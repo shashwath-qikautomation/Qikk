@@ -69,6 +69,5 @@ function Blog() {
      </Row>
 
       </Container>
-  );
-}
+
 export default Blog;
