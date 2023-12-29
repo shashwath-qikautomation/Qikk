@@ -1,0 +1,10 @@
+.text{
+    color:rgba(14, 14, 122, 0.8);
+}
+h2{
+    text-align: left;
+}
+.btn{
+    color:rgb(216, 34, 170);
+    border: 3px solid rgb(216, 34, 170);
+}

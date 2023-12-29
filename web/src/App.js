@@ -12,7 +12,7 @@ import Blog from "./pages/Blog";
 function App() {
   return (
     <div className="App">
-      <NavBar />
+       <NavBar />
       <Routes>
         <Route path={routes.homePage} element={<HomePage />} />
         <Route path={routes.about} element={<About />} />
