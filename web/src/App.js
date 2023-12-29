@@ -4,6 +4,7 @@ import { routes } from "./helper/routes";
 import HomePage from "./pages/HomePage";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import "bootstrap/dist/css/bootstrap.min.css"
 import NavBar from "./components/NavBar";
 
 function App() {
