@@ -21,6 +21,7 @@ function Blog() {
 
         <Col sm={8}>
           {/* <img src={BlogImg} /> */}
+
           <h2>The standard Lorem Ipsum passage, used since the 1500s</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -32,7 +33,6 @@ function Blog() {
             culpa qui officia deserunt mollit anim id est laborum.
           </p>
         </Col>
-
         <Col sm={4}>
           <Card
             style={{
@@ -56,7 +56,6 @@ function Blog() {
               SEARCH
             </Button>
           </Card>
-
           <Card
             style={{
               width: "18rem",
@@ -76,7 +75,6 @@ function Blog() {
             </ListGroup>
           </Card>
         </Col>
-
         <Col sm={8}>
           {/* <img src={BlogImg} /> */}
           <h2>The standard Lorem Ipsum passage, used since the 1500s</h2>
@@ -94,4 +92,5 @@ function Blog() {
     </Container>
   );
 }
+  
 export default Blog;
