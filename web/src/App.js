@@ -8,6 +8,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import NavBar from "./components/NavBar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Blog from "./pages/Blog";
+import Gallery from "./pages/Gallery";
 
 function App() {
   return (
@@ -17,8 +18,10 @@ function App() {
         <Route path={routes.homePage} element={<HomePage />} />
         <Route path={routes.about} element={<About />} />
         <Route path={routes.contact} element={<Contact />} />
-        <Route path={routes.blog} element={<Blog />} />
-      </Routes> 
+       <Route path={routes.blog} element={<Blog />} />
+      <Route path={routes.gallery} element={<Gallery/>} />
+      </Routes>   
+      
     </div>
   );
 }
