@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "../components/Button";
-import homeSvg from "../assets/images/homepage.svg";
+
+import homeSvg from "../assets/images/homepage.svg"
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
