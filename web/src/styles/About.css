@@ -1,10 +1,25 @@
-.hoover:hover{
-    transform: scale(1.1);
-    
-    
+.hoover:hover {
+  background-color: #66a2d0;
+  color: white;
 }
+/* .hoover:hover h5{
+    position: absolute;
+    top: 0;
+} */
+/* .hoover:hover p {
+    color: white;
+  visibility: visible;
+} */
 .hoover {
-    transition: cubic-bezier(0.19, 1, 0.22, 1);
-    transition: 2s;
-    backdrop-filter: blur;
+  background-color: white;
+  transition: 0.7s;
+}
+/* .hoover p {
+  visibility: hidden;
+} */
+.hoverIcon img {
+  filter: saturate(0%);
+}
+.hoverIcon:hover img {
+  filter: saturate(100%);
 }
