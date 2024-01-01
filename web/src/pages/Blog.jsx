@@ -3,7 +3,7 @@ import "../styles/Blog.css";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import BlogImg from "../assets/images/blog.svg";
+// import BlogImg from "../assets/Images/company profile img.svg";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
@@ -128,5 +128,5 @@ function Blog() {
     </Container>
   );
 }
-
+  
 export default Blog;

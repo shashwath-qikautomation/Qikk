@@ -1,0 +1,10 @@
+.hoover:hover{
+    transform: scale(1.1);
+    
+    
+}
+.hoover {
+    transition: cubic-bezier(0.19, 1, 0.22, 1);
+    transition: 2s;
+    backdrop-filter: blur;
+}
