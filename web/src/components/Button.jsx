@@ -1,19 +1,11 @@
 import React from "react";
-import Button from "react-bootstrap/Button";
+import "../styles/Button.css";
 
 const Buttons = ({ width, height, name, btnClick, color }) => {
   return (
-    <Button
-      style={{
-        width: width,
-        height: height,
-        backgroundColor: color,
-      }}
-      variant="primary"
-      onClick={btnClick}
-    >
+    <button className="button-style" onClick={onclick}>
       {name}
-    </Button>
+    </button>
   );
 };
 

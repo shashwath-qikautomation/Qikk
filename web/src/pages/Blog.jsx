@@ -3,7 +3,7 @@ import "../styles/Blog.css";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-// import BlogImg from "../assets/Images/company profile img.svg";
+import BlogImg from "../assets/images/blog.svg";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
@@ -78,55 +78,21 @@ function Blog() {
           </ul>
         </Col>
 
-        <Col xs={12} lg={12} className="mb-4">
-          <h1 className="text-primary fs-6 text-start fw-bold">
-            Challenges and Considerations:
-          </h1>
-          <ul className="text-start">
-            <li>
-              <span className="text-dark fw-bold">
-                Collaborative Robotics (Cobots):{" "}
-              </span>{" "}
-              The integration of cobots, which work alongside human operators,
-              is expected to rise. These robots can handle intricate tasks that
-              demand human dexterity while reducing the risk of physical strain
-              and errors.
-            </li>
-            <li>
-              <span className="text-dark fw-bold">undefined :</span> Undefined
-            </li>
-            <li>
-              <span className="text-dark fw-bold">
-                Internet of Things (IoT) Connectivity:{" "}
-              </span>{" "}
-              IoT-enabled devices can facilitate real-time monitoring, tracking,
-              and remote control of manufacturing equipment, enabling efficient
-              maintenance and proactive issue resolution.
-            </li>
-            <li>
-              <span className="text-dark fw-bold">
-                Additive Manufacturing (3D Printing):{" "}
-              </span>{" "}
-              3D printing technology can revolutionize the production of
-              electronic components, allowing for rapid prototyping,
-              customization, and reduced material waste.
-            </li>
-          </ul>
-          <p className="fs-6 text-start">
-            In conclusion, the adoption of automation in electronic
-            manufacturing services is a strategic imperative for achieving
-            higher levels of efficiency, productivity, and competitiveness.
-            While challenges persist, the benefits, including enhanced quality,
-            scalability, and data-driven decision-making, outweigh the initial
-            obstacles. As technology continues to advance, the EMS sector stands
-            poised to leverage emerging trends like collaborative robotics, AI,
-            and IoT connectivity to further revolutionize its operations and
-            reshape the future of electronic manufacturing.
+        <Col sm={8}>
+          <img src={BlogImg} />
+          <h2>The standard Lorem Ipsum passage, used since the 1500s</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
           </p>
         </Col>
       </Row>
     </Container>
   );
 }
-  
 export default Blog;

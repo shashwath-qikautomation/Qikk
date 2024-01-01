@@ -2,16 +2,14 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import aboutSvg from "../assets/images/about.svg";
-import homeSvg from "../assets/images/homepage.svg";
-import businessSvg from "../assets/images/business.svg";
-import logo from "../assets/logoW.png";
-import Card from "react-bootstrap/Card";
-import { Button } from "bootstrap";
-import Buttons from "../components/Button";
 import { useNavigate } from "react-router-dom";
+import aboutSvg from "../assets/images/about.svg";
+import homeSvg from "../assets/images/about.svg";
+import businessSvg from "../assets/images/about.svg";
+import logoW from "../assets/logoW.png";
+import Card from "react-bootstrap/Card";
+import Buttons from "../components/Button";
 import { routes } from "../helper/routes";
-import "../styles/About.css";
 
 function About() {
   const navigate = useNavigate();
@@ -129,7 +127,7 @@ function About() {
           <img style={{ width: "50px" }} src={homeSvg} />
         </Col>
         <Col>
-          <img style={{ width: "50px" }} src={logo} />
+          <img style={{ width: "50px" }} src={logoW} />
         </Col>
       </Row>
       <div></div>
