@@ -10,12 +10,13 @@ import { useNavigate } from "react-router-dom";
 function Article() {
   const navigate = useNavigate();
 
-  const btnClick = () => navigate(routes.contact);
+  const onClick = () => navigate(routes.contact);
+
   return (
-    <Container maxWidth="xxl">
+    <div>
       <Row className="mb-5 p-5">
         <Col className="pt-2">
-          <img src={business} width="600px" height="500px" />
+          <img src={business} width="auto" height="500px" />
         </Col>
         <Col className="gap-4">
           {" "}
@@ -38,7 +39,7 @@ function Article() {
             width={"150px"}
             height={"40px"}
             name={"Contact Us"}
-            btnClick={btnClick}
+            onClick={onClick}
           />
         </Col>
       </Row>
@@ -50,7 +51,7 @@ function Article() {
         </Col>
       </Row>
       <Row className="gap-4 p-5">
-        <Col className="shadow-lg p-4 mb-5 bg-white rounded">
+        <Col className="shadow-lg p-4 bg-white rounded">
           <h1 className="fs-3">Link building</h1>
           <p className="p">
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -59,7 +60,7 @@ function Article() {
             and scrambled it to make a type specimen book.
           </p>
         </Col>
-        <Col className="shadow-lg p-4 mb-5 bg-white rounded">
+        <Col className="shadow-lg p-4 bg-white rounded">
           <h1 className="fs-3">Content marketing</h1>
           <p className="p">
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -70,7 +71,7 @@ function Article() {
         </Col>
       </Row>
       <Row className="gap-4 p-5">
-        <Col className="shadow-lg p-4 mb-5 bg-white rounded">
+        <Col className="shadow-lg p-4 bg-white rounded">
           <h1 className="fs-3">Link building</h1>
           <p className="p">
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -79,7 +80,7 @@ function Article() {
             and scrambled it to make a type specimen book.
           </p>
         </Col>
-        <Col className="shadow-lg p-4 mb-5 bg-white rounded">
+        <Col className="shadow-lg p-4 bg-white rounded">
           <h1 className="fs-3">Content marketing</h1>
           <p className="p">
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -89,7 +90,7 @@ function Article() {
           </p>
         </Col>
       </Row>
-    </Container>
+    </div>
   );
 }
 export default Article;
