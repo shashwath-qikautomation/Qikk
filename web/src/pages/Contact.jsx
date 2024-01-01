@@ -6,7 +6,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-
+import { IoHomeOutline } from "react-icons/io5";
 
 function Contact() {
     const h2 = {
@@ -20,27 +20,12 @@ function Contact() {
     const contactTitle = {
         fontSize: '27px',
         fontWeight: '600',
-        marginBottom: '20px'
+        marginBottom: '20px',
+        float:'left'
     }
 
-    const button = {
-        background: '#fff',
-        color: '#ff5c97 !important',
-        display: 'inline-block',
-        padding: '18px 44px',
-        fontFamily: '"Poppins",sans-serif',
-        fontSize: '14px',
-        fontWeight: '400',
-        border: '0',
-        border: '1px solid #ff5c97',
-        letterSpacing: '3px',
-        textAlign: 'center',
-        color: '#ff5c97',
-        textTransform: 'uppercase',
-        cursor: 'pointer',
-    }
-    
   return (
+    <Container >
     <div className="contact-us">
         <div className="header">
             <Container>
@@ -56,11 +41,12 @@ function Contact() {
         <div className="contact-section">
             <Container fluid>
                 <Row>
-                    <Col lg={12} sm={12} md={12} >
+                    <Col lg={12} sm={12} md={12}  >
                         <h2 className="contact-title" style={contactTitle}>Get in touch</h2>
                     </Col>
                 </Row>
-                <Row>
+                <Row className="ml-2">
+                    
                     <Col lg={8} sm={12} md={8} className="mb-4">
                         <Form.Group className="mb-3"  placeholder="Enter message" controlId="exampleForm.ControlTextarea1">
                             <Row>
@@ -99,22 +85,21 @@ function Contact() {
                         </Row>
                     </Col>
                     <Col sm={12} md={4} lg={4} className="mb-4 ml-1">
-                        <Card className="shadow-lg p-4 mb-5 bg-white rounded">
+                        <Card className="p-4 mb-5 bg-white rounded">
                             <Card.Body>
                                 <Row>
-                                    {/* <i class="fa-solid fa-house"></i> */}
                                     <Card.Text> <p><b>Buttonwood, California.</b></p>
                                     Rosemead, CA 91770   </Card.Text>
                                 </Row>
                                 <br/>
                                 <Row>
-                                {/* <FontAwesomeIcon icon="fa-solid fa-mobile-screen-button" /> */}
+                               
                                     <Card.Text><p><b>+1 253 565 2365</b></p>
                                     Mon to Fri 9am to 6pm</Card.Text>
                                 </Row> 
                                 <br/>
                                 <Row>
-                                {/* <i class="fa-light fa-envelope"></i> */}
+                                
                                     <Card.Text><p> <b>support@colorlib.com</b> </p>
                                     Send us your query anytime!</Card.Text>
                                 </Row>
@@ -125,7 +110,7 @@ function Contact() {
             </Container>
         </div>
     </div>
-    
+    </Container>
   );
 }
 export default Contact;
