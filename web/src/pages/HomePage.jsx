@@ -1,12 +1,12 @@
 import React from "react";
 import Button from "../components/Button";
 
-import homeSvg from "../assets/images/homepage.svg"
+import homeSvg from "../assets/images/homepage.svg";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 //import "../styles/HomePage.css";
-import Card from "react-bootstrap/Card";
+// import Card from "react-bootstrap/Card";
 import { useNavigate } from "react-router-dom";
 import { routes } from "../helper/routes";
 import Article from "../components/Article";
