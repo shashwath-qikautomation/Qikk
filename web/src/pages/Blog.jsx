@@ -14,78 +14,114 @@ function Blog() {
   return (
     <Container>
       <Row>
-        <Col xs={12}>
-          <h3 className="blog-heading">Blog</h3>
-          <h1 className="blog-heading">Our Blog Area</h1>
-        </Col>
-
-        <Col sm={8}>
-          {/* <img src={BlogImg} /> */}
-
-          <h2>The standard Lorem Ipsum passage, used since the 1500s</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+        <Col xs={12} lg={12} className="mb-4 mt-4">
+          <h1 className="text-primary fs-4 text-center">
+            Unlocking Automation for Electronic Manufacturing Services to
+            Enhance Shop Floor Efficiency and Productivity
+          </h1>
+          <p className="text-dark fs-6 text-start">
+            In the rapidly evolving landscape of electronic manufacturing
+            services (EMS), the integration of automation technologies has
+            emerged as a transformative solution to significantly enhance shop
+            floor efficiency and productivity. This strategic implementation of
+            automation not only streamlines production processes but also
+            empowers manufacturers to meet escalating demands, reduce
+            operational costs, and ensure consistent product quality. This
+            section delves into the pivotal role of automation in the EMS
+            sector, highlighting its benefits, challenges, and potential future
+            developments.
           </p>
         </Col>
-        <Col sm={4}>
-          <Card
-            style={{
-              width: "18rem",
-              backgroundColor: "rgb(226, 226, 247)",
-              padding: "10px",
-              margin: "20px",
-            }}
-          >
-            <InputGroup className="mb-3">
-              <Form.Control
-                placeholder="Search Here"
-                aria-label="Recipient's username"
-                aria-describedby="basic-addon2"
-              />
-              <Button variant="outline-secondary" id="button-addon2">
-                {/* <FontAwesomeIcon icon="fa-regular fa-magnifying-glass" /> */}
-              </Button>
-            </InputGroup>
-            <Button variant="primary" size="lg">
-              SEARCH
-            </Button>
-          </Card>
-          <Card
-            style={{
-              width: "18rem",
-              backgroundColor: "rgb(226, 226, 231)",
-              padding: "10px",
-              margin: "20px",
-            }}
-          >
-            <Card.Title>Category</Card.Title>
-            <ListGroup style={{ padding: "20px" }}>
-              <ListGroup.Item>Cras justo odio</ListGroup.Item>
-              <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-              <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
-              <ListGroup.Item>Cras justo odio</ListGroup.Item>
-              <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-              <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
-            </ListGroup>
-          </Card>
+
+        <Col xs={12} lg={12} className="mb-4">
+          <h1 className="text-primary fs-6 text-start fw-bold">
+            Benefits of Automation in EMS:
+          </h1>
+          <ul className="text-start">
+            <li>
+              <span className="text-dark fw-bold">Enhanced Efficiency:</span>{" "}
+              Automation minimizes human intervention in repetitive and
+              time-consuming tasks, allowing manufacturers to optimize resource
+              allocation and reduce cycle times. This leads to increased
+              throughput, reduced lead times, and improved overall operational
+              efficiency.
+            </li>
+            <li>
+              <span className="text-dark fw-bold">Consistent Quality:</span>{" "}
+              Automated systems ensure standardized processes, reducing the
+              likelihood of human errors and defects. This results in higher
+              product quality and reliability, which is particularly crucial in
+              the electronics industry where precision is paramount.
+            </li>
+            <li>
+              <span className="text-dark fw-bold">Scalability:</span> Automation
+              equips EMS providers to seamlessly scale up production to meet
+              fluctuating demands. Rapid adjustments can be made without the
+              need for extensive retraining or recruitment efforts.
+            </li>
+            <li>
+              <span className="text-dark fw-bold">
+                Data-Driven Decision Making:
+              </span>{" "}
+              Automation generates real-time production data and analytics that
+              enable data-driven decision-making. Manufacturers can identify
+              bottlenecks, performance trends, and areas for improvement,
+              fostering continuous enhancement of manufacturing processes.
+            </li>
+            <li>
+              <span className="text-dark fw-bold">Cost Efficiency: </span>{" "}
+              Although initial setup costs can be substantial, the long- term
+              savings gained from reduced labor costs, minimized material
+              wastage, and optimized resource utilization justify the investment
+              in automation technology.
+            </li>
+          </ul>
         </Col>
-        <Col sm={8}>
-          {/* <img src={BlogImg} /> */}
-          <h2>The standard Lorem Ipsum passage, used since the 1500s</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+
+        <Col xs={12} lg={12} className="mb-4">
+          <h1 className="text-primary fs-6 text-start fw-bold">
+            Challenges and Considerations:
+          </h1>
+          <ul className="text-start">
+            <li>
+              <span className="text-dark fw-bold">
+                Collaborative Robotics (Cobots):{" "}
+              </span>{" "}
+              The integration of cobots, which work alongside human operators,
+              is expected to rise. These robots can handle intricate tasks that
+              demand human dexterity while reducing the risk of physical strain
+              and errors.
+            </li>
+            <li>
+              <span className="text-dark fw-bold">undefined :</span> Undefined
+            </li>
+            <li>
+              <span className="text-dark fw-bold">
+                Internet of Things (IoT) Connectivity:{" "}
+              </span>{" "}
+              IoT-enabled devices can facilitate real-time monitoring, tracking,
+              and remote control of manufacturing equipment, enabling efficient
+              maintenance and proactive issue resolution.
+            </li>
+            <li>
+              <span className="text-dark fw-bold">
+                Additive Manufacturing (3D Printing):{" "}
+              </span>{" "}
+              3D printing technology can revolutionize the production of
+              electronic components, allowing for rapid prototyping,
+              customization, and reduced material waste.
+            </li>
+          </ul>
+          <p className="fs-6 text-start">
+            In conclusion, the adoption of automation in electronic
+            manufacturing services is a strategic imperative for achieving
+            higher levels of efficiency, productivity, and competitiveness.
+            While challenges persist, the benefits, including enhanced quality,
+            scalability, and data-driven decision-making, outweigh the initial
+            obstacles. As technology continues to advance, the EMS sector stands
+            poised to leverage emerging trends like collaborative robotics, AI,
+            and IoT connectivity to further revolutionize its operations and
+            reshape the future of electronic manufacturing.
           </p>
         </Col>
       </Row>
