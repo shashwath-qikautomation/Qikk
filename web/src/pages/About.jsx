@@ -12,19 +12,24 @@ import Buttons from "../components/Button";
 import { useNavigate } from "react-router-dom";
 import { routes } from "../helper/routes";
 import "../styles/About.css";
+import CardText from "react-bootstrap/esm/CardText";
+import App from "../components/Model";
+import MyModal from "../components/Model.jsx";
 
 function About() {
   const navigate = useNavigate();
+  const [modalShow, setModalShow] = React.useState(false);
+  console.log(modalShow);
 
   const handleNavigateToContactUs = () => {
     navigate(routes.contact);
   };
   return (
-    <Container fluid>
+    <Container fluid xxl>
       <div>
-        <Row className="mb-5 p-5">
+        <Row className="p-5">
           <Col md={4}>
-            <img style={{ width: "300px" }} src={aboutSvg} />
+            <img style={{ width: "400px" }} src={aboutSvg} />
           </Col>
           <Col></Col>
           <Col md={7} className="text-start">
@@ -45,94 +50,108 @@ function About() {
         </Row>
       </div>
       <Row>
-        <div className="mb-4 p-5">
+        <div className="p-5">
           <h1>Visit some Of Our Stuffs</h1>
         </div>
       </Row>
       <div>
-        <Row className="gap-4 p-5">
+        <Row className="gap-2 p-5">
           <Col>
-            <Card className="shadow-lg p-1 mb-5 bg-white rounded bg-dark text-black">
+            <Card className="shadow-lg mb-5 bg-white rounded bg-dark text-black overflow-y-auto">
               <Card.Img src={homeSvg} alt="Card image" />
               <Card.ImgOverlay>
-                <div className="hoover">
-                  <Card.Title>Mission</Card.Title>
-                  <Card.Text>
-                    Our mission is to empower electronic manufacturing companies
-                    with state-of-the-art technology solutions that optimize
-                    production processes, reduce operational costs, and enhance
-                    overall competitiveness in a rapidly evolving market.
+                <div className="hoover rounded  p-2 m-3 position-absolute bottom-0 ">
+                  <Card.Title>
+                    {/* <h5 className=" position-absolute bottom-0 start-50 translate-middle"></h5> */}
+                    <h5>Mission</h5>
+                  </Card.Title>
+                  <Card.Text className="text-start m-2">
+                    <p>
+                      Our mission is to empower electronic manufacturing
+                      companies with state-of-the-art technology solutions that
+                      optimize production processes, reduce operational costs,
+                      and enhance overall competitiveness in a rapidly evolving
+                      market.
+                    </p>
                   </Card.Text>
                 </div>
               </Card.ImgOverlay>
             </Card>
           </Col>
           <Col>
-            <Card className="shadow-lg p-1 mb-5 bg-white rounded bg-dark text-black">
+            <Card className="shadow-lg mb-5 bg-white rounded bg-dark text-black overflow-y-auto">
               <Card.Img src={homeSvg} alt="Card image" />
               {/* <Card.Img src={businessSvg} alt="Card image" /> */}
               <Card.ImgOverlay>
-                <div className="hoover">
-                  <Card.Title>Future Outlook</Card.Title>
-                  <Card.Text>
-                    REXSATRONIX MYS PRIVATE LIMITED is poised for rapid growth
-                    in the electronic manufacturing industry. By leveraging
-                    cutting-edge technology, continuous innovation, and a
-                    customer-centric approach, we aim to become a global leader
-                    in providing integrated solutions for electronic
-                    manufacturing processes. As we expand our product portfolio
-                    and enhance our software offerings, we will remain dedicated
-                    to driving the industry forward through Quality, efficiency,
-                    and excellence. For inquiries, collaborations, or more
-                    information about REXSATRONIX, please visit our website at
-                    www.rexsatronix.com or contact us at info@rexsatronix.com.
+                <div className="hoover rounded p-2 m-3 position-absolute bottom-0 ">
+                  <Card.Title>
+                    {/* <h5 className=" position-absolute bottom-0 start-50 translate-middle"></h5> */}
+                    <h5>Future Outlook</h5>
+                  </Card.Title>
+                  <Card.Text className="text-start m-2">
+                    <p>
+                      REXSATRONIX MYS PRIVATE LIMITED is poised for rapid growth
+                      in the electronic manufacturing industry. We aim to become
+                      a global leader in providing integrated solutions for
+                      electronic manufacturing processes.
+                    </p>
                   </Card.Text>
+                  <Card.Text>
+                    <Buttons
+                      variant="primary"
+                      btnClick={() => setModalShow(true)}
+                      name={"Read More"}
+                    ></Buttons>
+                  </Card.Text>
+                  <CardText className="text-start m-2">
+                    <MyModal
+                      show={modalShow}
+                      onHide={() => setModalShow(false)}
+                    >
+                      <p>
+                        REXSATRONIX MYS PRIVATE LIMITED is poised for rapid
+                        growth in the electronic manufacturing industry. By
+                        leveraging cutting-edge technology, continuous
+                        innovation, and a customer-centric approach, we aim to
+                        become a global leader in providing integrated solutions
+                        for electronic manufacturing processes. As we expand our
+                        product portfolio and enhance our software offerings, we
+                        will remain dedicated to driving the industry forward
+                        through Quality, efficiency, and excellence. For
+                        inquiries, collaborations, or more information about
+                        REXSATRONIX, please visit our website at
+                        www.rexsatronix.com or contact us at
+                        info@rexsatronix.com.
+                      </p>
+                    </MyModal>
+                  </CardText>
                 </div>
               </Card.ImgOverlay>
             </Card>
           </Col>
-          {/* <Col className="shadow-lg p-1 mb-5 bg-white rounded">
-            <Card>
-              <Card.Body>
-                <Card.Title>Mission</Card.Title>
-                <Card.Text>
-                  REXSATRONIX MYS PRIVATE LIMITED is poised for rapid growth in
-                  the electronic manufacturing industry. By leveraging
-                  cutting-edge technology, continuous innovation, and a
-                  customer-centric approach, we aim to become a global leader in
-                  providing integrated solutions for electronic manufacturing
-                  processes. As we expand our product portfolio and enhance our
-                  software offerings, we will remain dedicated to driving the
-                  industry forward through Quality, efficiency, and excellence.
-                  For inquiries, collaborations, or more information about
-                  REXSATRONIX, please visit our website at www.rexsatronix.com
-                  or contact us at info@rexsatronix.com.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col> */}
         </Row>
       </div>
-      <Row>
-        <div className="mb-4 p-5">
-          <h1>What client Say About Us</h1>
-        </div>
-      </Row>
-      <Row className="d-flex justify-content-evenly mb-4 p-2 bg-dark">
+      <Row className="d-flex justify-content-evenly mb-5 p-2 bg-body-secondary">
         <Col>
-          <img style={{ width: "50px" }} src={aboutSvg} />
+          <div className="hoverIcon">
+            <img style={{ height: "70px" }} src={aboutSvg} />
+          </div>
         </Col>
-        <Col>
+        {/* <Col>
           <img style={{ width: "50px" }} src={businessSvg} />
+        </Col> */}
+        <Col>
+          <div className="hoverIcon">
+            <img style={{ height: "70px" }} src={homeSvg} />
+          </div>
         </Col>
         <Col>
-          <img style={{ width: "50px" }} src={homeSvg} />
-        </Col>
-        <Col>
-          <img style={{ width: "50px" }} src={logo} />
+          <div className="hoverIcon">
+            <img style={{ height: "70px" }} src={logo} />
+          </div>
         </Col>
       </Row>
-      <div></div>
+      <div> </div>
     </Container>
   );
 }
