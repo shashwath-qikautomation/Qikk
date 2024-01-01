@@ -4,7 +4,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { useNavigate } from "react-router-dom";
 import aboutSvg from "../assets/images/about.svg";
-import homeSvg from "../assets/images/about.svg";
+import homeSvg from "../assets/images/homepage.svg";
 import businessSvg from "../assets/images/about.svg";
 import logoW from "../assets/logoW.png";
 import Card from "react-bootstrap/Card";
@@ -146,7 +146,7 @@ function About() {
         </Col>
         <Col>
           <div className="hoverIcon">
-            <img style={{ height: "70px" }} src={logo} />
+            <img style={{ height: "70px" }} src={logoW} />
           </div>
         </Col>
       </Row>

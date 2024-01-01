@@ -17,7 +17,7 @@ import { useState } from "react";
 import "../styles/Gallery.css";
 import { SlArrowLeft } from "react-icons/sl";
 import { SlArrowRight } from "react-icons/sl";
-import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+//import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
 const allImages = [
   // { src: "https://picsum.photos/2000/3000", category: "Rack" },
@@ -180,7 +180,7 @@ function Gallery() {
           )}
 
           <div>
-            <ResponsiveMasonry
+            {/* <ResponsiveMasonry
             // columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
             >
               <Masonry gutter="20px">
@@ -201,7 +201,7 @@ function Gallery() {
                   </div>
                 ))}
               </Masonry>
-            </ResponsiveMasonry>
+            </ResponsiveMasonry> */}
           </div>
         </>
       </Row>
