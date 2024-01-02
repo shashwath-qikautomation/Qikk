@@ -1,21 +1,3 @@
 p{
     text-align: start;
 }
-
-.card {
-  transition: 0.3s ease;
-  height: 20rem;
-} 
-
-.card:hover {
-  background-color: #67acda;     /*Change to the desired color when hovering*/
-
-  /* background: linear-gradient(to bottom left, #67acda); */
-  cursor: pointer;
-  /* background-position: top; */
-}
-
-.card button:hover{
-  background-color: white;
-  color:black;
-}
