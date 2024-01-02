@@ -7,8 +7,14 @@ import logoW from "../assets/logoW.png";
 import { routes } from "../helper/routes";
 //import "../styles/NavBar.css";
 import Fade from "react-reveal/Fade";
+import { useNavigate } from "react-router-dom";
 
 function NavBar() {
+  const navigate = useNavigate();
+  const navigateRouteTo = (path) => {
+    console.log(path);
+    navigate(path);
+  };
   //"me-auto p-5"
 
   return (
@@ -22,37 +28,43 @@ function NavBar() {
           <Nav className="mx-auto gap-4 p-4">
             <Nav.Link
               className="nav-link d-flex justify-content-start"
-              href={routes.homePage}
+              onClick={() => navigateRouteTo(routes.homePage)}
+              // href={routes.homePage}
             >
               Home
             </Nav.Link>
             <Nav.Link
               className="nav-link d-flex justify-content-start"
-              href={routes.about}
+              // href={routes.about}
+              onClick={() => navigateRouteTo(routes.about)}
             >
               About Us
             </Nav.Link>
             <Nav.Link
               className="nav-link d-flex justify-content-start"
-              href={routes.blog}
+              // href={routes.blog}
+              onClick={() => navigateRouteTo(routes.blog)}
             >
               Blog
             </Nav.Link>
             <Nav.Link
               className="nav-link d-flex justify-content-start"
-              href={routes.product}
+              // href={routes.product}
+              onClick={() => navigateRouteTo(routes.product)}
             >
               Products & Services
             </Nav.Link>
             <Nav.Link
               className="nav-link d-flex justify-content-start"
-              href={routes.gallery}
+              // href={routes.gallery}
+              onClick={() => navigateRouteTo(routes.gallery)}
             >
               Gallery
             </Nav.Link>
             <Nav.Link
               className="nav-link d-flex justify-content-start"
-              href={routes.contact}
+              // href={routes.contact}
+              onClick={() => navigateRouteTo(routes.contact)}
             >
               Contact
             </Nav.Link>
