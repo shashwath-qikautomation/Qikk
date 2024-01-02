@@ -1,13 +1,15 @@
 .card {
     transition: 300ms ease-in-out;
     height: 23rem;
+    overflow: auto;
   } 
   
   .card-title {
     font-weight: bold;
   }
   .card:hover {
-    background-color: #67acda;     
+    background-color: #67acda; 
+    transform: scale(1.1) !important;    
     /* transition: 0.5s; */
     /* background: linear-gradient(to bottom left, #67acda); */
     cursor: pointer;
