@@ -19,6 +19,7 @@ import CyientLogo from "../assets/clientsLogo/CyientDLM.png";
 import TycoonLogo from "../assets/clientsLogo/Tycoon.png";
 import frontlineLogo from "../assets/clientsLogo/frontline.jpg";
 import vinyasLogo from "../assets/clientsLogo/vinyas.jpg";
+import { FaAward } from "react-icons/fa";
 
 function About() {
   const navigate = useNavigate();
@@ -55,7 +56,7 @@ function About() {
               </p>
               <Buttons
                 name={"Contact Us"}
-                btnClick={handleNavigateToContactUs}
+                onClick={handleNavigateToContactUs}
               />
             </Col>
           </Row>
@@ -105,7 +106,7 @@ function About() {
                       </p>
                       <Buttons
                         variant="primary"
-                        btnClick={() => setModalShow(true)}
+                        onClick={() => setModalShow(true)}
                         name={"Read More"}
                       ></Buttons>
                     </Card.Text>
@@ -150,12 +151,15 @@ function About() {
         <Row className="p-5">
           <Col md={4} className="text-center">
             <Card className="qik border border-0">
-              <Card.Img
+              {/* <Card.Img
                 style={{ height: "200px" }}
                 variant="top"
                 src={qualitySvg}
                 rounded
-              />
+              /> */}
+              <Card.Header className="border border-0">
+                <FaAward size={"200px"} />
+              </Card.Header>
               <Card.Body>
                 <Card.Title>
                   <h5>Quality</h5>
