@@ -1,9 +1,9 @@
-import React from 'react'
-import { Container } from 'react-bootstrap'
-import productImg from '../assets/images/product.svg'
-import Buttons from './Button';
-import Card from 'react-bootstrap/Card';
-import styles from '../styles/Cards.css'
+import React from "react";
+import { Container } from "react-bootstrap";
+import productImg from "../assets/images/product.svg";
+import Buttons from "./Button";
+import Card from "react-bootstrap/Card";
+import styles from "../styles/Cards.css";
 
 function Cards(props) {
   return (
@@ -15,7 +15,7 @@ function Cards(props) {
            <center><Buttons style={{alignItems:'center'}} onClick={props.onClick} height="35px" width="105px" color='blue' name='Read More'/>  </center>
         </Card>
     </Container>
-  )
+  );
 }
 
-export default Cards
+export default Cards;

@@ -10,7 +10,7 @@ function MyModal(props) {
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
-      <Modal.Header closeButton></Modal.Header>
+      <Modal.Header closeButton>{props.title}</Modal.Header>
       <Modal.Body>{props.children}</Modal.Body>
       <Modal.Footer>
         <Button onClick={props.onHide}>Close</Button>

@@ -1,18 +1,18 @@
-import React from 'react'
-import Container from 'react-bootstrap/esm/Container'
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import style from '../styles/Product.css'
-import productImg from '../assets/images/product.svg'
-import { useState } from 'react';
-import pdfUrl from '../assets/QIK-500CC.pdf';
-import MyModal from '../components/Model';
-import Cards from '../components/Cards';
-import 'animate.css'
+import React from "react";
+import Container from "react-bootstrap/esm/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import style from "../styles/Product.css";
+import productImg from "../assets/images/product.svg";
+import { useState } from "react";
+import pdfUrl from "../assets/QIK-500CC.pdf";
+import MyModal from "../components/Model";
+import Cards from "../components/Cards";
+import "animate.css";
+
 
  function Product() {
     const [showModal, setShowModal] = useState(false);
-   
 
   const handleShowModal = () =>  setShowModal(true);
   const handleCloseModal = () => setShowModal(false);
@@ -124,17 +124,22 @@ import 'animate.css'
                 
             </Row>
          </Container> 
-
-        <MyModal show={showModal} fullscreen={true} onHide={handleCloseModal} className='modal-pdf'>
-            <div className="pdf-frame">
-                <iframe src={pdfUrl} title="pdf" style={{ width: '100%', height: '100vh' }}>
-                </iframe>
-            </div>
-        </MyModal>
-
-
+      <MyModal
+        show={showModal}
+        fullscreen={true}
+        onHide={handleCloseModal}
+        className="modal-pdf"
+      >
+        <div className="pdf-frame">
+          <iframe
+            src={pdfUrl}
+            title="pdf"
+            style={{ width: "100%", height: "100vh" }}
+          ></iframe>
+        </div>
+      </MyModal>
     </div>
-  )
+  );
 }
 
-export default Product
+export default Product;
