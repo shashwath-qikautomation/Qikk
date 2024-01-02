@@ -17,18 +17,9 @@ import { useState } from "react";
 import "../styles/Gallery.css";
 import { SlArrowLeft } from "react-icons/sl";
 import { SlArrowRight } from "react-icons/sl";
-//import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+import Image from "react-bootstrap/Image";
 
 const allImages = [
-  // { src: "https://picsum.photos/2000/3000", category: "Rack" },
-  // { src: "https://picsum.photos/3000/2000", category: "Rack" },
-  // { src: "https://picsum.photos/4000/3000", category: "Rack" },
-  // { src: "https://picsum.photos/3000/1500", category: "Conveyor" },
-  // { src: "https://picsum.photos/1000/2000", category: "Conveyor" },
-  // { src: "https://picsum.photos/1500/2000", category: "Conveyor" },
-  // { src: "https://picsum.photos/3000/2000", category: "Company" },
-  // { src: "https://picsum.photos/2000/1500", category: "Company" },
-  // { src: "https://picsum.photos/3000/2000", category: "Company" },
   { src: rackImg1, category: "Rack" },
   { src: rackImg2, category: "Rack" },
   { src: rackImg3, category: "Rack" },
@@ -70,140 +61,137 @@ function Gallery() {
       : allImages.filter((img) => img.category === filter);
 
   return (
-    <Container className="bg-white">
-      <Row className="mb-5 p-2 mt-3">
+    <Container className="pt-5 pb-5 mt-5">
+      <Row className="mb-5 p-2 mt-5">
         <Col xs={12}>
-          <h1 className="text-primary fs-4 fw-bold">Our Projects</h1>
-          <p className="text-dark fs-1 fw-bold">Recently Launched Projects</p>
+          <h1 className="text-primary fs-5 fw-bold animate__animated animate__fadeInUp">
+            Our Projects
+          </h1>
+          <p className="text-dark fs-4 fw-bold text-center animate__animated animate__fadeInUp">
+            Recently Launched Projects
+          </p>
           <br />
-          <div className="d-flex justify-content-center">
-            <hr className="text-dark w-50" />
-          </div>
+          <span className="d-flex justify-content-center">
+            {" "}
+            <hr className="text-dark w-75" />
+          </span>
         </Col>
+      </Row>
 
-        <Col className="d-flex flex-row  justify-content-center mb-3">
-          <div className="m-2">
-            <Buttons
-              height="40px"
-              width="90px"
-              name="All"
-              btnClick={() => setFilter("All")}
-              color="grey"
-              backgroundColor="white"
-              borderStyle="none"
-            />
-          </div>
-
-          <div className="m-2">
-            <Buttons
-              height="40px"
-              width="90px"
-              name="Rack"
-              btnClick={() => setFilter("Rack")}
-              color="grey"
-              backgroundColor="white"
-              borderStyle="none"
-            />
-          </div>
-          <div className="m-2">
-            <Buttons
-              height="40px"
-              width="90px"
-              name="Conveyor"
-              btnClick={() => setFilter("Conveyor")}
-              color="grey"
-              backgroundColor="white"
-              borderStyle="none"
-            />
-          </div>
-          <div className="m-2">
-            <Buttons
-              height="40px"
-              width="90px"
-              name="Company"
-              btnClick={() => setFilter("Company")}
-              color="grey"
-              backgroundColor="white"
-              borderStyle="none"
-            />
-          </div>
-        </Col>
-        <>
-          {data.fullView && (
-            <div
-              style={{
-                width: "100%",
-                height: "100vh",
-                backgroundColor: "black",
-                position: "fixed",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                overflow: "hidden",
-                zIndex: 1000,
-                top: 0,
-                left: 0,
-              }}
-            >
-              <button
-                style={{
-                  position: "absolute",
-                  top: "2px",
-                  right: "10px",
-                  backgroundColor: "grey",
-                  color: "white",
-                  fontSize: "15px",
-                  borderStyle: "none",
-                  borderRadius: "4px",
-                  marginTop: "5px",
-                }}
-                onClick={() => imgAction()}
-              >
-                X
-              </button>
-
-              <SlArrowLeft
-                onClick={() => imgAction("previous-img")}
-                className="text-white fs-3"
-              />
-
-              <img
-                src={data.img.src}
-                style={{ width: "auto", maxWidth: "90%", maxHeight: "90%" }}
-                alt={data.img.category}
-              />
-              <SlArrowRight
-                onClick={() => imgAction("next-img")}
-                className="text-white fs-3"
+      <Row>
+        <Col xs={12} className="mb-2 animate__animated animate__fadeInUp">
+          <div className="d-flex flex-row justify-content-center mb-3">
+            <div className="m-1">
+              <Buttons
+                className="button-style"
+                name="All"
+                onClick={() => setFilter("All")}
               />
             </div>
-          )}
+            <div className="m-1">
+              <Buttons
+                className="button-style"
+                name="Rack"
+                onClick={() => setFilter("Rack")}
+              />
+            </div>
 
-          <div>
-            {/* <ResponsiveMasonry
-            // columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
-            >
-              <Masonry gutter="20px">
-                {filteredImages.map((image, index) => (
-                  <div className="gallery-image-col">
-                    <img
-                      key={index}
-                      src={image.src}
-                      style={{
-                        height: "100%",
-                        width: "100%",
-                        display: "block",
-                        cursor: "pointer",
-                      }}
-                      alt={image.category}
-                      onClick={() => viewImage(image, index)}
-                    />
-                  </div>
-                ))}
-              </Masonry>
-            </ResponsiveMasonry> */}
+            <div className="m-1">
+              <Buttons
+                className="button-style"
+                name="Conveyor"
+                onClick={() => setFilter("Conveyor")}
+              />
+            </div>
+
+            <div className="m-1">
+              <Buttons
+                className="button-style"
+                name="Company"
+                onClick={() => setFilter("Company")}
+              />
+            </div>
           </div>
-        </>
+        </Col>
+      </Row>
+      <div>
+        {data.fullView && (
+          <div
+            className="mt-5 d-flex flex-row justify-content-center"
+            style={{
+              width: "60%",
+              height: "60%",
+              backgroundColor: "rgba(0,0,0,0.8)",
+              position: "fixed",
+              zIndex: 100,
+              top: "30%",
+              right: "25%",
+              left: "24%",
+            }}
+          >
+            <button
+              style={{
+                position: "absolute",
+                top: "5px",
+                right: "20px",
+                backgroundColor: "grey",
+                color: "white",
+                fontSize: "15px",
+                zIndex: "100",
+                cursor: "pointer",
+                fontWeight: "bolder",
+              }}
+              onClick={() => imgAction()}
+            >
+              X
+            </button>
+
+            <SlArrowLeft
+              onClick={() => imgAction("previous-img")}
+              className="text-white fs-3"
+            />
+
+            <img
+              src={data.img.src}
+              style={{
+                position: "absolute",
+                maxWidth: "80%",
+                maxHeight: "80%",
+                display: "block",
+                objectFit: "contain",
+                top: "10%",
+                left: "30%",
+                transform: "transaate(-50%, -50%)",
+                border: "3px solid #fff",
+              }}
+              alt={data.img.category}
+            />
+            <SlArrowRight
+              onClick={() => imgAction("next-img")}
+              className="text-white fs-3"
+            />
+          </div>
+        )}
+      </div>
+
+      <Row>
+        {filteredImages.map((image, index) => (
+          <Col key={index} xs={12} sm={6} md={4} lg={3} className="mb-4">
+            <div className="gallery-image-col animate__animated animate__fadeInUp">
+              <Image
+                key={index}
+                src={image.src}
+                style={{
+                  height: "100%",
+                  width: "100%",
+                  cursor: "pointer",
+                }}
+                alt={image.category}
+                onClick={() => viewImage(image, index)}
+              />
+            </div>
+          </Col>
+        ))}
       </Row>
     </Container>
   );
