@@ -6,7 +6,10 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import Buttons from "../components/Button";
-
+import { FaPhoneAlt } from "react-icons/fa";
+import { IoMdMail } from "react-icons/io";
+import { IoHome } from "react-icons/io5";
+import 'animate.css';
 
 function Contact() {
   const h2 = {
@@ -29,7 +32,7 @@ function Contact() {
     <div className="pt-5 mt-5">
       <div className="header">
         <Container>
-          <Row className="d-flex justify-content-center">
+          <Row className="d-flex justify-content-center animate__animated animate__fadeInUp">
             <Col lg={8}>
               <div>
                 <h2 style={h2}>Contact Us</h2>
@@ -38,7 +41,7 @@ function Contact() {
           </Row>
         </Container>
       </div>
-      <div className="contact-section">
+      <div className="contact-section animate__animated animate__fadeInUp">
         <Container fluid>
           <Row>
             <Col lg={12} sm={12} md={12}>
@@ -110,9 +113,9 @@ function Contact() {
                     <Card.Text>
                       {" "}
                       <p>
-                        <b>Buttonwood, California.</b>
+                        <b><IoHome /> &emsp; Koorgalli, Mysore.</b>
                       </p>
-                      Rosemead, CA 91770{" "}
+                      &emsp; &emsp;Karnataka,-570018{" "}
                     </Card.Text>
                   </Row>
                   <br />
@@ -120,9 +123,9 @@ function Contact() {
                     
                     <Card.Text>
                       <p>
-                        <b>+1 253 565 2365</b>
+                        <b><FaPhoneAlt /> &emsp; +91 8277995300</b>
                       </p>
-                      Mon to Fri 9am to 6pm
+                      &emsp;&emsp;Mon to Fri 9am to 6pm
                     </Card.Text>
                   </Row>
                   <br />
@@ -131,9 +134,9 @@ function Contact() {
                     <Card.Text>
                       <p>
                         {" "}
-                        <b>support@colorlib.com</b>{" "}
+                        <b><IoMdMail /> &emsp; info@rexsatronix.com</b>{" "}
                       </p>
-                      Send us your query anytime!
+                      &emsp;&emsp; Send us your query anytime!
                     </Card.Text>
                   </Row>
                 </Card.Body>

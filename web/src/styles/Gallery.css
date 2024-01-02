@@ -3,6 +3,7 @@
     overflow: hidden;
     
     
+    
 }
   .gallery-image-col:hover img {
     transform: scale(1.1); 
@@ -18,5 +19,26 @@
     background-color: rgba(187, 28, 28, 0.3); 
     pointer-events: none;
   }
- 
+  .button-style {
+    width: 80px;
+    height: 40px;
+    font-size: 15px;
+  }
+  /* .imageArray{
+    display: grid;
+    gap: 20px;
+    grid-template-areas: 
+    "imageOne imageTwo imageThree"
+    "imageOne imageFour imageFive";
+    grid-template-columns: 1fr 20% 20%;
+  }
+  .imageArray > div {
+    border: 2px solid black;
+  } 
+.imageArray > div  :first-child{
+    grid-area: imageOne;
+    height: 300px;
+    
+} 
+   */
   
