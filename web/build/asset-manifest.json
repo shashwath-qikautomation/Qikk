@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b20b5f62.css",
+    "main.js": "/static/js/main.7c61a64e.js",
+    "static/js/787.aadca95f.chunk.js": "/static/js/787.aadca95f.chunk.js",
+    "static/media/QIK-500CC.pdf": "/static/media/QIK-500CC.627240a5da26c70435f2.pdf",
+    "static/media/Quality2.svg": "/static/media/Quality2.f5fd9f7a3d7e5227398e1ace5d73fca0.svg",
+    "static/media/about.svg": "/static/media/about.9994cd418767985eed7f61cb81590664.svg",
+    "static/media/rackImg2.svg": "/static/media/rackImg2.bfaf4217aba3ae6bf15d09b644dd01f2.svg",
+    "static/media/Creative.svg": "/static/media/Creative.38b8ca5e70c8b5359dc6b9503d9210d4.svg",
+    "static/media/conveyorImg1.svg": "/static/media/conveyorImg1.a40c16024a3c9813cc6879ae5a4da479.svg",
+    "static/media/rackImg4.svg": "/static/media/rackImg4.050a5b6bde18be810c8b2685f01b4597.svg",
+    "static/media/companyImg1.svg": "/static/media/companyImg1.dc7ea6c335e0d2720802e11712e5edc5.svg",
+    "static/media/companyImg2.svg": "/static/media/companyImg2.dc7ea6c335e0d2720802e11712e5edc5.svg",
+    "static/media/logoW.png": "/static/media/logoW.8281b8ba9b772b659d94.png",
+    "static/media/homepage.svg": "/static/media/homepage.26ef9d319f4ea2840ad44f9fd0d22d6e.svg",
+    "static/media/frontline.jpg": "/static/media/frontline.4c2e305b45bcd1cdb67c.jpg",
+    "static/media/rackImg3.svg": "/static/media/rackImg3.16244f55878643ea3608c8da138e2fd3.svg",
+    "static/media/conveyorImg4.svg": "/static/media/conveyorImg4.34852861bb235815d6250bc77bbd754b.svg",
+    "static/media/rackImg1.svg": "/static/media/rackImg1.2d73c18417205feba5f68dc0b8f9c3e3.svg",
+    "static/media/companyImg3.svg": "/static/media/companyImg3.893a7d494f807d047310b0f03551c1c2.svg",
+    "static/media/conveyorImg2.svg": "/static/media/conveyorImg2.40865bb8c9bf9a9f4fe9a78f21d12a31.svg",
+    "static/media/companyImg4.svg": "/static/media/companyImg4.49a420679a63545d20648b8e0cb01f17.svg",
+    "static/media/hero-img.png": "/static/media/hero-img.53f1b5467e5095dc4126.png",
+    "static/media/Intelligance2.svg": "/static/media/Intelligance2.7539c9f2f5ffb03db1f64a918619f737.svg",
+    "static/media/conveyorImg3.svg": "/static/media/conveyorImg3.fe4a9594f2edb13caf8e02d29fa302e5.svg",
+    "static/media/business.svg": "/static/media/business.d67c2fdb65a300be6eeef06af20567ff.svg",
+    "static/media/Tycoon.png": "/static/media/Tycoon.9fab8928f89f8da8c19c.png",
+    "static/media/CyientDLM.png": "/static/media/CyientDLM.18b915217c6ec58e7155.png",
+    "static/media/about1.svg": "/static/media/about1.dd62c8ada2566520c8b3b8afc0ca38a4.svg",
+    "static/media/product.svg": "/static/media/product.eb8fd3679ab0a0852e9883430875ec86.svg",
+    "index.html": "/index.html",
+    "main.b20b5f62.css.map": "/static/css/main.b20b5f62.css.map",
+    "main.7c61a64e.js.map": "/static/js/main.7c61a64e.js.map",
+    "787.aadca95f.chunk.js.map": "/static/js/787.aadca95f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b20b5f62.css",
+    "static/js/main.7c61a64e.js"
+  ]
+}
