@@ -18,6 +18,7 @@ import qualitySvg from "../assets/images/Quality2.svg";
 import CyientLogo from "../assets/clientsLogo/CyientDLM.png";
 import TycoonLogo from "../assets/clientsLogo/Tycoon.png";
 import frontlineLogo from "../assets/clientsLogo/frontline.jpg";
+import vinyasLogo from "../assets/clientsLogo/vinyas.jpg";
 
 function About() {
   const navigate = useNavigate();
@@ -37,7 +38,7 @@ function About() {
             </Col>
             <Col></Col>
             <Col md={7} className="text-start">
-              <h1 style={{ fontSize: "50px" }} className="fw-bolder">
+              <h1 style={{ fontSize: "50px" }} className="fw-bolder mb-3">
                 We Collect High Quality Leads
               </h1>
               <p className="pt-2">
@@ -69,7 +70,7 @@ function About() {
         <div>
           <Row className="m-4 p-5">
             <Col md={6}>
-              <Card className="shadow-lg mb-5 bg-white rounded bg-dark text-black overflow-auto">
+              <Card className="border border-0 mb-5 bg-white rounded bg-dark text-black overflow-auto">
                 <Card.Img src={about1Svg} alt="Card image" />
                 <Card.ImgOverlay>
                   <div className="hoover rounded  p-2 m-3 position-absolute bottom-0 ">
@@ -90,7 +91,7 @@ function About() {
               </Card>
             </Col>
             <Col md={6}>
-              <Card className="shadow-lg mb-5 bg-white rounded bg-dark text-black overflow-auto">
+              <Card className="border border-0  mb-5 bg-white rounded bg-dark text-black overflow-auto">
                 <Card.Img src={homeSvg} alt="Card image" />
                 <Card.ImgOverlay>
                   <div className="hoover rounded p-2 m-3 position-absolute bottom-0 ">
@@ -112,6 +113,7 @@ function About() {
                       <MyModal
                         show={modalShow}
                         onHide={() => setModalShow(false)}
+                        title="Future Outlook"
                       >
                         <p>
                           QIK AUTOMATION MYS PRIVATE LIMITED is poised for rapid
@@ -155,7 +157,9 @@ function About() {
                 rounded
               />
               <Card.Body>
-                <Card.Title>Quality</Card.Title>
+                <Card.Title>
+                  <h5>Quality</h5>
+                </Card.Title>
                 <Card.Text className="text-center">
                   We are committed to delivering products and services of the
                   highest quality, ensuring the satisfaction of our customers
@@ -200,25 +204,33 @@ function About() {
             </Card>
           </Col>
         </Row>
-        <Row className="d-flex justify-content-evenly mb-5 p-2 bg-body-secondary">
-          <Col md={2}>
-            <div className="hoverIcon">
-              <img style={{ height: "70px" }} src={CyientLogo} />
-            </div>
-          </Col>
-
-          <Col md={2}>
-            <div className="hoverIcon">
-              <img style={{ height: "70px" }} src={TycoonLogo} />
-            </div>
-          </Col>
-          <Col md={2}>
-            <div className="hoverIcon">
-              <img style={{ height: "70px" }} src={frontlineLogo} />
-            </div>
-          </Col>
-        </Row>
       </Container>
+      <Row
+        style={{ marginBottom: "80px" }}
+        className="d-flex justify-content-evenly p-3 bg-body-secondary"
+      >
+        <Col md={2}>
+          <div className="hoverIcon">
+            <img style={{ height: "70px" }} src={CyientLogo} />
+          </div>
+        </Col>
+
+        <Col md={2}>
+          <div className="hoverIcon">
+            <img style={{ height: "70px" }} src={TycoonLogo} />
+          </div>
+        </Col>
+        <Col md={2}>
+          <div className="hoverIcon">
+            <img style={{ height: "70px" }} src={frontlineLogo} />
+          </div>
+        </Col>
+        <Col md={2}>
+          <div className="hoverIcon">
+            <img style={{ height: "70px" }} src={vinyasLogo} />
+          </div>
+        </Col>
+      </Row>
     </div>
   );
 }
