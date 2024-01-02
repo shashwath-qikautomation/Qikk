@@ -1,0 +1,23 @@
+.card {
+    transition: 300ms ease-in-out;
+    height: 23rem;
+  } 
+  
+  .card-title {
+    font-weight: bold;
+  }
+  .card:hover {
+    background-color: #67acda;     
+    /* transition: 0.5s; */
+    /* background: linear-gradient(to bottom left, #67acda); */
+    cursor: pointer;
+    /* background-position: top; */
+    bottom: 0;
+    height: 100%;
+  }
+  
+  .card button:hover{
+    background-color: white;
+    color:black;
+  }
+  
