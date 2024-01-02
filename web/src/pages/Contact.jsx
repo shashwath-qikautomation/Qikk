@@ -5,7 +5,8 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
+import Buttons from "../components/Button";
+
 
 function Contact() {
   const h2 = {
@@ -20,26 +21,11 @@ function Contact() {
     fontSize: "27px",
     fontWeight: "600",
     marginBottom: "20px",
-  };
-
-  const button = {
-    background: "#fff",
-    color: "#ff5c97 !important",
-    display: "inline-block",
-    padding: "18px 44px",
-    fontFamily: '"Poppins",sans-serif',
-    fontSize: "14px",
-    fontWeight: "400",
-    border: "0",
-    border: "1px solid #ff5c97",
-    letterSpacing: "3px",
-    textAlign: "center",
-    color: "#ff5c97",
-    textTransform: "uppercase",
-    cursor: "pointer",
+    float:"left"
   };
 
   return (
+    <Container>
     <div className="pt-5 mt-5">
       <div className="header">
         <Container>
@@ -104,24 +90,23 @@ function Contact() {
               </Form.Group>
               <Row>
                 <Col>
-                  <Button
+                  <Buttons
                     className="btn"
                     variant="outline-Primary"
-                    style={{
-                      border: "1px solid rgb(216, 34, 170)",
-                      float: "left",
-                    }}
+                    name="SEND"
+                    height="35px"
+                     width="105px" 
+                     color='blue'
                   >
-                    SEND
-                  </Button>
+                  </Buttons>
                 </Col>
               </Row>
             </Col>
             <Col sm={12} md={4} lg={4} className="mb-4 ml-1">
-              <Card className="shadow-lg p-4 mb-5 bg-white rounded">
+              <Card className=" p-4 mb-5 bg-white rounded">
                 <Card.Body>
                   <Row>
-                    {/* <i class="fa-solid fa-house"></i> */}
+                  
                     <Card.Text>
                       {" "}
                       <p>
@@ -132,7 +117,7 @@ function Contact() {
                   </Row>
                   <br />
                   <Row>
-                    {/* <FontAwesomeIcon icon="fa-solid fa-mobile-screen-button" /> */}
+                    
                     <Card.Text>
                       <p>
                         <b>+1 253 565 2365</b>
@@ -142,7 +127,7 @@ function Contact() {
                   </Row>
                   <br />
                   <Row>
-                    {/* <i class="fa-light fa-envelope"></i> */}
+                    
                     <Card.Text>
                       <p>
                         {" "}
@@ -158,6 +143,7 @@ function Contact() {
         </Container>
       </div>
     </div>
+    </Container>
   );
 }
 export default Contact;
