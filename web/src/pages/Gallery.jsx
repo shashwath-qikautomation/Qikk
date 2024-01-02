@@ -117,25 +117,27 @@ function Gallery() {
       <div>
         {data.fullView && (
           <div
-            className="mt-5 d-flex flex-row justify-content-center"
+            className="mt-5"
             style={{
-              width: "60%",
-              height: "60%",
+              width: "100%",
+              height: "100%",
               backgroundColor: "rgba(0,0,0,0.8)",
               position: "fixed",
-              zIndex: 100,
-              top: "30%",
-              right: "25%",
-              left: "24%",
+              zIndex: "100",
+              top: "0",
+              left: "0",
+              objectFit: "cover",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
             }}
           >
             <button
               style={{
                 position: "absolute",
-                top: "5px",
-                right: "20px",
-                backgroundColor: "grey",
-                color: "white",
+                top: "4px",
+                right: "3px",
+                color: "black",
                 fontSize: "15px",
                 zIndex: "100",
                 cursor: "pointer",
@@ -149,19 +151,25 @@ function Gallery() {
             <SlArrowLeft
               onClick={() => imgAction("previous-img")}
               className="text-white fs-3"
+              style={{
+                position: "absolute",
+                top: "50%",
+                left: "20px",
+                cursor: "pointer",
+              }}
             />
 
             <img
               src={data.img.src}
               style={{
                 position: "absolute",
-                maxWidth: "80%",
-                maxHeight: "80%",
+                maxWidth: "90%",
+                maxHeight: "90%",
                 display: "block",
                 objectFit: "contain",
-                top: "10%",
-                left: "30%",
-                transform: "transaate(-50%, -50%)",
+                top: "5%",
+                left: "25%",
+                transform: "transaate(-10%, -25%)",
                 border: "3px solid #fff",
               }}
               alt={data.img.category}
@@ -169,6 +177,12 @@ function Gallery() {
             <SlArrowRight
               onClick={() => imgAction("next-img")}
               className="text-white fs-3"
+              style={{
+                position: "absolute",
+                top: "50%",
+                right: "20px",
+                cursor: "pointer",
+              }}
             />
           </div>
         )}
