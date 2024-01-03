@@ -43,7 +43,7 @@ const Footer = () => {
               </p>
             </Col>
           </div>
-          <div style={{ paddingLeft: "50px" }} className="col-md-3 col-sm-6">
+          <div className="col-md-3 col-sm-6">
             <Col className="text-start">
               <h1 className="fs-6 pb-3 text-black">Popular Link</h1>
               <Nav.Link className="pb-2" href={routes.about}>
@@ -63,7 +63,7 @@ const Footer = () => {
               </Nav.Link>
             </Col>
           </div>
-          <div style={{ paddingRight: "50px" }} className="col-md-3 col-sm-6">
+          <div className="col-md-3 col-sm-6">
             <Col className="text-start">
               <h1 className="fs-6 pb-3 text-black">Gallery</h1>
             </Col>

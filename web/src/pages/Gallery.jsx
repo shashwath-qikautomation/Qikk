@@ -1,41 +1,53 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import rackImg1 from "../assets/images/rackImg1.svg";
-import rackImg2 from "../assets/images/rackImg2.svg";
-import rackImg3 from "../assets/images/rackImg3.svg";
-import rackImg4 from "../assets/images/rackImg4.svg";
-import conveyorImg1 from "../assets/images/conveyorImg1.svg";
-import conveyorImg2 from "../assets/images/conveyorImg2.svg";
-import conveyorImg3 from "../assets/images/conveyorImg3.svg";
-import conveyorImg4 from "../assets/images/conveyorImg4.svg";
-import companyImg1 from "../assets/images/companyImg1.svg";
-import companyImg2 from "../assets/images/companyImg2.svg";
-import companyImg3 from "../assets/images/companyImg3.svg";
-import companyImg4 from "../assets/images/companyImg4.svg";
+import rackImg1 from "../assets/images/rackImg.jpg";
+import rackImg2 from "../assets/images/reelRackImg.jpg";
+import conveyorImg1 from "../assets/images/conveyorImg1.jpg";
+import conveyorImg2 from "../assets/images/conveyorImg2.jpg";
+import conveyorImg3 from "../assets/images/conveyorImg3.jpg";
+import conveyorImg4 from "../assets/images/conveyorImg4.jpg";
+import conveyorImg5 from "../assets/images/conveyorImg5.jpg";
+import conveyorImg6 from "../assets/images/conveyorImg6.jpg";
+import conveyorImg7 from "../assets/images/conveyorImg7.jpg";
+import companyImg1 from "../assets/images/companyImg1.jpg";
+import companyImg2 from "../assets/images/companyImg2.jpg";
+import companyImg3 from "../assets/images/companyImg3.jpg";
+import companyImg4 from "../assets/images/companyImg4.jpg";
 import Buttons from "../components/Button";
 import { useState } from "react";
 import "../styles/Gallery.css";
 import { SlArrowLeft } from "react-icons/sl";
 import { SlArrowRight } from "react-icons/sl";
 import Image from "react-bootstrap/Image";
+import { FaClone } from "react-icons/fa";
+import { FiPlus } from "react-icons/fi";
 
 const allImages = [
+  { src: companyImg1, category: "Company" },
   { src: rackImg1, category: "Rack" },
   { src: rackImg2, category: "Rack" },
-  { src: rackImg3, category: "Rack" },
-  { src: rackImg4, category: "Rack" },
   { src: conveyorImg1, category: "Conveyor" },
+  { src: companyImg2, category: "Company" },
   { src: conveyorImg2, category: "Conveyor" },
+  { src: companyImg3, category: "Company" },
   { src: conveyorImg3, category: "Conveyor" },
   { src: conveyorImg4, category: "Conveyor" },
-  { src: companyImg1, category: "Company" },
-  { src: companyImg2, category: "Company" },
-  { src: companyImg3, category: "Company" },
+  { src: conveyorImg5, category: "Conveyor" },
+  { src: conveyorImg6, category: "Conveyor" },
+  { src: conveyorImg7, category: "Conveyor" },
   { src: companyImg4, category: "Company" },
 ];
 
 function Gallery() {
   const [data, setData] = useState({ img: "", i: 0, fullView: false });
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const handleHover = (index) => {
+    setHoveredIndex(index);
+  };
+
+  const handleLeave = () => {
+    setHoveredIndex(null);
+  };
 
   const viewImage = (img, i) => {
     setData({ img, i, fullView: true });
@@ -62,7 +74,7 @@ function Gallery() {
 
   return (
     <Container className="pt-5 pb-5 mt-5">
-      <Row className="mb-5 p-2 mt-5">
+      <Row className="mb-2 p-2 mt-5">
         <Col xs={12}>
           <h1 className="text-primary fs-5 fw-bold animate__animated animate__fadeInUp">
             Our Projects
@@ -114,6 +126,7 @@ function Gallery() {
           </div>
         </Col>
       </Row>
+
       <div>
         {data.fullView && (
           <div
@@ -169,7 +182,7 @@ function Gallery() {
                 objectFit: "contain",
                 top: "5%",
                 left: "25%",
-                transform: "transaate(-10%, -25%)",
+                transform: "translate(-10%, -25%)",
                 border: "3px solid #fff",
               }}
               alt={data.img.category}
@@ -190,19 +203,36 @@ function Gallery() {
 
       <Row>
         {filteredImages.map((image, index) => (
-          <Col key={index} xs={12} sm={6} md={4} lg={3} className="mb-4">
-            <div className="gallery-image-col animate__animated animate__fadeInUp">
+          <Col key={index} xs={12} sm={12} md={4} lg={4} className="mb-4">
+            <div
+              className={`gallery-image-col animate__animated animate__fadeInUp ${
+                hoveredIndex === index ? "hovered" : ""
+              }`}
+              onMouseEnter={() => handleHover(index)}
+              onMouseLeave={handleLeave}
+            >
               <Image
                 key={index}
                 src={image.src}
                 style={{
                   height: "100%",
                   width: "100%",
-                  cursor: "pointer",
+                  objectFit: "cover",
+                  maxWidth: "100%",
+                  maxHeight: "100%",
                 }}
-                alt={image.category}
                 onClick={() => viewImage(image, index)}
               />
+              {hoveredIndex === index && (
+                <div className="hover-content">
+                  <h1>
+                    <FaClone style={{ marginRight: "5px" }} />
+                    {image.category}
+                  </h1>
+
+                  <FiPlus className="plus-Icon" />
+                </div>
+              )}
             </div>
           </Col>
         ))}

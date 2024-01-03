@@ -22,6 +22,7 @@ import { FaAward } from "react-icons/fa";
 import Tooltip from "react-bootstrap/Tooltip";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 
+
 function About() {
   const navigate = useNavigate();
   const [modalShow, setModalShow] = React.useState(false);
@@ -68,7 +69,7 @@ function About() {
               </p>
               <Buttons
                 name={"Contact Us"}
-                btnClick={handleNavigateToContactUs}
+                onClick={handleNavigateToContactUs}
               />
             </Col>
           </Row>
@@ -118,7 +119,7 @@ function About() {
                       </p>
                       <Buttons
                         variant="primary"
-                        btnClick={() => setModalShow(true)}
+                        onClick={() => setModalShow(true)}
                         name={"Read More"}
                       ></Buttons>
                     </Card.Text>
