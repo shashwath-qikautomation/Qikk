@@ -6,30 +6,16 @@ import Navbar from "react-bootstrap/Navbar";
 import logoW from "../assets/logoW.png";
 import { routes } from "../helper/routes";
 //import "../styles/NavBar.css";
+import Fade from "react-reveal/Fade";
+import { useNavigate } from "react-router-dom";
 
 function NavBar() {
+  const navigate = useNavigate();
+  const navigateRouteTo = (path) => {
+    console.log(path);
+    navigate(path);
+  };
   //"me-auto p-5"
-  const [scrolled, setScrolled] = useState(false);
-
-  const handleScroll = () => {
-    if (window.scrollY > 50) {
-      setScrolled(true);
-    } else {
-      setScrolled(false);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  const styled = {
-    boxShadow: "0px 2px 15px rgba(0, 0, 0, 0.1)",
-    padding: "12px 0",
-  };
 
   return (
     <Navbar expand="lg" className="bg-body-tertiary fixed-top">
@@ -40,14 +26,48 @@ function NavBar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mx-auto gap-4 p-4">
-            <Nav.Link className="nav-link" href={routes.homePage}>
+            <Nav.Link
+              className="nav-link d-flex justify-content-start"
+              onClick={() => navigateRouteTo(routes.homePage)}
+              // href={routes.homePage}
+            >
               Home
             </Nav.Link>
-            <Nav.Link href={routes.about}>About Us</Nav.Link>
-            <Nav.Link href={routes.blog}>Blog</Nav.Link>
-            <Nav.Link href={routes.product}>Products & Services</Nav.Link>
-            <Nav.Link href={routes.gallery}>Gallery</Nav.Link>
-            <Nav.Link href={routes.contact}>Contact</Nav.Link>
+            <Nav.Link
+              className="nav-link d-flex justify-content-start"
+              // href={routes.about}
+              onClick={() => navigateRouteTo(routes.about)}
+            >
+              About Us
+            </Nav.Link>
+            <Nav.Link
+              className="nav-link d-flex justify-content-start"
+              // href={routes.blog}
+              onClick={() => navigateRouteTo(routes.blog)}
+            >
+              Blog
+            </Nav.Link>
+            <Nav.Link
+              className="nav-link d-flex justify-content-start"
+              // href={routes.product}
+              onClick={() => navigateRouteTo(routes.product)}
+            >
+              Products & Services
+            </Nav.Link>
+            <Nav.Link
+              className="nav-link d-flex justify-content-start"
+              // href={routes.gallery}
+              onClick={() => navigateRouteTo(routes.gallery)}
+            >
+              Gallery
+            </Nav.Link>
+            <Nav.Link
+              className="nav-link d-flex justify-content-start"
+              // href={routes.contact}
+              onClick={() => navigateRouteTo(routes.contact)}
+            >
+              Contact
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

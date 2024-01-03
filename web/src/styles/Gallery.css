@@ -1,44 +1,54 @@
 .gallery-image-col {
-    position: relative;
-    overflow: hidden;
-    
-    
-    
+  position: relative;
+  overflow: hidden;
 }
-  .gallery-image-col:hover img {
-    transform: scale(1.1); 
-    transition: transform 0.3s ease-in-out;
-    
-  }
-  .gallery-image-col:hover::after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(187, 28, 28, 0.3); 
-    pointer-events: none;
-  }
-  .button-style {
+
+.gallery-image-col img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.gallery-image-col:hover img {
+  transform: scale(1.1);
+ 
+}
+
+.hovered .hover-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color:rgba(0,0,0,0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  text-align: start;
+  
+  
+}
+
+.hover-content h1 {
+  margin: 10px;
+ color: #fff;
+  font-size: 20px;
+  text-align: start;
+}
+.plus-Icon {
+  margin: 10px;
+  color: #fff;
+  font-size: 30px;
+  text-align: start;
+}
+
+.button-style {
     width: 80px;
     height: 40px;
     font-size: 15px;
-  }
-  /* .imageArray{
-    display: grid;
-    gap: 20px;
-    grid-template-areas: 
-    "imageOne imageTwo imageThree"
-    "imageOne imageFour imageFive";
-    grid-template-columns: 1fr 20% 20%;
-  }
-  .imageArray > div {
-    border: 2px solid black;
-  } 
-.imageArray > div  :first-child{
-    grid-area: imageOne;
-    height: 300px;
     
-} 
-   */
-  
+    
+  }
+  .button-style:focus{
+    background-color:#3498db;
+  }
+ 
