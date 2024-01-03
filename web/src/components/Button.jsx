@@ -3,7 +3,7 @@ import "../styles/Button.css";
 
 const Buttons = ({ width, height, name, onClick, color }) => {
   return (
-    <button className="button-style" onClick={onClick}>
+    <button style={{ width: width }} className="button-style" onClick={onClick}>
       {name}
     </button>
   );

@@ -11,7 +11,7 @@ const Footer = () => {
     <div
       style={{
         backgroundColor: "#efefef",
-        color: "#3e4643",
+        color: "#1c1a1a",
         fontWeight: 300,
         fontSize: "14px",
         opacity: 1,

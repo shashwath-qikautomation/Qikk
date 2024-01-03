@@ -24,10 +24,10 @@ function Contact() {
       <div className="pt-5 mt-5">
         <div className="header">
           <Container>
-            <Row className="d-flex justify-content-center mt-5 animate__animated animate__fadeInUp">
-              <Col lg={8} className="d-flex justify-content-center">
+            <Row className="d-flex justify-content-center animate__animated animate__fadeInUp">
+              <Col lg={8}>
                 <div>
-                  <h2 style={{ fontWeight: "900" }}>Contact Us</h2>
+                  <h2>Contact Us</h2>
                 </div>
               </Col>
             </Row>
@@ -37,7 +37,7 @@ function Contact() {
           <Container fluid>
             <Row>
               <Col lg={12} sm={12} md={12}>
-                <h3 className="contact-title mt-5" style={contactTitle}>
+                <h3 className="contact-title" style={contactTitle}>
                   Get in touch
                 </h3>
               </Col>
@@ -91,18 +91,6 @@ function Contact() {
                     </Col>
                   </Row>
                 </Form.Group>
-                <Row>
-                  <Col>
-                    <Buttons
-                      className="btn"
-                      variant="outline-Primary"
-                      name="SEND"
-                      height="35px"
-                      width="105px"
-                      color="blue"
-                    ></Buttons>
-                  </Col>
-                </Row>
               </Col>
               <Col sm={12} md={4} lg={4} className="mb-4 ml-1">
                 <Card className=" p-4 mb-5 bg-white rounded">
