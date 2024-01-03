@@ -44,7 +44,9 @@ function Gallery() {
   const handleHover = (index) => {
     setHoveredIndex(index);
   };
-
+  const width = {
+    width: "80px",
+  };
   const handleLeave = () => {
     setHoveredIndex(null);
   };
@@ -73,8 +75,8 @@ function Gallery() {
       : allImages.filter((img) => img.category === filter);
 
   return (
-    <Container className="pt-5 pb-5 mt-5">
-      <Row className="mb-2 p-2 mt-5">
+    <Container className="pt-4 pb-4 mt-4">
+      <Row className="mb-2 pt-4 mt-5">
         <Col xs={12}>
           <h1 className="text-primary fs-5 fw-bold animate__animated animate__fadeInUp">
             Our Projects
@@ -96,6 +98,7 @@ function Gallery() {
             <div className="m-1">
               <Buttons
                 className="button-style"
+                width={width.width}
                 name="All"
                 onClick={() => setFilter("All")}
               />
@@ -103,6 +106,7 @@ function Gallery() {
             <div className="m-1">
               <Buttons
                 className="button-style"
+                width={width.width}
                 name="Rack"
                 onClick={() => setFilter("Rack")}
               />
@@ -112,6 +116,7 @@ function Gallery() {
               <Buttons
                 className="button-style"
                 name="Conveyor"
+                width={width.width}
                 onClick={() => setFilter("Conveyor")}
               />
             </div>
@@ -120,6 +125,7 @@ function Gallery() {
               <Buttons
                 className="button-style"
                 name="Company"
+                width={width.width}
                 onClick={() => setFilter("Company")}
               />
             </div>

@@ -3,11 +3,11 @@
   overflow: hidden;
 }
 
-.gallery-image-col img {
+.gallery-image-col Image {
   transition: transform 0.3s ease-in-out;
 }
 
-.gallery-image-col:hover img {
+.gallery-image-col:hover Image {
   transform: scale(1.1);
  
 }
@@ -42,7 +42,7 @@
 }
 
 .button-style {
-    width: 80px;
+    
     height: 40px;
     font-size: 15px;
     
@@ -51,21 +51,4 @@
   .button-style:focus{
     background-color:#3498db;
   }
-  /* .imageArray{
-    display: grid;
-    gap: 20px;
-    grid-template-areas: 
-    "imageOne imageTwo imageThree"
-    "imageOne imageFour imageFive";
-    grid-template-columns: 1fr 20% 20%;
-  }
-  .imageArray > div {
-    border: 2px solid black;
-  } 
-.imageArray > div  :first-child{
-    grid-area: imageOne;
-    height: 300px;
-    
-} 
-   */
-  
+ 
