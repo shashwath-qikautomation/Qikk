@@ -12,14 +12,7 @@ import { IoHome } from "react-icons/io5";
 import "animate.css";
 
 function Contact() {
-  const h2 = {
-    color: "#2b4b80",
-    fontSize: "50px",
-    fontWeight: "700",
-    marginBottom: "66px",
-    lineHeight: "1.3",
-  };
-
+  
   const contactTitle = {
     fontSize: "27px",
     fontWeight: "600",
@@ -29,76 +22,73 @@ function Contact() {
 
   return (
     <Container>
-      <div className="pt-5 mt-5">
-        <div className="header">
-          <Container>
-            <Row className="d-flex justify-content-center animate__animated animate__fadeInUp">
-              <Col lg={8}>
-                <div>
-                  <h2 style={h2}>Contact Us</h2>
-                </div>
-              </Col>
-            </Row>
-          </Container>
-        </div>
-        <div className="contact-section animate__animated animate__fadeInUp">
-          <Container fluid>
-            <Row>
-              <Col lg={12} sm={12} md={12}>
-                <h2 className="contact-title" style={contactTitle}>
-                  Get in touch
-                </h2>
-              </Col>
-            </Row>
-            <Row>
-              <Col lg={8} sm={12} md={8} className="mb-4">
-                <Form.Group
-                  className="mb-3"
-                  placeholder="Enter message"
-                  controlId="exampleForm.ControlTextarea1"
-                >
-                  <Row>
-                    <Col sm={12} lg={12} md={12}>
-                      <Form.Control
-                        as="textarea"
-                        className="mb-3"
-                        rows={5}
-                        placeholder="Enter Message"
-                      />
-                    </Col>
-                    <Col sm={12} lg={6} md={6}>
-                      <Form.Control
-                        className="mb-3"
-                        type="text"
-                        placeholder="Enter your name"
-                      />
-                    </Col>
-                    <Col sm={12} lg={6} md={6}>
-                      <Form.Control
-                        className="mb-3"
-                        type="text"
-                        placeholder="Enter your Email"
-                      />
-                    </Col>
-                    <Col sm={12} lg={12} md={12}>
-                      <Form.Control
-                        className="mb-3"
-                        type="text"
-                        placeholder="Enter Subject"
-                      />
-                    </Col>
-                  </Row>
-                </Form.Group>
+    <div className="pt-5 mt-5">
+      <div className="header">
+        <Container>
+          <Row className="d-flex justify-content-center animate__animated animate__fadeInUp">
+            <Col lg={8}>
+              <div>
+                <h2 >Contact Us</h2>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+      <div className="contact-section animate__animated animate__fadeInUp">
+        <Container fluid>
+          <Row>
+            <Col lg={12} sm={12} md={12}>
+              <h3 className="contact-title" style={contactTitle}>
+                Get in touch
+              </h3>
+            </Col>
+          </Row>
+          <Row>
+            <Col lg={8} sm={12} md={8} className="mb-4">
+              <Form.Group
+                className="mb-3"
+                placeholder="Enter message"
+                controlId="exampleForm.ControlTextarea1"
+              >
                 <Row>
-                  <Col>
-                    <Buttons
-                      className="btn"
-                      variant="outline-Primary"
-                      name="SEND"
-                      height="35px"
-                      width="105px"
-                      color="blue"
-                    ></Buttons>
+                  <Col sm={12} lg={12} md={12}>
+                    <Form.Control
+                      as="textarea"
+                      rows={5}
+                      className="mb-3"
+                      placeholder="Enter Message"
+                    />
+                  </Col>
+                </Row>
+                <Row>
+                  <Col sm={12} lg={6} md={6}>
+                    <Form.Control
+                      className="mb-3"
+                      type="text"
+                      placeholder="Enter your name"
+                    />
+                  </Col>
+                  <Col sm={12} lg={6} md={6}>
+                    <Form.Control
+                      className="mb-3"
+                      type="text"
+                      placeholder="Enter your Email"
+                    />
+                  </Col>
+                  <Col sm={12} lg={12} md={12} className="mb-3">
+                      <Form.Select aria-label="Default select example">
+                        <option style={{color:'gray'}}>Select Reason</option>
+                        <option value="1">Reason One</option>
+                        <option value="2">Reason Two</option>
+                        <option value="3">Reason Three</option>
+                      </Form.Select>
+                  </Col>
+                  <Col sm={12} lg={12} md={12}>
+                    <Form.Control
+                      className="mb-3"
+                      type="text"
+                      placeholder="Enter Subject"
+                    />
                   </Col>
                 </Row>
               </Col>

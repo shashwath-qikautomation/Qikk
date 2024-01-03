@@ -12,9 +12,6 @@ function MyModal(props) {
     >
       <Modal.Header closeButton>{props.title}</Modal.Header>
       <Modal.Body>{props.children}</Modal.Body>
-      <Modal.Footer>
-        <Button onClick={props.onHide}>Close</Button>
-      </Modal.Footer>
     </Modal>
   );
 }
