@@ -4,6 +4,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "animate.css";
+
 function Blog() {
   return (
     <Container className="pt-5 pb-5 mt-5">
