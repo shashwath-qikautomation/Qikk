@@ -37,7 +37,10 @@ function About() {
           <Row className="d-flex justify-content-center text-center">
             <Col lg={8}>
               <div>
-                <h2 style={{ fontSize: "50px" }} className="fw-bolder mb-3">
+                <h2
+                  style={{ fontSize: "50px" }}
+                  className="head fw-bolder mb-3"
+                >
                   About Us
                 </h2>
               </div>
@@ -68,7 +71,7 @@ function About() {
               </p>
               <Buttons
                 name={"Contact Us"}
-                btnClick={handleNavigateToContactUs}
+                onClick={handleNavigateToContactUs}
               />
             </Col>
           </Row>
@@ -84,7 +87,11 @@ function About() {
           <Row className="m-4 p-5">
             <Col md={6}>
               <Card className="border border-0 mb-5 bg-white rounded bg-dark text-black overflow-auto">
-                <Card.Img src={about1Svg} alt="Card image" />
+                <Card.Img
+                  src={about1Svg}
+                  alt="Card image"
+                  style={{ height: "23rem" }}
+                />
                 <Card.ImgOverlay>
                   <div className="hoover rounded  p-2 bottom-0 ">
                     <Card.Title>
@@ -105,7 +112,11 @@ function About() {
             </Col>
             <Col md={6}>
               <Card className="border border-0  mb-5 bg-white rounded text-black d-flex justify-content-evenl overflow-auto">
-                <Card.Img src={homeSvg} alt="Card image" />
+                <Card.Img
+                  src={homeSvg}
+                  alt="Card image"
+                  style={{ height: "23rem" }}
+                />
                 <Card.ImgOverlay>
                   <div className="hoover rounded p-2 bottom-0 ">
                     <Card.Title>
@@ -118,7 +129,7 @@ function About() {
                       </p>
                       <Buttons
                         variant="primary"
-                        btnClick={() => setModalShow(true)}
+                        onClick={() => setModalShow(true)}
                         name={"Read More"}
                       ></Buttons>
                     </Card.Text>
@@ -223,7 +234,7 @@ function About() {
           <div className="hoverIcon">
             <span>
               <OverlayTrigger
-                delay={{ hide: 450, show: 300 }}
+                delay={{ hide: 600, show: 300 }}
                 overlay={(props) => (
                   <Tooltip {...props}>
                     <div>CYIENT DLM</div>
@@ -244,7 +255,7 @@ function About() {
           <div className="hoverIcon">
             <span>
               <OverlayTrigger
-                delay={{ hide: 450, show: 300 }}
+                delay={{ hide: 600, show: 300 }}
                 overlay={(props) => (
                   <Tooltip {...props}>
                     <div>Tycoon Innovative Technology</div>
@@ -264,7 +275,7 @@ function About() {
           <div className="hoverIcon">
             <span>
               <OverlayTrigger
-                delay={{ hide: 450, show: 300 }}
+                delay={{ hide: 600, show: 300 }}
                 overlay={(props) => (
                   <Tooltip {...props}>
                     <div>Frontline Electronics Ltd.</div>
@@ -287,7 +298,7 @@ function About() {
           <div className="hoverIcon">
             <span>
               <OverlayTrigger
-                delay={{ hide: 450, show: 300 }}
+                delay={{ hide: 600, show: 300 }}
                 overlay={(props) => (
                   <Tooltip {...props}>
                     <div>Vinyas Innovative Technologies Ltd.</div>
