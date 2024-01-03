@@ -13,9 +13,12 @@ function Article() {
   const navigate = useNavigate();
 
   const onClick = () => navigate(routes.contact);
+  const width = {
+    width: "150px",
+  };
   //mb-5
   return (
-    <div>
+    <div style={{ marginBottom: "100px" }}>
       <Row xs={1} md={2} className="md-2 p-5">
         <Col className="pt-2">
           <Fade left duration="1500">
@@ -42,7 +45,7 @@ function Article() {
             </p>
             <Button
               color={"pink"}
-              width={"150px"}
+              width={width.width}
               height={"40px"}
               name={"Contact Us"}
               onClick={onClick}
@@ -70,7 +73,7 @@ function Article() {
               type and scrambled it to make a type specimen book.
             </p>
           </Col>
-          <Col className="card-hover shadow-lg p-4 bg-white rounded">
+          <Col className="card-hover shadow p-4 bg-white rounded">
             <h1 className="fs-3">Content marketing</h1>
             <p className="p">
               Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -83,7 +86,7 @@ function Article() {
       </Fade>
       <Fade bottom duration="1400">
         <Row className="gap-4 p-5">
-          <Col className="card-hover shadow-lg p-4 bg-white rounded">
+          <Col className="card-hover shadow p-4 bg-white rounded">
             <h1 className="fs-3">Link building</h1>
             <p className="p">
               Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -92,7 +95,7 @@ function Article() {
               type and scrambled it to make a type specimen book.
             </p>
           </Col>
-          <Col className="card-hover shadow-lg p-4 bg-white rounded">
+          <Col className="card-hover shadow p-4 bg-white rounded">
             <h1 className="fs-3">Content marketing</h1>
             <p className="p">
               Lorem Ipsum is simply dummy text of the printing and typesetting
