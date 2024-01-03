@@ -67,12 +67,21 @@ const handleDownloadPdf = () => {
                     </Col>
             </Row>
 
-            <Row  className='mt-5'>
-                <Col lg={12} sm={12} md={12} >
-                <p className='d-flex justify-content-start text-justify animate__animated animate__fadeInUp'>We are India's first smart factory solution provider in addressing the challenges of the electronics manufacturing industry particularly, in traceability, material handling and production execution. We offer end-to-end solutions and enable electronic manufacturers to significantly improve their overall productivity, production efficiency and help our clients to elevate their journey of automation. We carry the pride of our Solutions to be of high Quality, 
-                Intelligent and Creative along with an exclusive alignment to Industry 4.0.</p>
-                </Col>
-            </Row>
+        <Row className="mt-5">
+          <Col lg={12} sm={12} md={12}>
+            <p className="d-flex justify-content-start text-justify animate__animated animate__fadeInUp">
+              We are India's first smart factory solution provider in addressing
+              the challenges of the electronics manufacturing industry
+              particularly, in traceability, material handling and production
+              execution. We offer end-to-end solutions and enable electronic
+              manufacturers to significantly improve their overall productivity,
+              production efficiency and help our clients to elevate their
+              journey of automation. We carry the pride of our Solutions to be
+              of high Quality, Intelligent and Creative along with an exclusive
+              alignment to Industry 4.0.
+            </p>
+          </Col>
+        </Row>
 
             <Row className='mt-4 animate__animated animate__fadeInUp'>
                 <Col lg={12} sm={12} md={12}>
@@ -165,3 +174,4 @@ const handleDownloadPdf = () => {
  }
  
 export default Product
+

@@ -9,7 +9,7 @@ import Buttons from "../components/Button";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { IoHome } from "react-icons/io5";
-import 'animate.css';
+import "animate.css";
 
 function Contact() {
   
@@ -17,7 +17,7 @@ function Contact() {
     fontSize: "27px",
     fontWeight: "600",
     marginBottom: "20px",
-    float:"left"
+    float: "left",
   };
 
   return (
@@ -91,62 +91,51 @@ function Contact() {
                     />
                   </Col>
                 </Row>
-              </Form.Group>
-              <Row>
-                <Col>
-                  <Buttons
-                    className="btn"
-                    variant="outline-Primary"
-                    name="SEND"
-                    height="35px"
-                     width="105px" 
-                     color='blue'
-                  >
-                  </Buttons>
-                </Col>
-              </Row>
-            </Col>
-            <Col sm={12} md={4} lg={4} className="mb-4 ml-1">
-              <Card className=" p-4 mb-5 bg-white rounded">
-                <Card.Body>
-                  <Row>
-                  
-                    <Card.Text>
-                      {" "}
-                      <p>
-                        <b><IoHome /> &emsp; Koorgalli, Mysore.</b>
-                      </p>
-                      &emsp; &emsp;Karnataka,-570018{" "}
-                    </Card.Text>
-                  </Row>
-                  <br />
-                  <Row>
-                    
-                    <Card.Text>
-                      <p>
-                        <b><FaPhoneAlt /> &emsp; +91 8277995300</b>
-                      </p>
-                      &emsp;&emsp;Mon to Fri 9am to 6pm
-                    </Card.Text>
-                  </Row>
-                  <br />
-                  <Row>
-                    
-                    <Card.Text>
-                      <p>
+              </Col>
+              <Col sm={12} md={4} lg={4} className="mb-4 ml-1">
+                <Card className=" p-4 mb-5 bg-white rounded">
+                  <Card.Body>
+                    <Row>
+                      <Card.Text>
                         {" "}
-                        <b><IoMdMail /> &emsp; info@rexsatronix.com</b>{" "}
-                      </p>
-                      &emsp;&emsp; Send us your query anytime!
-                    </Card.Text>
-                  </Row>
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
-        </Container>
+                        <p>
+                          <b>
+                            <IoHome /> &emsp; Koorgalli, Mysore.
+                          </b>
+                        </p>
+                        &emsp; &emsp;Karnataka,-570018{" "}
+                      </Card.Text>
+                    </Row>
+                    <br />
+                    <Row>
+                      <Card.Text>
+                        <p>
+                          <b>
+                            <FaPhoneAlt /> &emsp; +91 8277995300
+                          </b>
+                        </p>
+                        &emsp;&emsp;Mon to Fri 9am to 6pm
+                      </Card.Text>
+                    </Row>
+                    <br />
+                    <Row>
+                      <Card.Text>
+                        <p>
+                          {" "}
+                          <b>
+                            <IoMdMail /> &emsp; info@rexsatronix.com
+                          </b>{" "}
+                        </p>
+                        &emsp;&emsp; Send us your query anytime!
+                      </Card.Text>
+                    </Row>
+                  </Card.Body>
+                </Card>
+              </Col>
+            </Row>
+          </Container>
+        </div>
       </div>
-    </div>
     </Container>
   );
 }
