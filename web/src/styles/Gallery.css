@@ -51,21 +51,4 @@
   .button-style:focus{
     background-color:#3498db;
   }
-  /* .imageArray{
-    display: grid;
-    gap: 20px;
-    grid-template-areas: 
-    "imageOne imageTwo imageThree"
-    "imageOne imageFour imageFive";
-    grid-template-columns: 1fr 20% 20%;
-  }
-  .imageArray > div {
-    border: 2px solid black;
-  } 
-.imageArray > div  :first-child{
-    grid-area: imageOne;
-    height: 300px;
-    
-} 
-   */
-  
+ 

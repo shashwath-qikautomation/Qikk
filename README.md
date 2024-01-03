@@ -1,2 +1,0 @@
-# Qikk
-Qikk website
