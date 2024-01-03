@@ -14,11 +14,13 @@ import CardText from "react-bootstrap/esm/CardText";
 import MyModal from "../components/Model.jsx";
 import creativeSvg from "../assets/images/Creative.svg";
 import intelliganceSvg from "../assets/images/Intelligance2.svg";
-import qualitySvg from "../assets/images/Quality2.svg";
 import CyientLogo from "../assets/clientsLogo/CyientDLM.png";
 import TycoonLogo from "../assets/clientsLogo/Tycoon.png";
 import frontlineLogo from "../assets/clientsLogo/frontline.jpg";
 import vinyasLogo from "../assets/clientsLogo/vinyas.jpg";
+import { FaAward } from "react-icons/fa";
+import Tooltip from "react-bootstrap/Tooltip";
+import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 
 function About() {
   const navigate = useNavigate();
@@ -29,16 +31,27 @@ function About() {
     navigate(routes.contact);
   };
   return (
-    <div style={{ position: "relative", top: "50px" }}>
+    <div style={{ position: "relative", top: "110px" }}>
       <Container className="position-relative">
+        <div className="header">
+          <Row className="d-flex justify-content-center text-center">
+            <Col lg={8}>
+              <div>
+                <h2 style={{ fontSize: "50px" }} className="fw-bolder mb-3">
+                  About Us
+                </h2>
+              </div>
+            </Col>
+          </Row>
+        </div>
         <div>
-          <Row className="p-5">
-            <Col md={4}>
-              <img style={{ width: "400px" }} src={aboutSvg} />
+          <Row className="mt-1 gap-1 p-5">
+            <Col md={4} className="text-start">
+              <img src={aboutSvg} />
             </Col>
             <Col></Col>
             <Col md={7} className="text-start">
-              <h1 style={{ fontSize: "50px" }} className="fw-bolder mb-3">
+              <h1 style={{ fontSize: "35px" }} className="fw-bolder mb-3">
                 We Collect High Quality Leads
               </h1>
               <p className="pt-2">
@@ -73,7 +86,7 @@ function About() {
               <Card className="border border-0 mb-5 bg-white rounded bg-dark text-black overflow-auto">
                 <Card.Img src={about1Svg} alt="Card image" />
                 <Card.ImgOverlay>
-                  <div className="hoover rounded  p-2 m-3 position-absolute bottom-0 ">
+                  <div className="hoover rounded  p-2 bottom-0 ">
                     <Card.Title>
                       <h5>Mission</h5>
                     </Card.Title>
@@ -91,10 +104,10 @@ function About() {
               </Card>
             </Col>
             <Col md={6}>
-              <Card className="border border-0  mb-5 bg-white rounded bg-dark text-black overflow-auto">
+              <Card className="border border-0  mb-5 bg-white rounded text-black d-flex justify-content-evenl overflow-auto">
                 <Card.Img src={homeSvg} alt="Card image" />
                 <Card.ImgOverlay>
-                  <div className="hoover rounded p-2 m-3 position-absolute bottom-0 ">
+                  <div className="hoover rounded p-2 bottom-0 ">
                     <Card.Title>
                       <h5>Future Outlook</h5>
                     </Card.Title>
@@ -141,21 +154,18 @@ function About() {
         </div>
         <Row>
           <div className="p5">
-            <h2 style={{ fontSize: "40px" }} className="fs-2 mt-4 fw-bolder">
+            <h1 style={{ fontSize: "40px" }} className="fs-2 mt-4 fw-bolder">
               Dedicated to revolutionizing the electronic manufacturing
               industry.
-            </h2>
+            </h1>
           </div>
         </Row>
         <Row className="p-5">
           <Col md={4} className="text-center">
             <Card className="qik border border-0">
-              <Card.Img
-                style={{ height: "200px" }}
-                variant="top"
-                src={qualitySvg}
-                rounded
-              />
+              <Card.Header className="border border-0">
+                <FaAward size={"200px"} />
+              </Card.Header>
               <Card.Body>
                 <Card.Title>
                   <h5>Quality</h5>
@@ -206,28 +216,91 @@ function About() {
         </Row>
       </Container>
       <Row
-        style={{ marginBottom: "80px" }}
-        className="d-flex justify-content-evenly p-3 bg-body-secondary"
+        style={{ marginBottom: "150px", backgroundColor: "#E9FDFD" }}
+        className="d-flex justify-content-evenly p-3 "
       >
         <Col md={2}>
           <div className="hoverIcon">
-            <img style={{ height: "70px" }} src={CyientLogo} />
+            <span>
+              <OverlayTrigger
+                delay={{ hide: 450, show: 300 }}
+                overlay={(props) => (
+                  <Tooltip {...props}>
+                    <div>CYIENT DLM</div>
+                    <a href="https://www.cyientdlm.com/" target="blank">
+                      cyientdlm.com
+                    </a>
+                  </Tooltip>
+                )}
+                placement="top"
+              >
+                <img style={{ height: "70px" }} src={CyientLogo} />
+              </OverlayTrigger>
+            </span>
           </div>
         </Col>
 
         <Col md={2}>
           <div className="hoverIcon">
-            <img style={{ height: "70px" }} src={TycoonLogo} />
+            <span>
+              <OverlayTrigger
+                delay={{ hide: 450, show: 300 }}
+                overlay={(props) => (
+                  <Tooltip {...props}>
+                    <div>Tycoon Innovative Technology</div>
+                    <a href="https://tycoonit.in/" target="blank">
+                      tycoonit.in
+                    </a>
+                  </Tooltip>
+                )}
+                placement="top"
+              >
+                <img style={{ height: "70px" }} src={TycoonLogo} />
+              </OverlayTrigger>
+            </span>
           </div>
         </Col>
         <Col md={2}>
           <div className="hoverIcon">
-            <img style={{ height: "70px" }} src={frontlineLogo} />
+            <span>
+              <OverlayTrigger
+                delay={{ hide: 450, show: 300 }}
+                overlay={(props) => (
+                  <Tooltip {...props}>
+                    <div>Frontline Electronics Ltd.</div>
+                    <a
+                      href="http://www.frontlineelectronics.com/"
+                      target="blank"
+                    >
+                      frontlineelectronics.com
+                    </a>
+                  </Tooltip>
+                )}
+                placement="top"
+              >
+                <img style={{ height: "70px" }} src={frontlineLogo} />
+              </OverlayTrigger>
+            </span>
           </div>
         </Col>
         <Col md={2}>
           <div className="hoverIcon">
-            <img style={{ height: "70px" }} src={vinyasLogo} />
+            <span>
+              <OverlayTrigger
+                delay={{ hide: 450, show: 300 }}
+                overlay={(props) => (
+                  <Tooltip {...props}>
+                    <div>Vinyas Innovative Technologies Ltd.</div>
+                    <a href="https://www.vinyasit.com/" target="blank">
+                      vinyasit.com
+                    </a>
+                  </Tooltip>
+                )}
+                placement="top"
+              >
+                <img style={{ height: "70px" }} src={vinyasLogo} />
+              </OverlayTrigger>
+            </span>
           </div>
         </Col>
       </Row>
