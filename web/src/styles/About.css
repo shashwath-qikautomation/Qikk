@@ -2,12 +2,16 @@
   background-color: #66a2d0;
   color: white;
 }
-
 .hoover {
   background-color: #DBDBDB;
+ margin-top:175px ;
+ position: static;
 }
 .qik:hover{
   background-color: #66a2d0;
+}
+.qik{
+  transition: 0.7s;
 }
 
 .hoverIcon img {

@@ -85,7 +85,7 @@ function Gallery() {
             Recently Launched Projects
           </p>
           <br />
-          <span className="d-flex justify-content-center">
+          <span className="fy-content-center">
             {" "}
             <hr className="text-dark w-75" />
           </span>
