@@ -14,7 +14,7 @@ function Blog() {
             Unlocking Automation for Electronic Manufacturing Services to
             Enhance Shop Floor Efficiency and Productivity
           </h1>
-          <p className="text-dark fs-6 text-start animate__animated animate__fadeInUp">
+          <p className="text-dark fs-6 text-start text-justify animate__animated animate__fadeInUp">
             In the rapidly evolving landscape of electronic manufacturing
             services (EMS), the integration of automation technologies has
             emerged as a transformative solution to significantly enhance shop
