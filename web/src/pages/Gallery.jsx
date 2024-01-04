@@ -21,6 +21,7 @@ import { SlArrowRight } from "react-icons/sl";
 import Image from "react-bootstrap/Image";
 import { FaClone } from "react-icons/fa";
 import { FiPlus } from "react-icons/fi";
+import Fade from "react-reveal/Fade";
 
 const allImages = [
   { src: companyImg1, category: "Company" },
@@ -57,14 +58,21 @@ function Gallery() {
 
   const imgAction = (action) => {
     setData((prevData) => {
-      let i = prevData.i;
-      if (action === "next-img" && i < allImages.length - 1) {
-        return { img: allImages[i + 1], i: i + 1, fullView: true };
+      const currentIndex = allImages.findIndex(
+        (img) => img.src === prevData.img.src
+      );
+      let newIndex;
+
+      if (action === "next-img" && currentIndex < allImages.length - 1) {
+        newIndex = currentIndex + 1;
+        console.log(newIndex);
+      } else if (action === "previous-img" && currentIndex > 0) {
+        newIndex = currentIndex - 1;
+      } else {
+        newIndex = 0;
       }
-      if (action === "previous-img" && i > 0) {
-        return { img: allImages[i - 1], i: i - 1, fullView: true };
-      }
-      return { img: "", i: 0, fullView: false };
+
+      return { img: allImages[newIndex].src, i: newIndex, fullView: true };
     });
   };
   const [filter, setFilter] = useState("All");
@@ -76,173 +84,136 @@ function Gallery() {
 
   return (
     <Container className="pt-4 pb-4 mt-4">
-      <Row className="mb-2 pt-4 mt-5">
-        <Col xs={12}>
-          <h1 className="text-primary fs-5 fw-bold animate__animated animate__fadeInUp">
-            Our Projects
-          </h1>
-          <p className="text-dark fs-4 fw-bold text-center animate__animated animate__fadeInUp">
-            Recently Launched Projects
-          </p>
-          <br />
-          <span className="fy-content-center">
-            {" "}
-            <hr className="text-dark w-75" />
-          </span>
-        </Col>
-      </Row>
+      <Fade bottom duration="1500">
+        <Row className="mb-2 pt-4 mt-5">
+          <Col xs={12}>
+            <h2 className="gallery-heading mb-5">Gallery</h2>
+            <h1 className="text-primary fs-5 fw-bold">Our Projects</h1>
+            <p className="text-dark fs-4 fw-bold text-center">
+              Recently Launched Projects
+            </p>
+            <br />
+            <span className="d-flex flex-row justify-content-center">
+              {" "}
+              <hr className="text-dark w-75" />
+            </span>
+          </Col>
+        </Row>
+      </Fade>
+      <Fade bottom duration="1500">
+        <Row>
+          <Col xs={12} className="mb-2">
+            <div className="d-flex flex-row justify-content-center mb-3">
+              <div className="m-1">
+                <Buttons
+                  className="button-style"
+                  width={width.width}
+                  name="All"
+                  onClick={() => setFilter("All")}
+                />
+              </div>
+              <div className="m-1">
+                <Buttons
+                  className="button-style"
+                  width={width.width}
+                  name="Rack"
+                  onClick={() => setFilter("Rack")}
+                />
+              </div>
 
-      <Row>
-        <Col xs={12} className="mb-2 animate__animated animate__fadeInUp">
-          <div className="d-flex flex-row justify-content-center mb-3">
-            <div className="m-1">
-              <Buttons
-                className="button-style"
-                width={width.width}
-                name="All"
-                onClick={() => setFilter("All")}
-              />
-            </div>
-            <div className="m-1">
-              <Buttons
-                className="button-style"
-                width={width.width}
-                name="Rack"
-                onClick={() => setFilter("Rack")}
-              />
-            </div>
+              <div className="m-1">
+                <Buttons
+                  className="button-style"
+                  name="Conveyor"
+                  width={width.width}
+                  onClick={() => setFilter("Conveyor")}
+                />
+              </div>
 
-            <div className="m-1">
-              <Buttons
-                className="button-style"
-                name="Conveyor"
-                width={width.width}
-                onClick={() => setFilter("Conveyor")}
-              />
+              <div className="m-1">
+                <Buttons
+                  className="button-style"
+                  name="Company"
+                  width={width.width}
+                  onClick={() => setFilter("Company")}
+                />
+              </div>
             </div>
-
-            <div className="m-1">
-              <Buttons
-                className="button-style"
-                name="Company"
-                width={width.width}
-                onClick={() => setFilter("Company")}
-              />
-            </div>
-          </div>
-        </Col>
-      </Row>
+          </Col>
+        </Row>
+      </Fade>
 
       <div>
         {data.fullView && (
           <div
-            className="mt-5"
-            style={{
-              width: "100%",
-              height: "100%",
-              backgroundColor: "rgba(0,0,0,0.8)",
-              position: "fixed",
-              zIndex: "100",
-              top: "0",
-              left: "0",
-              objectFit: "cover",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
+            className="full-image-view"
+            onClick={() => setData({ img: "", i: 0, fullView: false })}
           >
-            <button
-              style={{
-                position: "absolute",
-                top: "4px",
-                right: "3px",
-                color: "black",
-                fontSize: "15px",
-                zIndex: "100",
-                cursor: "pointer",
-                fontWeight: "bolder",
-              }}
-              onClick={() => imgAction()}
-            >
-              X
-            </button>
+            <button className="close-btn">X</button>
 
             <SlArrowLeft
+              className="nav-arrow left-arrow"
               onClick={() => imgAction("previous-img")}
-              className="text-white fs-3"
-              style={{
-                position: "absolute",
-                top: "50%",
-                left: "20px",
-                cursor: "pointer",
-              }}
             />
 
-            <img
+            <Image
               src={data.img.src}
-              style={{
-                position: "absolute",
-                maxWidth: "90%",
-                maxHeight: "90%",
-                display: "block",
-                objectFit: "contain",
-                top: "5%",
-                left: "25%",
-                transform: "translate(-10%, -25%)",
-                border: "3px solid #fff",
-              }}
               alt={data.img.category}
+              className="full-image mt-5"
             />
+
             <SlArrowRight
+              className="nav-arrow right-arrow"
               onClick={() => imgAction("next-img")}
-              className="text-white fs-3"
-              style={{
-                position: "absolute",
-                top: "50%",
-                right: "20px",
-                cursor: "pointer",
-              }}
             />
           </div>
         )}
       </div>
 
-      <Row>
-        {filteredImages.map((image, index) => (
-          <Col key={index} xs={12} sm={12} md={4} lg={4} className="mb-4">
-            <div
-              className={`gallery-image-col animate__animated animate__fadeInUp ${
-                hoveredIndex === index ? "hovered" : ""
-              }`}
-              onMouseEnter={() => handleHover(index)}
-              onMouseLeave={handleLeave}
-            >
-              <Image
-                key={index}
-                src={image.src}
-                style={{
-                  height: "100%",
-                  width: "100%",
-                  objectFit: "cover",
-                  maxWidth: "100%",
-                  maxHeight: "100%",
-                }}
-                onClick={() => viewImage(image, index)}
-              />
-              {hoveredIndex === index && (
-                <div className="hover-content">
-                  <h1>
-                    <FaClone style={{ marginRight: "5px" }} />
-                    {image.category}
-                  </h1>
+      <Fade bottom duration="1500">
+        <Row>
+          {filteredImages.map((image, index) => (
+            <Col key={index} xs={12} sm={12} md={4} lg={4} className="mb-4">
+              <div
+                className={`gallery-image-col ${
+                  hoveredIndex === index ? "hovered" : ""
+                }`}
+                onMouseEnter={() => handleHover(index)}
+                onMouseLeave={handleLeave}
+              >
+                <Image
+                  key={index}
+                  src={image.src}
+                  onClick={() => viewImage(image, index)}
+                  style={{
+                    height: "100%",
+                    width: "100%",
+                    objectFit: "cover",
+                    maxWidth: "100%",
+                    maxHeight: "100%",
+                  }}
+                />
+                {hoveredIndex === index && (
+                  <div className="hover-content">
+                    <h1>
+                      <FaClone style={{ marginRight: "5px" }} />
+                      {image.category}
+                    </h1>
 
-                  <FiPlus className="plus-Icon" />
-                </div>
-              )}
-            </div>
-          </Col>
-        ))}
-      </Row>
+                    <FiPlus
+                      className="plus-Icon"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        viewImage(image, index);
+                      }}
+                    />
+                  </div>
+                )}
+              </div>
+            </Col>
+          ))}
+        </Row>
+      </Fade>
     </Container>
   );
 }
