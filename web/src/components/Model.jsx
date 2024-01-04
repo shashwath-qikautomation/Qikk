@@ -10,8 +10,10 @@ function MyModal(props) {
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
-      <Modal.Header closeButton>{props.title}</Modal.Header>
-      <Modal.Body>{props.children}</Modal.Body>
+      <Modal.Header closeButton className="bg-light">
+        {props.title}
+      </Modal.Header>
+      <Modal.Body className="bg-light">{props.children}</Modal.Body>
     </Modal>
   );
 }

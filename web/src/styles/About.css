@@ -27,10 +27,10 @@ h2.head{
 }
 h2.head::before{
   content: ' ';
-  background-color: black;
+  background-color: #5EAFF6;
   display: flex;
-  width: 20px;
-  height: 2px;
+  width: 40px;
+  height: 3px;
   position: absolute;
   left: 0;
   top: 50%;
@@ -39,10 +39,10 @@ h2.head::before{
 }
 h2.head::after{
   content: ' ';
-  background-color: black;
+  background-color: #5EAFF6;
   display: flex;
-  width: 20px;
-  height: 2px;
+  width: 40px;
+  height: 3px;
   position: absolute;
   right: 0;
   top: 50%;
