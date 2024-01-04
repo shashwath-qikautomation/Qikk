@@ -7,7 +7,7 @@ import Card from "react-bootstrap/Card";
 function Cards(props) {
   return (
     <Container>
-      <Card className="shadow p-4 mb-5 rounded">
+      <Card className="shadow-lg p-4 mb-5 rounded">
         <Card.Img
           variant="top"
           src={props.productImg}
@@ -18,7 +18,7 @@ function Cards(props) {
         <center>
           <Buttons
             style={{ alignItems: "center" }}
-            onClick={() => props.onClick(props.url)}
+            onClick={props.onClick}
             height="35px"
             width="105px"
             color="blue"
