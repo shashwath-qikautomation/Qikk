@@ -21,6 +21,7 @@ import { useRef } from "react";
 import Buttons from "../components/Button";
 import html2canvas from "html2canvas";
 import { jsPDF } from "jspdf";
+import "animate.css";
 import styles from "../styles/Cards.css";
 import Fade from "react-reveal";
 
@@ -38,6 +39,7 @@ function Product() {
     setShowModal(false);
   };
 
+  const Width = { width: "120px" };
   const [pageNumber, setPageNumber] = useState(1);
 
   const onDocumentLoadSuccess = ({ numPages }) => {
@@ -61,9 +63,11 @@ function Product() {
     <div>
       <Container>
         <Row className="d-flex justify-content-center mt-5 mb-5 animate__animated animate__fadeInUp">
-          <h1 className="mt-5" style={{ fontWeight: "800" }}>
-            Product and Solution
-          </h1>
+          <div className="mt-5">
+            <h1 className="mt-5" style={{ fontWeight: "800" }}>
+              <span className="line">Product and Solution</span>
+            </h1>
+          </div>
         </Row>
         <Row className="d-flex justify-content-center">
           <Col lg={12}>
@@ -74,12 +78,12 @@ function Product() {
               >
                 Our Services
               </h5>
-              <h1
+              <h3
                 className="animate__animated animate__fadeInUp"
                 style={{ fontWeight: 800 }}
               >
                 What Solutions We Provide
-              </h1>
+              </h3>
             </div>
           </Col>
         </Row>
@@ -132,7 +136,7 @@ function Product() {
           </Col>
         </Row>
         <Fade bottom>
-          <Row className="mt-4">
+          <Row className="mt-4 animate__animated animate__fadeInUp">
             <Col sm={12} md={4} lg={4}>
               <Cards
                 title="Single Lane Conveyor Series 0.5 M Cooling Conveyor QIK-500CC "
@@ -256,6 +260,7 @@ function Product() {
           <Buttons
             color="blue"
             name="Download PDF"
+            width={Width.width}
             onClick={handleDownloadPdf}
           ></Buttons>
         </div>
