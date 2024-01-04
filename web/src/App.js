@@ -7,9 +7,12 @@ import Contact from "./pages/Contact";
 import "bootstrap/dist/css/bootstrap.min.css";
 import NavBar from "./components/NavBar";
 import Blog from "./pages/Blog";
-import Product from "./pages/Product";
 import Gallery from "./pages/Gallery";
 import Footer from "./components/Footer";
+import MaterialHandling from "./pages/MaterialHandling";
+import SmartStorage from "./pages/SmartStorage";
+import SmartInventory from "./pages/SmartInventory";
+import Traceability from "./pages/Traceability";
 
 function App() {
   return (
@@ -19,9 +22,12 @@ function App() {
         <Route path={routes.homePage} element={<HomePage />} />
         <Route path={routes.about} element={<About />} />
         <Route path={routes.contact} element={<Contact />} />
-        <Route path={routes.product} element={<Product />} />
         <Route path={routes.blog} element={<Blog />} />
         <Route path={routes.gallery} element={<Gallery />} />
+        <Route path={routes.materialHandling} element={<MaterialHandling />} />
+        <Route path={routes.smartStorage} element={<SmartStorage />} />
+        <Route path={routes.smartInventory} element={<SmartInventory />} />
+        <Route path={routes.traceability} element={<Traceability />} />
       </Routes>
       <Footer />
     </div>

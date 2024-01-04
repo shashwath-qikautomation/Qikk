@@ -31,6 +31,11 @@ function About() {
   const handleNavigateToContactUs = () => {
     navigate(routes.contact);
   };
+
+  const width = {
+    width: "120px",
+  };
+
   return (
     <div style={{ position: "relative", top: "110px" }}>
       <Container className="position-relative">
@@ -74,6 +79,7 @@ function About() {
                   manufacturing processes.
                 </p>
                 <Buttons
+                  width={width.width}
                   name={"Contact Us"}
                   onClick={handleNavigateToContactUs}
                 />
@@ -91,7 +97,7 @@ function About() {
           </Row>
         </Fade>
         <div>
-          <Row className="m-4 p-5">
+          <Row xs={1} md={2} className="m-4 p-5">
             <Col md={6}>
               <Fade left duration="1500">
                 <Card className="border border-0 mb-5 bg-white rounded bg-dark text-black overflow-auto">

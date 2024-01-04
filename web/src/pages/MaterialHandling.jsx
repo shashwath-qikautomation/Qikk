@@ -25,7 +25,7 @@ import "animate.css";
 import styles from "../styles/Cards.css";
 import Fade from "react-reveal";
 
-function Product() {
+function MaterialHandling() {
   const [showModal, setShowModal] = useState(false);
   const [selectedUrl, setSelectedUrl] = useState("");
   const canvasRef = useRef(null);
@@ -269,4 +269,4 @@ function Product() {
   );
 }
 
-export default Product;
+export default MaterialHandling;
