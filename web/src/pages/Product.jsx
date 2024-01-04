@@ -17,11 +17,12 @@ import url9 from "../assets/pdf/img9.png";
 import url10 from "../assets/pdf/img10.png";
 import MyModal from "../components/Model";
 import Cards from "../components/Cards";
-import "animate.css";
 import { useRef } from "react";
 import Buttons from "../components/Button";
 import html2canvas from "html2canvas";
 import { jsPDF } from "jspdf";
+import styles from "../styles/Cards.css";
+import Fade from "react-reveal";
 
 function Product() {
   const [showModal, setShowModal] = useState(false);
@@ -130,111 +131,113 @@ function Product() {
             </ul>
           </Col>
         </Row>
-        <Row className="mt-4 animate__animated animate__fadeInUp">
-          <Col sm={12} md={4} lg={4}>
-            <Cards
-              title="Single Lane Conveyor Series 0.5 M Cooling Conveyor QIK-500CC "
-              text="PCB (Printed Circuit Board) conveyors are essential 
+        <Fade bottom>
+          <Row className="mt-4">
+            <Col sm={12} md={4} lg={4}>
+              <Cards
+                title="Single Lane Conveyor Series 0.5 M Cooling Conveyor QIK-500CC "
+                text="PCB (Printed Circuit Board) conveyors are essential 
                     equipment within the Surface Mount Technology (SMT) assembly...."
-              productImg={productImg}
-              url={url1}
-              onClick={() => handleShowModal(url1)}
-            />
-          </Col>
+                productImg={productImg}
+                url={url1}
+                onClick={() => handleShowModal(url1)}
+              />
+            </Col>
 
-          <Col sm={12} md={4}>
-            <Cards
-              title="Single Lane Conveyor Series 0.5 M Inspection Conveyor QIK-500IC "
-              text="PCB (Printed Circuit
+            <Col sm={12} md={4}>
+              <Cards
+                title="Single Lane Conveyor Series 0.5 M Inspection Conveyor QIK-500IC "
+                text="PCB (Printed Circuit
                      Board) conveyors are essential equipment within the Surface Mount Technology (SMT)..."
-              productImg={productImg}
-              url={url2}
-              onClick={() => handleShowModal(url2)}
-            />
-          </Col>
+                productImg={productImg}
+                url={url2}
+                onClick={() => handleShowModal(url2)}
+              />
+            </Col>
 
-          <Col sm={12} md={4}>
-            <Cards
-              title="Single Lane Conveyor Series 0.5 M Link Conveyor QIK-500LC "
-              text="PCB (Printed Circuit Board) conveyors
+            <Col sm={12} md={4}>
+              <Cards
+                title="Single Lane Conveyor Series 0.5 M Link Conveyor QIK-500LC "
+                text="PCB (Printed Circuit Board) conveyors
                      are essential equipment within the Surface Mount Technology (SMT) assembly... "
-              productImg={productImg}
-              url={url3}
-              onClick={() => handleShowModal(url3)}
-            />
-          </Col>
+                productImg={productImg}
+                url={url3}
+                onClick={() => handleShowModal(url3)}
+              />
+            </Col>
 
-          <Col sm={12} md={4}>
-            <Cards
-              title="Single Lane Conveyor Series 1 M Inspection Conveyor QIK-1000IC "
-              text="PCB (Printed Circuit Board) conveyors 
+            <Col sm={12} md={4}>
+              <Cards
+                title="Single Lane Conveyor Series 1 M Inspection Conveyor QIK-1000IC "
+                text="PCB (Printed Circuit Board) conveyors 
                     are essential equipment within the Surface Mount Technology "
-              productImg={productImg}
-              url={url4}
-              onClick={() => handleShowModal(url4)}
-            />
-          </Col>
-          <Col sm={12} md={4}>
-            <Cards
-              title="Single Lane Conveyor Series 1 M Cooling Conveyor QIK-1000CC "
-              text="PCB (Printed Circuit Board) conveyors
+                productImg={productImg}
+                url={url4}
+                onClick={() => handleShowModal(url4)}
+              />
+            </Col>
+            <Col sm={12} md={4}>
+              <Cards
+                title="Single Lane Conveyor Series 1 M Cooling Conveyor QIK-1000CC "
+                text="PCB (Printed Circuit Board) conveyors
                     are essential equipment within the Surface Mount Technology (SMT)... "
-              productImg={productImg}
-              url={url5}
-              onClick={() => handleShowModal(url5)}
-            />
-          </Col>
-          <Col sm={12} md={4}>
-            <Cards
-              title=" Single Lane Conveyor Series 1 M Link Conveyor QIK-1000LC "
-              text="PCB (Printed Circuit Board) conveyors 
+                productImg={productImg}
+                url={url5}
+                onClick={() => handleShowModal(url5)}
+              />
+            </Col>
+            <Col sm={12} md={4}>
+              <Cards
+                title=" Single Lane Conveyor Series 1 M Link Conveyor QIK-1000LC "
+                text="PCB (Printed Circuit Board) conveyors 
                     are essential equipment within the Surface Mount Technology (SMT) assembly.... "
-              productImg={productImg}
-              url={url6}
-              onClick={() => handleShowModal(url6)}
-            />
-          </Col>
-          <Col sm={12} md={4}>
-            <Cards
-              title=" Single Lane Series Magazine Loader QIK-ML "
-              text="PCB (Printed Circuit Board) loaders are an 
+                productImg={productImg}
+                url={url6}
+                onClick={() => handleShowModal(url6)}
+              />
+            </Col>
+            <Col sm={12} md={4}>
+              <Cards
+                title=" Single Lane Series Magazine Loader QIK-ML "
+                text="PCB (Printed Circuit Board) loaders are an 
                     integral part of the Surface Mount Technology (SMT) assembly process.... "
-              productImg={productImg}
-              url={url7}
-              onClick={() => handleShowModal(url7)}
-            />
-          </Col>
-          <Col sm={12} md={4}>
-            <Cards
-              title="Single Lane Series Magazine Unloader QIK-MUL "
-              text="PCB (Printed Circuit Board) 
+                productImg={productImg}
+                url={url7}
+                onClick={() => handleShowModal(url7)}
+              />
+            </Col>
+            <Col sm={12} md={4}>
+              <Cards
+                title="Single Lane Series Magazine Unloader QIK-MUL "
+                text="PCB (Printed Circuit Board) 
                     unloaders play a crucial role in the Surface Mount Technology (SMT)... "
-              productImg={productImg}
-              url={url8}
-              onClick={() => handleShowModal(url8)}
-            />
-          </Col>
-          <Col sm={12} md={4}>
-            <Cards
-              title="Smart Storage Series Smart Component Incoming System QIK-SCIS "
-              text="A Smart Incoming SMT System
+                productImg={productImg}
+                url={url8}
+                onClick={() => handleShowModal(url8)}
+              />
+            </Col>
+            <Col sm={12} md={4}>
+              <Cards
+                title="Smart Storage Series Smart Component Incoming System QIK-SCIS "
+                text="A Smart Incoming SMT System
                      Stream lines the process of receiving and inspection electronics component... "
-              productImg={productImg}
-              url={url9}
-              onClick={() => handleShowModal(url9)}
-            />
-          </Col>
-          <Col sm={12} md={4}>
-            <Cards
-              title="Smart Storage Series Smart Reel Storage System QIK-SRSS "
-              text="Our Storage system is equipped 
+                productImg={productImg}
+                url={url9}
+                onClick={() => handleShowModal(url9)}
+              />
+            </Col>
+            <Col sm={12} md={4}>
+              <Cards
+                title="Smart Storage Series Smart Reel Storage System QIK-SRSS "
+                text="Our Storage system is equipped 
                     with features to improve component management, reduce errors... "
-              productImg={productImg}
-              url={url10}
-              onClick={() => handleShowModal(url10)}
-            />
-          </Col>
-        </Row>
+                productImg={productImg}
+                url={url10}
+                onClick={() => handleShowModal(url10)}
+              />
+            </Col>
+          </Row>
+        </Fade>
       </Container>
 
       <MyModal
