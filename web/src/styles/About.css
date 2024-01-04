@@ -1,5 +1,5 @@
 .hoover:hover {
-  background-color: #66a2d0;
+  background-color:#64A8E3;
   color: white;
 }
 .hoover {
@@ -8,10 +8,15 @@
  position: static;
 }
 .qik:hover{
-  background-color: #66a2d0;
+  /* background-color: #64A8E3; */
+  background-position: 0;
 }
 .qik{
+  background: linear-gradient(45deg,#64A8E3 50%,white 50% );
   transition: 0.7s;
+  background-position: 100%;
+  background-size: 300%;
+
 }
 
 .hoverIcon img {
