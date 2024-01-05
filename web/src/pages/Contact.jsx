@@ -1,5 +1,5 @@
 import React from "react";
-import style from "../styles/Contact.css";
+import "../styles/Contact.css";
 import Form from "react-bootstrap/Form";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -16,125 +16,134 @@ function Contact() {
     fontSize: "27px",
     fontWeight: "600",
     marginBottom: "20px",
-    float: "left",
+    display: "flex",
+    justifyContent: "center",
   };
 
   return (
     <Container>
-      <div className="pt-5 mt-5">
-        <div className="header">
-          <Container>
-            <Row className="d-flex justify-content-center animate__animated animate__fadeInUp">
-              <Col lg={8} className="d-flex justify-content-center">
+      {/* <div className="pt-5 mt-5">
+         <Container>
+          <Row className="d-flex justify-content-center animate__animated animate__fadeInUp">
+             <Col lg={8} className="d-flex justify-content-center">
                 <div style={{ position: "relative", paddingTop: "20px" }}>
                   <h2>Contact Us</h2>
                 </div>
-              </Col>
-            </Row>
-          </Container>
-        </div>
-        <div className="contact-section animate__animated animate__fadeInUp">
-          <Container fluid>
-            <Row>
+              </Col> 
+          </Row>
+        </Container> 
+      </div> */}
+      <div className=" pt-5 mt-5">
+        <Container fluid>
+          <div className="header d-flex justify-content-center animate__animated animate__fadeInUp">
+            <Row className="pt-5 mt-2">
               <Col lg={12} sm={12} md={12}>
-                <h3 className="contact-title" style={contactTitle}>
+                <h2 className="contact-title" style={contactTitle}>
                   Get in touch
-                </h3>
+                </h2>
               </Col>
             </Row>
-            <Row>
-              <Col lg={8} sm={12} md={8} className="mb-4">
-                <Form.Group
-                  className="mb-3"
-                  placeholder="Enter message"
-                  controlId="exampleForm.ControlTextarea1"
-                >
+          </div>
+          <Row>
+            <Col lg={8} sm={12} md={8} className="mb-4 ">
+              <Form.Group
+                className="mb-3 animate__animated animate__fadeInUp"
+                placeholder="Enter message"
+                controlId="exampleForm.ControlTextarea1"
+              >
+                <Row>
+                  <Col sm={12} lg={12} md={12}>
+                    <Form.Control
+                      as="textarea"
+                      rows={5}
+                      className="mb-3"
+                      placeholder="Enter Message"
+                    />
+                  </Col>
+                </Row>
+                <Row>
+                  <Col sm={12} lg={6} md={6}>
+                    <Form.Control
+                      className="mb-3"
+                      type="text"
+                      placeholder="Enter your name"
+                    />
+                    {/* <div className="mb-3">
+                        <input
+                          type="text"
+                          placeholder="Enter your name"
+                          name="name"
+                        />
+                      </div> */}
+                  </Col>
+                  <Col sm={12} lg={6} md={6}>
+                    <Form.Control
+                      className="mb-3"
+                      type="text"
+                      placeholder="Enter your Email"
+                    />
+                  </Col>
+                  <Col sm={12} lg={12} md={12} className="mb-3">
+                    <Form.Select aria-label="Default select example">
+                      <option style={{ color: "gray" }}>Select Reason</option>
+                      <option value="1">Reason One</option>
+                      <option value="2">Reason Two</option>
+                      <option value="3">Reason Three</option>
+                    </Form.Select>
+                  </Col>
+                  <Col sm={12} lg={12} md={12}>
+                    <Form.Control
+                      className="mb-3"
+                      type="text"
+                      placeholder="Enter Subject"
+                    />
+                  </Col>
+                </Row>
+              </Form.Group>
+              <Buttons name="SEND" />
+            </Col>
+            <Col sm={12} md={4} lg={4} className="mb-4 ml-1">
+              <Card className=" p-4 mb-5 bg-white rounded animate__animated animate__fadeInUp">
+                <Card.Body>
                   <Row>
-                    <Col sm={12} lg={12} md={12}>
-                      <Form.Control
-                        as="textarea"
-                        rows={5}
-                        className="mb-3"
-                        placeholder="Enter Message"
-                      />
-                    </Col>
+                    <Card.Text>
+                      {" "}
+                      <p>
+                        <b>
+                          <IoHome /> &emsp; Koorgalli, Mysore.
+                        </b>
+                      </p>
+                      &emsp; &emsp;Karnataka,-570018{" "}
+                    </Card.Text>
                   </Row>
+                  <br />
                   <Row>
-                    <Col sm={12} lg={6} md={6}>
-                      <Form.Control
-                        className="mb-3"
-                        type="text"
-                        placeholder="Enter your name"
-                      />
-                    </Col>
-                    <Col sm={12} lg={6} md={6}>
-                      <Form.Control
-                        className="mb-3"
-                        type="text"
-                        placeholder="Enter your Email"
-                      />
-                    </Col>
-                    <Col sm={12} lg={12} md={12} className="mb-3">
-                      <Form.Select aria-label="Default select example">
-                        <option style={{ color: "gray" }}>Select Reason</option>
-                        <option value="1">Reason One</option>
-                        <option value="2">Reason Two</option>
-                        <option value="3">Reason Three</option>
-                      </Form.Select>
-                    </Col>
-                    <Col sm={12} lg={12} md={12}>
-                      <Form.Control
-                        className="mb-3"
-                        type="text"
-                        placeholder="Enter Subject"
-                      />
-                    </Col>
+                    <Card.Text>
+                      <p>
+                        <b>
+                          <FaPhoneAlt /> &emsp; +91 8277995300
+                        </b>
+                      </p>
+                      &emsp;&emsp;Mon to Fri 9am to 6pm
+                    </Card.Text>
                   </Row>
-                </Form.Group>
-              </Col>
-              <Col sm={12} md={4} lg={4} className="mb-4 ml-1">
-                <Card className=" p-4 mb-5 bg-white rounded">
-                  <Card.Body>
-                    <Row>
-                      <Card.Text>
+                  <br />
+                  <Row>
+                    <Card.Text>
+                      <p>
                         {" "}
-                        <p>
-                          <b>
-                            <IoHome /> &emsp; Koorgalli, Mysore.
-                          </b>
-                        </p>
-                        &emsp; &emsp;Karnataka,-570018{" "}
-                      </Card.Text>
-                    </Row>
-                    <br />
-                    <Row>
-                      <Card.Text>
-                        <p>
-                          <b>
-                            <FaPhoneAlt /> &emsp; +91 8277995300
-                          </b>
-                        </p>
-                        &emsp;&emsp;Mon to Fri 9am to 6pm
-                      </Card.Text>
-                    </Row>
-                    <br />
-                    <Row>
-                      <Card.Text>
-                        <p>
-                          {" "}
-                          <b>
-                            <IoMdMail /> &emsp; info@rexsatronix.com
-                          </b>{" "}
-                        </p>
-                        &emsp;&emsp; Send us your query anytime!
-                      </Card.Text>
-                    </Row>
-                  </Card.Body>
-                </Card>
-              </Col>
-            </Row>
-          </Container>
-        </div>
+                        <b>
+                          <IoMdMail /> &emsp; info@qikautomation.com
+                        </b>{" "}
+                      </p>
+                      &emsp;&emsp; Send us your query anytime!
+                    </Card.Text>
+                  </Row>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
+        </Container>
       </div>
     </Container>
   );
