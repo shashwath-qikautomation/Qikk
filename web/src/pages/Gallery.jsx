@@ -1,7 +1,7 @@
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
-import rackImg1 from "../assets/images/rackImg.jpg";
-import rackImg2 from "../assets/images/reelRackImg.jpg";
+import { Col, Container, Row, Modal, Carousel } from "react-bootstrap";
+import rackImg from "../assets/images/rackImg.jpg";
+import reelRackImg from "../assets/images/reelRackImg.jpg";
 import conveyorImg1 from "../assets/images/conveyorImg1.jpg";
 import conveyorImg2 from "../assets/images/conveyorImg2.jpg";
 import conveyorImg3 from "../assets/images/conveyorImg3.jpg";
@@ -13,11 +13,11 @@ import companyImg1 from "../assets/images/companyImg1.jpg";
 import companyImg2 from "../assets/images/companyImg2.jpg";
 import companyImg3 from "../assets/images/companyImg3.jpg";
 import companyImg4 from "../assets/images/companyImg4.jpg";
-import Buttons from "../components/Button";
+import Button from "react-bootstrap/Button";
 import { useState } from "react";
 import "../styles/Gallery.css";
-import { SlArrowLeft } from "react-icons/sl";
-import { SlArrowRight } from "react-icons/sl";
+import { FaAngleLeft } from "react-icons/fa";
+import { FaAngleRight } from "react-icons/fa";
 import Image from "react-bootstrap/Image";
 import { FaClone } from "react-icons/fa";
 import { FiPlus } from "react-icons/fi";
@@ -25,8 +25,8 @@ import Fade from "react-reveal/Fade";
 
 const allImages = [
   { src: companyImg1, category: "Company" },
-  { src: rackImg1, category: "Rack" },
-  { src: rackImg2, category: "Rack" },
+  { src: rackImg, category: "Rack" },
+  { src: reelRackImg, category: "Rack" },
   { src: conveyorImg1, category: "Conveyor" },
   { src: companyImg2, category: "Company" },
   { src: conveyorImg2, category: "Conveyor" },
@@ -40,41 +40,40 @@ const allImages = [
 ];
 
 function Gallery() {
-  const [data, setData] = useState({ img: "", i: 0, fullView: false });
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [showCarousel, setShowCarousel] = useState(false);
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+
+  function openCarousel(index) {
+    setSelectedImageIndex(index);
+    setShowCarousel(true);
+  }
+  const handleCarouselClose = () => {
+    setShowCarousel(false);
+  };
+  const handleCarouselPrev = () => {
+    setSelectedImageIndex((prevIndex) =>
+      prevIndex > 0 ? prevIndex - 1 : filteredImages.length - 1
+    );
+  };
+
+  const handleCarouselNext = () => {
+    setSelectedImageIndex((prevIndex) =>
+      prevIndex < filteredImages.length - 1 ? prevIndex + 1 : 0
+    );
+  };
+  const handleFilterClick = (selectedFilter) => {
+    setFilter(selectedFilter);
+  };
+
   const handleHover = (index) => {
     setHoveredIndex(index);
   };
-  const width = {
-    width: "80px",
-  };
+
   const handleLeave = () => {
     setHoveredIndex(null);
   };
 
-  const viewImage = (img, i) => {
-    setData({ img, i, fullView: true });
-  };
-
-  const imgAction = (action) => {
-    setData((prevData) => {
-      const currentIndex = allImages.findIndex(
-        (img) => img.src === prevData.img.src
-      );
-      let newIndex;
-
-      if (action === "next-img" && currentIndex < allImages.length - 1) {
-        newIndex = currentIndex + 1;
-        console.log(newIndex);
-      } else if (action === "previous-img" && currentIndex > 0) {
-        newIndex = currentIndex - 1;
-      } else {
-        newIndex = 0;
-      }
-
-      return { img: allImages[newIndex].src, i: newIndex, fullView: true };
-    });
-  };
   const [filter, setFilter] = useState("All");
 
   const filteredImages =
@@ -83,137 +82,135 @@ function Gallery() {
       : allImages.filter((img) => img.category === filter);
 
   return (
-    <Container className="pt-4 pb-4 mt-4">
+    <Container className="pt-4 pb-4 mt-5">
       <Fade bottom duration="1500">
-        <Row className="mb-2 pt-4 mt-5">
-          <Col xs={12}>
-            <h2 className="gallery-heading mb-5">Gallery</h2>
+        <Row className="mb-2 pt-4 mt-5 d-flex justify-content-center text-center">
+          <Col xs={12} className="mb-4">
             <h1 className="text-primary fs-5 fw-bold">Our Projects</h1>
-            <p className="text-dark fs-4 fw-bold text-center">
+            <p className="text-dark fs-4 fw-bold text-center mb-1">
               Recently Launched Projects
             </p>
-            <br />
-            <span className="d-flex flex-row justify-content-center">
-              {" "}
-              <hr className="text-dark w-75" />
-            </span>
           </Col>
         </Row>
       </Fade>
       <Fade bottom duration="1500">
         <Row>
-          <Col xs={12} className="mb-2">
-            <div className="d-flex flex-row justify-content-center mb-3">
-              <div className="m-1">
-                <Buttons
-                  className="button-style"
-                  width={width.width}
-                  name="All"
-                  onClick={() => setFilter("All")}
-                />
-              </div>
-              <div className="m-1">
-                <Buttons
-                  className="button-style"
-                  width={width.width}
-                  name="Rack"
-                  onClick={() => setFilter("Rack")}
-                />
-              </div>
-
-              <div className="m-1">
-                <Buttons
-                  className="button-style"
-                  name="Conveyor"
-                  width={width.width}
-                  onClick={() => setFilter("Conveyor")}
-                />
-              </div>
-
-              <div className="m-1">
-                <Buttons
-                  className="button-style"
-                  name="Company"
-                  width={width.width}
-                  onClick={() => setFilter("Company")}
-                />
-              </div>
+          <Col xs={12} className="mb-4">
+            <div className="post-filter container">
+              <span
+                className={`filter-item ${
+                  filter === "All" ? "active-filter" : ""
+                }`}
+                onClick={() => handleFilterClick("All")}
+              >
+                All
+              </span>
+              <span
+                className={`filter-item ${
+                  filter === "Rack" ? "active-filter" : ""
+                }`}
+                onClick={() => handleFilterClick("Rack")}
+              >
+                Rack
+              </span>
+              <span
+                className={`filter-item ${
+                  filter === "Conveyor" ? "active-filter" : ""
+                }`}
+                onClick={() => handleFilterClick("Conveyor")}
+              >
+                Conveyor
+              </span>
+              <span
+                className={`filter-item ${
+                  filter === "Company" ? "active-filter" : ""
+                }`}
+                onClick={() => handleFilterClick("Company")}
+              >
+                Company
+              </span>
             </div>
           </Col>
         </Row>
       </Fade>
 
-      <div>
-        {data.fullView && (
-          <div
-            className="full-image-view"
-            onClick={() => setData({ img: "", i: 0, fullView: false })}
-          >
-            <button className="close-btn">X</button>
+      <Row>
+        {filteredImages.map((image, index) => (
+          <Col key={index} xs={12} sm={12} md={4} lg={4} className="mb-4">
+            <div
+              className={`gallery-image-col ${
+                hoveredIndex === index ? "hovered" : ""
+              }`}
+              onMouseEnter={() => handleHover(index)}
+              onMouseLeave={handleLeave}
+              onClick={() => openCarousel(index)}
+            >
+              <Image
+                key={index}
+                src={image.src}
+                style={{
+                  height: "100%",
+                  width: "100%",
+                  objectFit: "cover",
+                  maxWidth: "100%",
+                  maxHeight: "100%",
+                }}
+              />
+              {hoveredIndex === index && (
+                <div className="hover-content">
+                  <h1>
+                    <FaClone style={{ marginRight: "5px" }} />
+                    {image.category}
+                  </h1>
 
-            <SlArrowLeft
-              className="nav-arrow left-arrow"
-              onClick={() => imgAction("previous-img")}
+                  <FiPlus className="plus-Icon" />
+                </div>
+              )}
+            </div>
+          </Col>
+        ))}
+      </Row>
+      <Modal
+        show={showCarousel}
+        onHide={handleCarouselClose}
+        centered
+        className="custom-modal"
+        style={{ width: "100%", maxHeight: "100vh" }}
+      >
+        <Carousel
+          activeIndex={selectedImageIndex}
+          onSelect={() => {}}
+          prevIcon={
+            <FaAngleLeft
+              onClick={handleCarouselPrev}
+              style={{ fontSize: "40px", color: "white" }}
             />
-
-            <Image
-              src={data.img.src}
-              alt={data.img.category}
-              className="full-image mt-5"
+          }
+          nextIcon={
+            <FaAngleRight
+              onClick={handleCarouselNext}
+              style={{ fontSize: "40px", color: "white" }}
             />
-
-            <SlArrowRight
-              className="nav-arrow right-arrow"
-              onClick={() => imgAction("next-img")}
-            />
-          </div>
-        )}
-      </div>
-
-      <Fade bottom duration="1500">
-        <Row>
+          }
+          style={{ maxHeight: "100vh" }}
+        >
           {filteredImages.map((image, index) => (
-            <Col key={index} xs={12} sm={12} md={4} lg={4} className="mb-4">
-              <div
-                className={`gallery-image-col ${
-                  hoveredIndex === index ? "hovered" : ""
-                }`}
-                onMouseEnter={() => handleHover(index)}
-                onMouseLeave={handleLeave}
-              >
-                <Image
-                  key={index}
-                  src={image.src}
-                  onClick={() => viewImage(image, index)}
-                  style={{
-                    height: "100%",
-                    width: "100%",
-                    objectFit: "cover",
-                    maxWidth: "100%",
-                    maxHeight: "100%",
-                  }}
-                />
-                {hoveredIndex === index && (
-                  <div className="hover-content">
-                    <h1>
-                      <FaClone style={{ marginRight: "5px" }} />
-                      {image.category}
-                    </h1>
-
-                    <FiPlus
-                      className="plus-Icon"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        viewImage(image, index);
-                      }}
-                    />
-                  </div>
-                )}
-              </div>
-            </Col>
+            <Carousel.Item key={index}>
+              <Image
+                src={image.src}
+                style={{
+                  height: "auto",
+                  width: "100%",
+                  objectFit: "contain",
+                  maxWidth: "100%",
+                  maxHeight: "100%", // Adjust the max height for the image
+                  margin: "auto",
+                }}
+              />
+            </Carousel.Item>
           ))}
-        </Row>
-      </Fade>
+        </Carousel>
+      </Modal>
     </Container>
   );
 }
