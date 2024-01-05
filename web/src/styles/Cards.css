@@ -1,7 +1,7 @@
 .card {
   transition: 300ms ease-in-out;
-  height: 25rem;
-  overflow: auto;
+  height: auto;
+  width: auto;
 }
 
 .card-title {
@@ -12,7 +12,7 @@
   transform: scale(1.1) !important;
   cursor: pointer;
   bottom: 0;
-  height: 25rem;
+  height: auto;
 
   /* transition: 0.5s; */
   /* background-image: linear-gradient(to bottom left, #67acda);
