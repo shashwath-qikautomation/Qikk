@@ -1,17 +1,25 @@
+.Card:hover{
+transform: scale(1) !important;
+}
 .hoover:hover {
-  background-color: #66a2d0;
+  background-color:#64A8E3;
   color: white;
 }
-.hoover {
+ .hoover {
   background-color: #DBDBDB;
  margin-top:175px ;
  position: static;
 }
 .qik:hover{
-  background-color: #66a2d0;
+  background-position: 0;
+  color: white;
 }
 .qik{
-  transition: 0.7s;
+  background: linear-gradient(45deg,#64A8E3 50%,white 50% );
+  transition: 0.3s;
+  background-position: 100%;
+  background-size: 1000%;
+
 }
 
 .hoverIcon img {
@@ -19,8 +27,9 @@
 }
 .hoverIcon:hover img {
   filter: saturate(100%);
+  cursor: pointer;
 }
-h2.head{
+/* h2.head{
   display: inline-block;
   width: 300px;
   position: relative;
@@ -48,4 +57,4 @@ h2.head::after{
   top: 50%;
   z-index: -1;
 
-}
+} */
