@@ -29,7 +29,6 @@ function About() {
   const navigate = useNavigate();
   const [modalShow, setModalShow] = React.useState(false);
   console.log(modalShow);
-  const width = { width: "120px" };
 
   const handleNavigateToContactUs = () => {
     navigate(routes.contact);
@@ -84,7 +83,6 @@ function About() {
                 <Buttons
                   width={width.width}
                   name={"Contact Us"}
-                  width={width.width}
                   onClick={handleNavigateToContactUs}
                 />
               </Col>
@@ -104,27 +102,6 @@ function About() {
           <Row className=" p-5">
             <Col md={6}>
               <Fade left duration="1500">
-                {/* <Card
-                  className="border border-0 mb-5 rounded text-black overflow-auto"
-                  style={{ backgroundImage: `url(${about1Svg})` }}
-                >
-                  <CardBody>
-                    <div className="hoover rounded  p-2 bottom-0 ">
-                      <Card.Title>
-                        <h5>Mission</h5>
-                      </Card.Title>
-                      <Card.Text className="text-start m-2">
-                        <p>
-                          Our mission is to empower electronic manufacturing
-                          companies with state-of-the-art technology solutions
-                          that optimize production processes, reduce operational
-                          costs, and enhance overall competitiveness in a
-                          rapidly evolving market.
-                        </p>
-                      </Card.Text>
-                    </div>
-                  </CardBody>
-                </Card> */}
                 <ResponsiveCollapseCard1 />
               </Fade>
             </Col>

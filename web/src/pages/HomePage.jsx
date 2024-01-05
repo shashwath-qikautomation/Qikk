@@ -23,7 +23,7 @@ function HomePage() {
   };
 
   return (
-    <Container className="pt-5 pb-5 mt-4" fluid="xxl">
+    <div className="container-fluid pt-5 pb-5 mt-4">
       <Row xs={1} md={2} className="header-content mb-5 p-5 fade-in-up">
         <Col className="text-start">
           {" "}
@@ -103,7 +103,7 @@ function HomePage() {
         </Row>
       </Fade>
       <Article />
-    </Container>
+    </div>
   );
 }
 

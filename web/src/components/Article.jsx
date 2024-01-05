@@ -17,6 +17,14 @@ import url2 from "../assets/pdf/img2.png";
 import url3 from "../assets/pdf/img3.png";
 import url4 from "../assets/pdf/img4.png";
 import { jsPDF } from "jspdf";
+import CyientLogo from "../assets/clientsLogo/CyientDLM.png";
+import TycoonLogo from "../assets/clientsLogo/Tycoon.png";
+import frontlineLogo from "../assets/clientsLogo/frontline.jpg";
+import vinyasLogo from "../assets/clientsLogo/vinyas.jpg";
+import Tooltip from "react-bootstrap/Tooltip";
+import OverlayTrigger from "react-bootstrap/OverlayTrigger";
+import "../styles/About.css";
+import Zoom from "react-reveal/Zoom";
 
 function Article() {
   const navigate = useNavigate();
@@ -24,11 +32,15 @@ function Article() {
   const [selectedUrl, setSelectedUrl] = useState("");
   const canvasRef = useRef(null);
 
+  const navigateRouteTo = (path) => {
+    console.log(path);
+    navigate(path);
+  };
+
   const onClick = () => navigate(routes.contact);
   const width = {
     width: "150px",
   };
-  //mb-5
 
   const handleShowModal = (url) => {
     setSelectedUrl(url);
@@ -54,7 +66,108 @@ function Article() {
   };
 
   return (
-    <div style={{ marginBottom: "100px" }}>
+    <div style={{ marginBottom: "60px" }}>
+      <Row
+        style={{
+          marginTop: "80px",
+          marginBottom: "100px",
+          backgroundColor: "#E9FDFD",
+          zIndex: "300",
+        }}
+        className="d-flex justify-content-evenly p-3 "
+      >
+        <Col md={2}>
+          <Zoom duration="2800">
+            <div className="hoverIcon">
+              <span>
+                <OverlayTrigger
+                  delay={{ hide: 600, show: 300 }}
+                  overlay={(props) => (
+                    <Tooltip {...props}>
+                      <div>CYIENT DLM</div>
+                      <a href="https://www.cyientdlm.com/" target="blank">
+                        cyientdlm.com
+                      </a>
+                    </Tooltip>
+                  )}
+                  placement="top"
+                >
+                  <Image style={{ height: "70px" }} src={CyientLogo} fluid />
+                </OverlayTrigger>
+              </span>
+            </div>
+          </Zoom>
+        </Col>
+        <Col md={2}>
+          <Zoom delay="500" duration="2800">
+            <div className="hoverIcon">
+              <span>
+                <OverlayTrigger
+                  delay={{ hide: 600, show: 300 }}
+                  overlay={(props) => (
+                    <Tooltip {...props}>
+                      <div>Tycoon Innovative Technology</div>
+                      <a href="https://tycoonit.in/" target="blank">
+                        tycoonit.in
+                      </a>
+                    </Tooltip>
+                  )}
+                  placement="top"
+                >
+                  <Image style={{ height: "70px" }} src={TycoonLogo} fluid />
+                </OverlayTrigger>
+              </span>
+            </div>
+          </Zoom>
+        </Col>
+        <Col md={2}>
+          <Zoom delay="1000" duration="2800">
+            <div className="hoverIcon">
+              <span>
+                <OverlayTrigger
+                  delay={{ hide: 600, show: 300 }}
+                  overlay={(props) => (
+                    <Tooltip {...props}>
+                      <div>Frontline Electronics Ltd.</div>
+                      <a
+                        href="http://www.frontlineelectronics.com/"
+                        target="blank"
+                      >
+                        frontlineelectronics.com
+                      </a>
+                    </Tooltip>
+                  )}
+                  placement="top"
+                >
+                  <Image style={{ height: "70px" }} src={frontlineLogo} fluid />
+                </OverlayTrigger>
+              </span>
+            </div>
+          </Zoom>
+        </Col>
+        <Col md={2}>
+          <Zoom delay="1500" duration="2800">
+            <div className="hoverIcon">
+              <span>
+                <OverlayTrigger
+                  delay={{ hide: 600, show: 300 }}
+                  overlay={(props) => (
+                    <Tooltip {...props}>
+                      <div>Vinyas Innovative Technologies Ltd.</div>
+                      <a href="https://www.vinyasit.com/" target="blank">
+                        vinyasit.com
+                      </a>
+                    </Tooltip>
+                  )}
+                  placement="top"
+                >
+                  <Image style={{ height: "70px" }} src={vinyasLogo} fluid />
+                </OverlayTrigger>
+              </span>
+            </div>
+          </Zoom>
+        </Col>
+      </Row>
       <Row xs={1} md={2} className="md-2 p-5">
         <Col className="pt-2">
           <Fade left duration="1500">
@@ -97,56 +210,57 @@ function Article() {
         </Row>
       </Fade>
       <Fade bottom duration="1500">
-        <Row className="gap-4 p-5">
-          <Col>
-            <Cards
-              title="Single Lane Conveyor Series 0.5 M Cooling Conveyor QIK-500CC "
-              text="PCB (Printed Circuit Board) conveyors are essential 
-                    equipment within the Surface Mount Technology (SMT) assembly...."
-              productImg={productImg}
-              url={url1}
-              onClick={() => handleShowModal(url1)}
-            />
-            {/* <h1 className="fs-3">
-            className="card-hover shadow p-4 bg-white rounded"
-              Single Lane Conveyor Series 1 M Link Conveyor QIK-1000LC{" "}
-            </h1>
+        <Row className="gap-5 p-5 w-75 mx-auto">
+          <Col className="card-hover shadow p-4 bg-white rounded">
+            <h1 className="fs-3">Material Handling Solutions</h1>
             <p className="p">
               Single Lane Conveyor Series 1 M Link Conveyor QIK-1000LC
-            </p> */}
+            </p>
+            <Button
+              width={"120px"}
+              height={"40px"}
+              name={"Read More"}
+              onClick={() => navigateRouteTo(routes.materialHandling)}
+            />
           </Col>
-          <Col>
-            <Cards
-              title="Single Lane Conveyor Series 0.5 M Inspection Conveyor QIK-500IC "
-              text="PCB (Printed Circuit
-                     Board) conveyors are essential equipment within the Surface Mount Technology (SMT)..."
-              productImg={productImg}
-              url={url2}
-              onClick={() => handleShowModal(url2)}
+          <Col className="card-hover shadow p-4 bg-white rounded">
+            <h1 className="fs-3">Smart Storage Solutions</h1>
+            <p className="p">
+              Single Lane Conveyor Series 1 M Link Conveyor QIK-1000LC
+            </p>
+            <Button
+              width={"120px"}
+              height={"40px"}
+              name={"Read More"}
+              onClick={() => navigateRouteTo(routes.smartStorage)}
             />
           </Col>
         </Row>
       </Fade>
       <Fade bottom duration="1400">
-        <Row className="gap-4 p-5">
-          <Col>
-            <Cards
-              title="Single Lane Conveyor Series 0.5 M Link Conveyor QIK-500LC "
-              text="PCB (Printed Circuit Board) conveyors
-                     are essential equipment within the Surface Mount Technology (SMT) assembly... "
-              productImg={productImg}
-              url={url3}
-              onClick={() => handleShowModal(url3)}
+        <Row className="gap-5 p-5 w-75 mx-auto">
+          <Col className="card-hover shadow p-4 bg-white rounded">
+            <h1 className="fs-3">Smart Inventory Solutions</h1>
+            <p className="p">
+              Single Lane Conveyor Series 1 M Link Conveyor QIK-1000LC
+            </p>
+            <Button
+              width={"120px"}
+              height={"40px"}
+              name={"Read More"}
+              onClick={() => navigateRouteTo(routes.smartInventory)}
             />
           </Col>
-          <Col>
-            <Cards
-              title="Single Lane Conveyor Series 1 M Inspection Conveyor QIK-1000IC "
-              text="PCB (Printed Circuit Board) conveyors 
-                    are essential equipment within the Surface Mount Technology "
-              productImg={productImg}
-              url={url4}
-              onClick={() => handleShowModal(url4)}
+          <Col className="card-hover shadow p-4 bg-white rounded">
+            <h1 className="fs-3">Traceability</h1>
+            <p className="p">
+              Single Lane Conveyor Series 1 M Link Conveyor QIK-1000LC
+            </p>
+            <Button
+              width={"120px"}
+              height={"40px"}
+              name={"Read More"}
+              onClick={() => navigateRouteTo(routes.traceability)}
             />
           </Col>
         </Row>

@@ -4,37 +4,28 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import logoW from "../assets/logoW.png";
 import { routes } from "../helper/routes";
-//import "../styles/NavBar.css";
-import { useNavigate } from "react-router-dom";
+import "../styles/NavBar.css";
+import { useNavigate, useLocation } from "react-router-dom";
 import NavDropdown from "react-bootstrap/NavDropdown";
 
 function NavBar() {
   const navigate = useNavigate();
+  const location = useLocation();
+  const [activeLink, setActiveLink] = useState("");
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    setActiveLink(activeLink);
+  }, [location.pathname]);
+
   const navigateRouteTo = (path) => {
     console.log(path);
     navigate(path);
   };
-  // position-fixed z-3
-  const [navbarBg, setNavbarBg] = useState("transparent");
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-
-      if (scrollPosition > 100) {
-        setNavbarBg("yourDesiredColor"); // Set your desired background color
-      } else {
-        setNavbarBg("transparent");
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    // Cleanup the event listener on component unmount
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  const handleNavItemClick = (link) => {
+    setActiveLink(link);
+  };
 
   return (
     <Navbar expand="lg" className="navbar bg-body-tertiary fixed-top">
@@ -44,29 +35,47 @@ function NavBar() {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mx-auto gap-4 p-4">
+          <Nav className="ms-auto gap-4 p-4">
             <Nav.Link
               className="nav-link d-flex justify-content-start"
-              onClick={() => navigateRouteTo(routes.homePage)}
-              // href={routes.homePage}
+              onClick={() => {
+                navigateRouteTo(routes.homePage);
+                handleNavItemClick("home");
+              }}
+              //href={routes.homePage}
+              style={{ color: activeLink === "home" ? "#3498db" : "inherit" }}
             >
               Home
             </Nav.Link>
             <Nav.Link
               className="nav-link d-flex justify-content-start"
-              // href={routes.about}
-              onClick={() => navigateRouteTo(routes.about)}
+              onClick={() => {
+                navigateRouteTo(routes.about);
+                handleNavItemClick("about");
+              }}
+              //href={routes.about}
+
+              style={{ color: activeLink === "about" ? "#3498db" : "inherit" }}
             >
               About Us
             </Nav.Link>
             <Nav.Link
               className="nav-link d-flex justify-content-start"
               // href={routes.blog}
-              onClick={() => navigateRouteTo(routes.blog)}
+              onClick={() => {
+                navigateRouteTo(routes.blog);
+                handleNavItemClick("blog");
+              }}
+              style={{ color: activeLink === "blog" ? "#3498db" : "inherit" }}
             >
               Blog
             </Nav.Link>
-            <NavDropdown title="Products & Solutions" id="basic-nav-dropdown">
+            <NavDropdown
+              className="d-flex justify-content-start"
+              title="Products & Solutions"
+              id="basic-nav-dropdown"
+              menuVariant="dark"
+            >
               <NavDropdown.Item
                 onClick={() => navigateRouteTo(routes.materialHandling)}
               >
@@ -91,14 +100,26 @@ function NavBar() {
             <Nav.Link
               className="nav-link d-flex justify-content-start"
               // href={routes.gallery}
-              onClick={() => navigateRouteTo(routes.gallery)}
+              onClick={() => {
+                navigateRouteTo(routes.gallery);
+                handleNavItemClick("gallery");
+              }}
+              style={{
+                color: activeLink === "gallery" ? "#3498db" : "inherit",
+              }}
             >
               Gallery
             </Nav.Link>
             <Nav.Link
               className="nav-link d-flex justify-content-start"
               // href={routes.contact}
-              onClick={() => navigateRouteTo(routes.contact)}
+              onClick={() => {
+                navigateRouteTo(routes.contact);
+                handleNavItemClick("contact");
+              }}
+              style={{
+                color: activeLink === "contact" ? "#3498db" : "inherit",
+              }}
             >
               Contact
             </Nav.Link>
