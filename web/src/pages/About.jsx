@@ -1,11 +1,10 @@
-import React from "react";
+import React, { useMemo } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { useNavigate } from "react-router-dom";
 import aboutSvg from "../assets/images/about.svg";
 import about1Svg from "../assets/images/about1.svg";
-import homeSvg from "../assets/images/homepage.svg";
 import Card from "react-bootstrap/Card";
 import Buttons from "../components/Button";
 import { routes } from "../helper/routes";
@@ -22,19 +21,24 @@ import { FaAward } from "react-icons/fa";
 import Tooltip from "react-bootstrap/Tooltip";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Fade from "react-reveal/Fade";
+import CardBody from "react-bootstrap/esm/CardBody";
+import ResponsiveCollapseCard from "../components/responsiveCard";
+import ResponsiveCollapseCard1 from "../components/responsiveCard1";
 
 function About() {
   const navigate = useNavigate();
   const [modalShow, setModalShow] = React.useState(false);
   console.log(modalShow);
+  const width = { width: "120px" };
 
   const handleNavigateToContactUs = () => {
     navigate(routes.contact);
   };
+
   return (
     <div style={{ position: "relative", top: "110px" }}>
       <Container className="position-relative">
-        <div className="header">
+        {/* <div className="header">
           <Fade bottom duration="1500">
             <Row className="d-flex justify-content-center text-center">
               <Col lg={8}>
@@ -49,7 +53,7 @@ function About() {
               </Col>
             </Row>
           </Fade>
-        </div>
+        </div> */}
         <div>
           <Fade bottom duration="1500">
             <Row className="mt-1 gap-1 p-5">
@@ -62,8 +66,8 @@ function About() {
                   We Collect High Quality Leads
                 </h1>
                 <p className="pt-2">
-                  <strong>QIK AUTOMATION</strong> MYS PRIVATE LIMITED is a
-                  cutting-edge startup based in Mysore, India, dedicated to
+                  <strong>QIKK AUTOMATION TECHNOLOGIES</strong> PRIVATE LIMITED
+                  is a cutting-edge startup based in Mysore, India, dedicated to
                   revolutionizing the electronic manufacturing industry. With a
                   strong focus on innovation, design, and technology, QIK
                   AUTOMATION aims to provide comprehensive solutions for
@@ -75,6 +79,7 @@ function About() {
                 </p>
                 <Buttons
                   name={"Contact Us"}
+                  width={width.width}
                   onClick={handleNavigateToContactUs}
                 />
               </Col>
@@ -85,22 +90,20 @@ function About() {
           <Row>
             <div className="p-5">
               <h1 style={{ fontSize: "40px" }} className="fs-2 mt-4 fw-bolder">
-                Visit some Of Our Stuffs
+                Vision and Future Outlook
               </h1>
             </div>
           </Row>
         </Fade>
         <div>
-          <Row className="m-4 p-5">
+          <Row className=" p-5">
             <Col md={6}>
               <Fade left duration="1500">
-                <Card className="border border-0 mb-5 bg-white rounded bg-dark text-black overflow-auto">
-                  <Card.Img
-                    src={about1Svg}
-                    alt="Card image"
-                    style={{ height: "23rem" }}
-                  />
-                  <Card.ImgOverlay>
+                {/* <Card
+                  className="border border-0 mb-5 rounded text-black overflow-auto"
+                  style={{ backgroundImage: `url(${about1Svg})` }}
+                >
+                  <CardBody>
                     <div className="hoover rounded  p-2 bottom-0 ">
                       <Card.Title>
                         <h5>Mission</h5>
@@ -115,31 +118,33 @@ function About() {
                         </p>
                       </Card.Text>
                     </div>
-                  </Card.ImgOverlay>
-                </Card>
+                  </CardBody>
+                </Card> */}
+                <ResponsiveCollapseCard1 />
               </Fade>
             </Col>
             <Col md={6}>
               <Fade right duration="1500">
-                <Card className="border border-0  mb-5 bg-white rounded text-black d-flex justify-content-evenl overflow-auto">
-                  <Card.Img
-                    src={homeSvg}
-                    alt="Card image"
-                    style={{ height: "23rem" }}
-                  />
-                  <Card.ImgOverlay>
+                {/* <Card
+                  className="border border-0  mb-5 rounded text-black overflow-auto"
+                  style={{ backgroundImage: `url(${about1Svg})` }}
+                >
+                 
+                  <CardBody>
                     <div className="hoover rounded p-2 bottom-0 ">
                       <Card.Title>
                         <h5>Future Outlook</h5>
                       </Card.Title>
                       <Card.Text className="text-start m-2">
                         <p>
-                          QIK AUTOMATION MYS PRIVATE LIMITED is poised for rapid
-                          growth in the electronic manufacturing industry.
+                          QIKK AUTOMATION TECHNOLOGIES PRIVATE LIMITED is poised
+                          for rapid growth in the electronic manufacturing
+                          industry.
                         </p>
                         <Buttons
                           variant="primary"
                           onClick={() => setModalShow(true)}
+                          width={width.width}
                           name={"Read More"}
                         ></Buttons>
                       </Card.Text>
@@ -150,26 +155,27 @@ function About() {
                           title="Future Outlook"
                         >
                           <p>
-                            QIK AUTOMATION MYS PRIVATE LIMITED is poised for
-                            rapid growth in the electronic manufacturing
-                            industry. By leveraging cutting-edge technology,
-                            continuous innovation, and a customer-centric
-                            approach, we aim to become a global leader in
-                            providing integrated solutions for electronic
-                            manufacturing processes. As we expand our product
-                            portfolio and enhance our software offerings, we
-                            will remain dedicated to driving the industry
-                            forward through Quality, efficiency, and excellence.
-                            For inquiries, collaborations, or more information
-                            about QIK AUTOMATION, please visit our website at
-                            www.rexsatronix.com or contact us at
+                            QIKK AUTOMATION TECHNOLOGIES PRIVATE LIMITED is
+                            poised for rapid growth in the electronic
+                            manufacturing industry. By leveraging cutting-edge
+                            technology, continuous innovation, and a
+                            customer-centric approach, we aim to become a global
+                            leader in providing integrated solutions for
+                            electronic manufacturing processes. As we expand our
+                            product portfolio and enhance our software
+                            offerings, we will remain dedicated to driving the
+                            industry forward through Quality, efficiency, and
+                            excellence. For inquiries, collaborations, or more
+                            information about QIK AUTOMATION, please visit our
+                            website at www.rexsatronix.com or contact us at
                             info@rexsatronix.com.
                           </p>
                         </MyModal>
                       </CardText>
                     </div>
-                  </Card.ImgOverlay>
-                </Card>
+                  </CardBody>
+                </Card> */}
+                <ResponsiveCollapseCard />
               </Fade>
             </Col>
           </Row>
@@ -184,13 +190,12 @@ function About() {
             </div>
           </Row>
         </Fade>
-        ?
         <Row className="p-5">
           <Col md={4} className="text-center">
             <Fade left duration="1500">
               <Card className="qik border border-0">
                 <Card.Header className="border border-0">
-                  <FaAward size={"200px"} />
+                  <FaAward size={"180px"} fluid />
                 </Card.Header>
                 <Card.Body>
                   <Card.Title>
@@ -208,10 +213,11 @@ function About() {
             <Fade bottom duration="1500">
               <Card className="qik border border-0">
                 <Card.Img
-                  style={{ height: "200px" }}
+                  style={{ height: "170px" }}
                   variant="top"
                   src={intelliganceSvg}
                   rounded
+                  fluid
                 />
                 <Card.Body>
                   <Card.Title>Intelligence</Card.Title>
@@ -228,10 +234,11 @@ function About() {
             <Fade right duration="1500">
               <Card className="qik border border-0">
                 <Card.Img
-                  style={{ height: "200px" }}
+                  style={{ height: "180px" }}
                   variant="top"
                   src={creativeSvg}
                   rounded
+                  fluid
                 />
                 <Card.Body>
                   <Card.Title>Creativity</Card.Title>
@@ -246,12 +253,12 @@ function About() {
           </Col>
         </Row>
       </Container>
-      <Fade big clear duration="1500">
-        <Row
-          style={{ marginBottom: "150px", backgroundColor: "#E9FDFD" }}
-          className="d-flex justify-content-evenly p-3 "
-        >
-          <Col md={2}>
+      <Row
+        style={{ marginBottom: "150px", backgroundColor: "#E9FDFD" }}
+        className="d-flex justify-content-evenly p-3 "
+      >
+        <Col md={2}>
+          <Fade big clear duration="2800">
             <div className="hoverIcon">
               <span>
                 <OverlayTrigger
@@ -270,9 +277,11 @@ function About() {
                 </OverlayTrigger>
               </span>
             </div>
-          </Col>
+          </Fade>
+        </Col>
 
-          <Col md={2}>
+        <Col md={2}>
+          <Fade big clear delay="500" duration="2800">
             <div className="hoverIcon">
               <span>
                 <OverlayTrigger
@@ -291,8 +300,10 @@ function About() {
                 </OverlayTrigger>
               </span>
             </div>
-          </Col>
-          <Col md={2}>
+          </Fade>
+        </Col>
+        <Col md={2}>
+          <Fade big clear delay="1000" duration="2800">
             <div className="hoverIcon">
               <span>
                 <OverlayTrigger
@@ -314,8 +325,10 @@ function About() {
                 </OverlayTrigger>
               </span>
             </div>
-          </Col>
-          <Col md={2}>
+          </Fade>
+        </Col>
+        <Col md={2}>
+          <Fade big clear delay="1500" duration="2800">
             <div className="hoverIcon">
               <span>
                 <OverlayTrigger
@@ -334,9 +347,9 @@ function About() {
                 </OverlayTrigger>
               </span>
             </div>
-          </Col>
-        </Row>
-      </Fade>
+          </Fade>
+        </Col>
+      </Row>
     </div>
   );
 }
