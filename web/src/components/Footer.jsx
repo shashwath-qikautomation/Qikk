@@ -5,6 +5,12 @@ import Col from "react-bootstrap/Col";
 import { Row } from "react-bootstrap";
 import Nav from "react-bootstrap/Nav";
 import { routes } from "../helper/routes";
+import Image from "react-bootstrap/Image";
+import business from "../assets/images/business.svg";
+import usa from "../assets/languages/usa.svg";
+import china from "../assets/languages/china.svg";
+import japan from "../assets/languages/japan.svg";
+import thailand from "../assets/languages/thailand.svg";
 
 const Footer = () => {
   return (
@@ -20,7 +26,7 @@ const Footer = () => {
       className="main-footer"
     >
       <div className="container">
-        <div className="row">
+        <div className="row g-5">
           <div className="col-md-3 col-sm-6">
             <Col className="text-start">
               <h1 className="fs-6 pb-3 text-black">Get In Touch</h1>
@@ -63,12 +69,77 @@ const Footer = () => {
               </Nav.Link>
             </Col>
           </div>
-          <div className="col-md-3 col-sm-6">
+          <div className="col-md-6 col-lg-3">
             <Col className="text-start">
               <h1 className="fs-6 pb-3 text-black">Gallery</h1>
+              <div className="row g-2">
+                <div className="col-4">
+                  <Image
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto",
+                    }}
+                    src={business}
+                  />
+                </div>
+                <div className="col-4">
+                  <Image
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto",
+                    }}
+                    src={business}
+                  />
+                </div>
+                <div className="col-4">
+                  <Image
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto",
+                    }}
+                    src={business}
+                  />
+                </div>
+                <div className="col-4">
+                  <Image
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto",
+                    }}
+                    src={business}
+                  />
+                </div>
+                <div className="col-4">
+                  <Image
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto",
+                    }}
+                    src={business}
+                  />
+                </div>
+                <div className="col-4">
+                  <Image
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto",
+                    }}
+                    src={business}
+                  />
+                </div>
+              </div>
+              <Col className="pt-4">
+                <h1 className="fs-6 pb-3 text-black">Language</h1>
+                <div className="d-flex justify-content-">
+                  <Image src={usa} width="20px" />
+                  <Image src={china} width="20px" />
+                  <Image src={japan} width="20px" />
+                  <Image src={thailand} width="20px" />
+                </div>
+              </Col>
             </Col>
           </div>
-          <div className="col-md-3 col-sm-6">
+          <div className="col-md-6 col-lg-3">
             <Col className="text-start">
               <h1 className="fs-6 pb-3 text-black">Mission</h1>
               <p>

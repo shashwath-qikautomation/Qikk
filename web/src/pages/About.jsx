@@ -35,6 +35,10 @@ function About() {
     navigate(routes.contact);
   };
 
+  const width = {
+    width: "120px",
+  };
+
   return (
     <div style={{ position: "relative", top: "110px" }}>
       <Container className="position-relative">
@@ -78,6 +82,7 @@ function About() {
                   manufacturing processes.
                 </p>
                 <Buttons
+                  width={width.width}
                   name={"Contact Us"}
                   width={width.width}
                   onClick={handleNavigateToContactUs}
