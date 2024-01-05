@@ -2,40 +2,66 @@ import React from "react";
 import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import ProductCard from "../components/ProductCard";
+import MyModal from "../components/Model";
+import productImg from "../assets/images/product.svg";
+import Fade from "react-reveal";
+import Buttons from "../components/Button";
+import url10 from "../assets/pdf/img10.png";
+import { useState, useRef } from "react";
+import html2canvas from "html2canvas";
+import "../styles/Product.css";
+import { jsPDF } from "jspdf";
 
 const SmartStorage = () => {
+  const [showModal, setShowModal] = useState(false);
+  const [selectedUrl, setSelectedUrl] = useState("");
+  const canvasRef = useRef(null);
+
+  const handleShowModal = (url) => {
+    setSelectedUrl(url);
+    setShowModal(true);
+  };
+  const handleCloseModal = () => {
+    setSelectedUrl("");
+    setShowModal(false);
+  };
+
+  const Width = { width: "120px" };
+
+  const handleDownloadPdf = () => {
+    if (canvasRef.current) {
+      const captureNode = canvasRef.current;
+      const { width, height } = captureNode.getBoundingClientRect();
+      const pdf = new jsPDF({ unit: "px", format: [width, height] });
+      html2canvas(captureNode).then((canvas) => {
+        const dataUrl = canvas.toDataURL("image/png");
+        pdf.addImage(dataUrl, "PNG", 0, 0, width, height);
+        pdf.save("QIK.pdf");
+      });
+    }
+  };
+
   return (
     <div>
       <Container>
-        <Row className="d-flex justify-content-center mt-5 mb-5 animate__animated animate__fadeInUp">
-          <div className="mt-5">
-            <h1 className="mt-5" style={{ fontWeight: "800" }}>
-              <span className="line">Product and Solution</span>
-            </h1>
-          </div>
-        </Row>
-        <Row className="d-flex justify-content-center">
-          <Col lg={12}>
+        <Fade bottom>
+          <Row className="d-flex justify-content-center mt-5">
             <div className="mt-5">
-              <h5
-                style={{ color: "#2124b1", fontWeight: 700 }}
-                className="animate__animated animate__fadeInUp"
-              >
-                Our Services
-              </h5>
-              <h3
-                className="animate__animated animate__fadeInUp"
-                style={{ fontWeight: 800 }}
-              >
-                What Solutions We Provide
-              </h3>
+              <Col lg={12}>
+                <div className="mt-5">
+                  <h5 className="text-primary" style={{ fontWeight: 700 }}>
+                    Our Services
+                  </h5>
+                  <h3 style={{ fontWeight: 800 }}>What Solutions We Provide</h3>
+                </div>
+              </Col>
             </div>
-          </Col>
-        </Row>
-
+          </Row>
+        </Fade>
         <Row className="mt-5">
           <Col lg={12} sm={12} md={12}>
-            <p className="d-flex justify-content-start text-justify animate__animated animate__fadeInUp">
+            <p className="d-flex justify-content-start text-justify">
               We are India's first smart factory solution provider in addressing
               the challenges of the electronics manufacturing industry
               particularly, in traceability, material handling and production
@@ -48,7 +74,42 @@ const SmartStorage = () => {
             </p>
           </Col>
         </Row>
+        <Fade bottom>
+          <Row className="mt-4">
+            <Col sm={12} md={4}>
+              <ProductCard
+                title="Smart Storage Series Smart Reel Storage System QIK-SRSS "
+                text="Our Storage system is equipped 
+                    with features to improve component management, reduce errors... "
+                productImg={productImg}
+                url={url10}
+                onClick={() => handleShowModal(url10)}
+              />
+            </Col>
+          </Row>
+        </Fade>
       </Container>
+      <MyModal
+        show={showModal}
+        fullscreen={true}
+        onHide={handleCloseModal}
+        className="modal-pdf border-0"
+      >
+        <div className="image-frame text-center m-auto border-0">
+          <img
+            style={{ width: "100%" }}
+            ref={canvasRef}
+            src={selectedUrl}
+            alt="image"
+          ></img>
+          <Buttons
+            color="blue"
+            name="Download PDF"
+            width={Width.width}
+            onClick={handleDownloadPdf}
+          ></Buttons>
+        </div>
+      </MyModal>
     </div>
   );
 };
