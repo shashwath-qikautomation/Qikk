@@ -26,7 +26,7 @@ function Contact() {
           <Container>
             <Row className="d-flex justify-content-center animate__animated animate__fadeInUp">
               <Col lg={8} className="d-flex justify-content-center">
-                <div>
+                <div style={{ position: "relative", paddingTop: "20px" }}>
                   <h2>Contact Us</h2>
                 </div>
               </Col>
