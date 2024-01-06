@@ -24,6 +24,7 @@ import Fade from "react-reveal/Fade";
 import CardBody from "react-bootstrap/esm/CardBody";
 import ResponsiveCollapseCard from "../components/responsiveCard";
 import ResponsiveCollapseCard1 from "../components/responsiveCard1";
+import { Image } from "react-bootstrap";
 
 function About() {
   const navigate = useNavigate();
@@ -99,82 +100,11 @@ function About() {
           <Row className=" p-5">
             <Col md={6}>
               <Fade left duration="1500">
-                {/* <Card
-                  className="border border-0 mb-5 rounded text-black overflow-auto"
-                  style={{ backgroundImage: `url(${about1Svg})` }}
-                >
-                  <CardBody>
-                    <div className="hoover rounded  p-2 bottom-0 ">
-                      <Card.Title>
-                        <h5>Mission</h5>
-                      </Card.Title>
-                      <Card.Text className="text-start m-2">
-                        <p>
-                          Our mission is to empower electronic manufacturing
-                          companies with state-of-the-art technology solutions
-                          that optimize production processes, reduce operational
-                          costs, and enhance overall competitiveness in a
-                          rapidly evolving market.
-                        </p>
-                      </Card.Text>
-                    </div>
-                  </CardBody>
-                </Card> */}
                 <ResponsiveCollapseCard1 />
               </Fade>
             </Col>
             <Col md={6}>
               <Fade right duration="1500">
-                {/* <Card
-                  className="border border-0  mb-5 rounded text-black overflow-auto"
-                  style={{ backgroundImage: `url(${about1Svg})` }}
-                >
-                 
-                  <CardBody>
-                    <div className="hoover rounded p-2 bottom-0 ">
-                      <Card.Title>
-                        <h5>Future Outlook</h5>
-                      </Card.Title>
-                      <Card.Text className="text-start m-2">
-                        <p>
-                          QIKK AUTOMATION TECHNOLOGIES PRIVATE LIMITED is poised
-                          for rapid growth in the electronic manufacturing
-                          industry.
-                        </p>
-                        <Buttons
-                          variant="primary"
-                          onClick={() => setModalShow(true)}
-                          width={width.width}
-                          name={"Read More"}
-                        ></Buttons>
-                      </Card.Text>
-                      <CardText className="text-start m-2">
-                        <MyModal
-                          show={modalShow}
-                          onHide={() => setModalShow(false)}
-                          title="Future Outlook"
-                        >
-                          <p>
-                            QIKK AUTOMATION TECHNOLOGIES PRIVATE LIMITED is
-                            poised for rapid growth in the electronic
-                            manufacturing industry. By leveraging cutting-edge
-                            technology, continuous innovation, and a
-                            customer-centric approach, we aim to become a global
-                            leader in providing integrated solutions for
-                            electronic manufacturing processes. As we expand our
-                            product portfolio and enhance our software
-                            offerings, we will remain dedicated to driving the
-                            industry forward through Quality, efficiency, and
-                            excellence. For inquiries, collaborations, or more
-                            information about QIK AUTOMATION, please visit our
-                            website at www.rexsatronix.com or contact us at
-                            info@rexsatronix.com.
-                          </p>
-                        </MyModal>
-                      </CardText>
-                    </div>
-                  </CardBody>
-                </Card> */}
                 <ResponsiveCollapseCard />
               </Fade>
             </Col>
@@ -191,11 +121,15 @@ function About() {
           </Row>
         </Fade>
         <Row className="p-5">
-          <Col md={4} className="text-center">
+          <Col md={4} className="text-center col-lg-4 col-md-6">
             <Fade left duration="1500">
               <Card className="qik border border-0">
                 <Card.Header className="border border-0">
-                  <FaAward size={"180px"} fluid />
+                  <FaAward
+                    size={"180px"}
+                    backgroundColor={"transparent"}
+                    fluid
+                  />
                 </Card.Header>
                 <Card.Body>
                   <Card.Title>
@@ -209,7 +143,7 @@ function About() {
               </Card>
             </Fade>
           </Col>
-          <Col md={4} className="text-center">
+          <Col md={4} className="text-center col-lg-4 col-md-6">
             <Fade bottom duration="1500">
               <Card className="qik border border-0">
                 <Card.Img
@@ -230,7 +164,7 @@ function About() {
               </Card>
             </Fade>
           </Col>
-          <Col md={4} className="text-center">
+          <Col md={4} className="text-center col-lg-4 col-md-6">
             <Fade right duration="1500">
               <Card className="qik border border-0">
                 <Card.Img
@@ -257,7 +191,7 @@ function About() {
         style={{ marginBottom: "150px", backgroundColor: "#E9FDFD" }}
         className="d-flex justify-content-evenly p-3 "
       >
-        <Col md={2}>
+        <Col className="col-lg-2 col-md-4 col-6">
           <Fade big clear duration="2800">
             <div className="hoverIcon">
               <span>
@@ -273,14 +207,14 @@ function About() {
                   )}
                   placement="top"
                 >
-                  <img style={{ height: "70px" }} src={CyientLogo} />
+                  <Image style={{ height: "70px" }} src={CyientLogo} fluid />
                 </OverlayTrigger>
               </span>
             </div>
           </Fade>
         </Col>
 
-        <Col md={2}>
+        <Col className="col-lg-2 col-md-4 col-6">
           <Fade big clear delay="500" duration="2800">
             <div className="hoverIcon">
               <span>
@@ -296,13 +230,13 @@ function About() {
                   )}
                   placement="top"
                 >
-                  <img style={{ height: "70px" }} src={TycoonLogo} />
+                  <Image style={{ height: "70px" }} src={TycoonLogo} fluid />
                 </OverlayTrigger>
               </span>
             </div>
           </Fade>
         </Col>
-        <Col md={2}>
+        <Col className="col-lg-2 col-md-4 col-6">
           <Fade big clear delay="1000" duration="2800">
             <div className="hoverIcon">
               <span>
@@ -321,13 +255,13 @@ function About() {
                   )}
                   placement="top"
                 >
-                  <img style={{ height: "70px" }} src={frontlineLogo} />
+                  <Image style={{ height: "70px" }} src={frontlineLogo} fluid />
                 </OverlayTrigger>
               </span>
             </div>
           </Fade>
         </Col>
-        <Col md={2}>
+        <Col className="col-lg-2 col-md-4 col-6">
           <Fade big clear delay="1500" duration="2800">
             <div className="hoverIcon">
               <span>
@@ -343,7 +277,7 @@ function About() {
                   )}
                   placement="top"
                 >
-                  <img style={{ height: "70px" }} src={vinyasLogo} />
+                  <Image style={{ height: "70px" }} src={vinyasLogo} fluid />
                 </OverlayTrigger>
               </span>
             </div>
