@@ -3,6 +3,7 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    align-items: center;
    
     
 }
@@ -14,13 +15,16 @@
     box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
     border-radius: 15px 15px 0 0;
     align-items: center;
-    padding: 25px 25px 0 25px;
+    padding: 24px 24px 0 24px;
+    
 }
 .text{
     color:  #228be6;
     font-size: 20px;
     font-weight: 500;
     margin-bottom: 20px; 
+    padding-right: 10px;
+  
    
     
 }
@@ -30,7 +34,8 @@
     color:  #228be6;
     transform: rotate(0deg);
     transition: transform 0.3s ease;
-   
+    font-size: 20px;
+ 
     
 }
 .hidden-box{
