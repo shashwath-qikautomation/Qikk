@@ -1,24 +1,57 @@
+.accordion{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+   
+    
+}
+.item{
+   
+    column-gap: 24px;
+    row-gap: 32px;
+    border-top: 4px solid #228be6;
+    box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+    border-radius: 15px 15px 0 0;
+    align-items: center;
+    padding: 25px 25px 0 25px;
+}
+.text{
+    color:  #228be6;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px; 
+   
+    
+}
+.icon{
+    width: 24px;
+    height: 24px;
+    color:  #228be6;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+   
+    
+}
+.hidden-box{
+    grid-column: 2;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
 
-.blog-heading {
-    position: relative;
-  }
-  
-  .blog-heading::before,
-  .blog-heading::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    width: 5%;
-    height: 1px;
-    background-color: #000; 
-  }
-  
-  .blog-heading::before {
-    left: 36%;
-    margin-left: 5%;
-  }
-  
-  .blog-heading::after {
-    right: 36%;
-    margin-right: 5%;
-  }
+}
+.hidden-box p{
+    line-height: 1.6;
+    margin-bottom: 24px;
+   
+    
+}
+.active-box{
+    max-height: 50%;
+    margin-bottom: 24px;
+    transition: max-height 0.3s ease;
+}
+.rotate{
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+}
