@@ -23,7 +23,7 @@ function HomePage() {
   };
 
   return (
-    <Container className="pt-5 pb-5 mt-4" fluid="xxl">
+    <div className="container-fluid pt-5 pb-5 mt-4">
       <Row xs={1} md={2} className="header-content mb-5 p-5 fade-in-up">
         <Col className="text-start">
           {" "}
@@ -67,6 +67,7 @@ function HomePage() {
       <Fade bottom duration="1500">
         <Row className="gap-4 p-5">
           <Col>
+            <h5 className="text-primary fs-5 fw-bold"> About Us</h5>
             <h1 style={{ fontSize: "40px" }} className="fs-2 mt-4 fw-bolder">
               Dedicated to revolutionizing the electronic manufacturing
               industry.
@@ -102,7 +103,7 @@ function HomePage() {
         </Row>
       </Fade>
       <Article />
-    </Container>
+    </div>
   );
 }
 

@@ -1,11 +1,9 @@
-p{
-    text-align: start;
+p {
+  text-align: start;
 }
-.modal-content{
-    background: rgba(29, 29, 39, 0.7);
+.modal-content {
+  background: rgba(29, 29, 39, 0.7);
 }
 h2 {
-    position: relative;
-  }
-  
-  
+  position: relative;
+}
