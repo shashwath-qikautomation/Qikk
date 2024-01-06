@@ -21,23 +21,7 @@ function Blog() {
 
   return (
     <Container className="pt-5 pb-5 mt-5">
-      <div className="header">
-        <Fade bottom duration="1500">
-          <Row className="d-flex justify-content-center text-center">
-            <Col lg={8}>
-              <div>
-                <h2
-                  style={{ fontSize: "50px", paddingTop: "20px" }}
-                  className="head fw-bolder mb-3"
-                >
-                  Blog
-                </h2>
-              </div>
-            </Col>
-          </Row>
-        </Fade>
-      </div>
-      <Row className="mb-5 p-2 mt-5">
+      <Row className="mb-5 p-2 mt-5 ">
         <Fade bottom duration="1500">
           <Col xs={12} className="mb-5">
             <h1 className="text-primary fs-4 fw-bold mb-4">
