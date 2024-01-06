@@ -101,7 +101,11 @@ function Contact() {
             <Fade bottom>
               <div className="row">
                 <div className="col">
-                  <Buttons className="btn" name="SEND"></Buttons>
+                  <Buttons
+                    width={"120px"}
+                    className="btn"
+                    name="SEND"
+                  ></Buttons>
                 </div>
               </div>
             </Fade>
