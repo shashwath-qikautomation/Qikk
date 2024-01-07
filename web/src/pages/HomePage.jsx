@@ -29,7 +29,7 @@ function HomePage() {
           {" "}
           <h1
             id="top"
-            style={{ fontSize: "50px" }}
+            style={{ fontSize: "calc(1.375rem + 1.5vw)" }}
             className="animate fw-bolder"
           >
             Quality, Intelligent & Creative Solutions
@@ -65,10 +65,13 @@ function HomePage() {
         </Col>
       </Row>
       <Fade bottom duration="1500">
-        <Row className="gap-4 p-5">
+        <Row className="gap-4 p-2">
           <Col>
             <h5 className="text-primary fs-5 fw-bold"> About Us</h5>
-            <h1 style={{ fontSize: "40px" }} className="fs-2 mt-4 fw-bolder">
+            <h1
+              style={{ fontSize: "calc(1.275rem + 1.5vw)" }}
+              className="fs-2 mt-4 fw-bolder"
+            >
               Dedicated to revolutionizing the electronic manufacturing
               industry.
             </h1>
@@ -77,14 +80,14 @@ function HomePage() {
       </Fade>
       <Fade bottom duration="1500">
         <Row className="gap-4 p-5">
-          <Col className="card-effect shadow p-4 mb-5 bg-white rounded">
+          <Col className="card-effect shadow p-4 mb-3 bg-white rounded">
             <h1 className="fs-3">Quality</h1>
             <p className="p-2">
               We are committed to delivering products and services of the
               highest quality, ensuring the satisfaction of our customers
             </p>
           </Col>
-          <Col className="card-effect shadow p-4 mb-5 bg-white rounded">
+          <Col className="card-effect shadow p-4 mb-3 bg-white rounded">
             <h1 className="fs-3">Intelligence</h1>
             <p className="p-2">
               We aim to create solutions that are not only efficient but also
@@ -92,7 +95,7 @@ function HomePage() {
               superior performance. industry.
             </p>
           </Col>
-          <Col className="card-effect shadow p-4 mb-5 bg-white rounded">
+          <Col className="card-effect shadow p-4 mb-3 bg-white rounded">
             <h1 className="fs-3">Creativity</h1>
             <p className="p-2">
               We foster a culture of creativity and constant improvement,
