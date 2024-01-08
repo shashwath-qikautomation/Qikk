@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import logoW from "../assets/logoW.png";
+import logoW from "../assets/logoFW.png";
 import { routes } from "../helper/routes";
 import "../styles/NavBar.css";
 import { useNavigate, useLocation } from "react-router-dom";
@@ -11,26 +11,33 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 function NavBar() {
   const navigate = useNavigate();
   const location = useLocation();
-  const [activeLink, setActiveLink] = useState("");
+  const [activeItem, setActiveItem] = useState(() => {
+    const storedItem = localStorage.getItem("activeItem");
+    return storedItem || "home";
+  });
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    setActiveLink(activeLink);
-  }, [location.pathname]);
+    localStorage.setItem("activeItem", activeItem);
+  }, [activeItem, location.pathname]);
 
   const navigateRouteTo = (path) => {
     console.log(path);
     navigate(path);
   };
 
-  const handleNavItemClick = (link) => {
-    setActiveLink(link);
+  const handleClick = (link) => {
+    setActiveItem(link);
   };
 
   return (
     <Navbar expand="lg" className="navbar bg-body-tertiary fixed-top">
       <Container className="gap-5">
-        <Navbar.Brand href={routes.homePage}>
+        <Navbar.Brand
+          onClick={() => {
+            navigateRouteTo(routes.homePage);
+          }}
+        >
           <img src={logoW} alt="logo" height={"80"} width={"140"} />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -40,10 +47,12 @@ function NavBar() {
               className="nav-link d-flex justify-content-start"
               onClick={() => {
                 navigateRouteTo(routes.homePage);
-                handleNavItemClick("home");
+                handleClick("home");
               }}
               //href={routes.homePage}
-              style={{ color: activeLink === "home" ? "#3498db" : "inherit" }}
+              style={{
+                color: location.pathname === "/" ? "#3498db" : "inherit",
+              }}
             >
               Home
             </Nav.Link>
@@ -51,11 +60,13 @@ function NavBar() {
               className="nav-link d-flex justify-content-start"
               onClick={() => {
                 navigateRouteTo(routes.about);
-                handleNavItemClick("about");
+                handleClick("about");
               }}
               //href={routes.about}
 
-              style={{ color: activeLink === "about" ? "#3498db" : "inherit" }}
+              style={{
+                color: location.pathname === "/about" ? "#3498db" : "inherit",
+              }}
             >
               About Us
             </Nav.Link>
@@ -64,9 +75,11 @@ function NavBar() {
               // href={routes.blog}
               onClick={() => {
                 navigateRouteTo(routes.blog);
-                handleNavItemClick("blog");
+                handleClick("blog");
               }}
-              style={{ color: activeLink === "blog" ? "#3498db" : "inherit" }}
+              style={{
+                color: location.pathname === "/blog" ? "#3498db" : "inherit",
+              }}
             >
               Blog
             </Nav.Link>
@@ -102,10 +115,10 @@ function NavBar() {
               // href={routes.gallery}
               onClick={() => {
                 navigateRouteTo(routes.gallery);
-                handleNavItemClick("gallery");
+                handleClick("gallery");
               }}
               style={{
-                color: activeLink === "gallery" ? "#3498db" : "inherit",
+                color: location.pathname === "/gallery" ? "#3498db" : "inherit",
               }}
             >
               Gallery
@@ -115,10 +128,10 @@ function NavBar() {
               // href={routes.contact}
               onClick={() => {
                 navigateRouteTo(routes.contact);
-                handleNavItemClick("contact");
+                handleClick("contact");
               }}
               style={{
-                color: activeLink === "contact" ? "#3498db" : "inherit",
+                color: location.pathname === "/contact" ? "#3498db" : "inherit",
               }}
             >
               Contact

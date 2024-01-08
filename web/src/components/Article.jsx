@@ -69,14 +69,14 @@ function Article() {
     <div style={{ marginBottom: "60px" }}>
       <Row
         style={{
-          marginTop: "80px",
+          marginTop: "30px",
           marginBottom: "100px",
           backgroundColor: "#E9FDFD",
           zIndex: "300",
         }}
         className="d-flex justify-content-evenly p-3 "
       >
-        <Col md={2}>
+        <Col className="col-lg-2 col-md-4 p-2 col-6">
           <Zoom duration="2800">
             <div className="hoverIcon">
               <span>
@@ -98,7 +98,7 @@ function Article() {
             </div>
           </Zoom>
         </Col>
-        <Col md={2}>
+        <Col className="col-lg-2 col-md-4 p-2 col-6">
           <Zoom delay="500" duration="2800">
             <div className="hoverIcon">
               <span>
@@ -120,7 +120,7 @@ function Article() {
             </div>
           </Zoom>
         </Col>
-        <Col md={2}>
+        <Col className="col-lg-2 col-md-4 p-2 col-6">
           <Zoom delay="1000" duration="2800">
             <div className="hoverIcon">
               <span>
@@ -145,7 +145,7 @@ function Article() {
             </div>
           </Zoom>
         </Col>
-        <Col md={2}>
+        <Col className="col-lg-2 col-md-4 p-2 col-6">
           <Zoom delay="1500" duration="2800">
             <div className="hoverIcon">
               <span>
@@ -171,13 +171,13 @@ function Article() {
       <Row xs={1} md={2} className="md-2 p-5">
         <Col className="pt-2">
           <Fade left duration="1500">
-            <Image src={business} width="500" height="400px" fluid />
+            <Image src={business} width="400" height="400px" fluid />
           </Fade>
         </Col>
         <Col className="gap-4 pt-4">
           <Fade right duration="1500">
             {" "}
-            <h1 className="fs-1">
+            <h1 style={{ fontSize: "calc(1.275rem + 1.5vw)" }} className="fs-1">
               Our compressive solutions aligned with Industry 4.0
             </h1>
             <p className="p-3">
@@ -203,15 +203,18 @@ function Article() {
             <h5 className="text-primary fs-5 fw-bold">
               Our Product & Solutions
             </h5>
-            <h1 className="fs-2 mt-4 font-weight-bold">
+            <h1
+              style={{ fontSize: "calc(1.275rem + 1.5vw)" }}
+              className="fs-2 mt-4 font-weight-bold"
+            >
               Our compressive solutions aligned with Industry 4.0
             </h1>
           </Col>
         </Row>
       </Fade>
       <Fade bottom duration="1500">
-        <Row className="gap-5 p-5 w-75 mx-auto">
-          <Col className="card-hover shadow p-4 bg-white rounded">
+        <Row className="row gap-5 w-75 mx-auto justify-content-center">
+          <Col className="col-md-5 card-hover shadow p-4 bg-white rounded">
             <h1 className="fs-3">Material Handling Solutions</h1>
             <p className="p">
               Single Lane Conveyor Series 1 M Link Conveyor QIK-1000LC
@@ -223,7 +226,7 @@ function Article() {
               onClick={() => navigateRouteTo(routes.materialHandling)}
             />
           </Col>
-          <Col className="card-hover shadow p-4 bg-white rounded">
+          <Col className="col-md-5 card-hover shadow p-4 bg-white rounded">
             <h1 className="fs-3">Smart Storage Solutions</h1>
             <p className="p">
               Single Lane Conveyor Series 1 M Link Conveyor QIK-1000LC
@@ -235,11 +238,7 @@ function Article() {
               onClick={() => navigateRouteTo(routes.smartStorage)}
             />
           </Col>
-        </Row>
-      </Fade>
-      <Fade bottom duration="1400">
-        <Row className="gap-5 p-5 w-75 mx-auto">
-          <Col className="card-hover shadow p-4 bg-white rounded">
+          <Col className="col-md-5 card-hover shadow p-4 bg-white rounded">
             <h1 className="fs-3">Smart Inventory Solutions</h1>
             <p className="p">
               Single Lane Conveyor Series 1 M Link Conveyor QIK-1000LC
@@ -251,7 +250,7 @@ function Article() {
               onClick={() => navigateRouteTo(routes.smartInventory)}
             />
           </Col>
-          <Col className="card-hover shadow p-4 bg-white rounded">
+          <Col className="col-md-5 card-hover shadow p-4 bg-white rounded">
             <h1 className="fs-3">Traceability</h1>
             <p className="p">
               Single Lane Conveyor Series 1 M Link Conveyor QIK-1000LC

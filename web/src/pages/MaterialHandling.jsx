@@ -90,9 +90,9 @@ function MaterialHandling() {
           </Row>
         </Fade>
 
-        <Fade bottom>
-          <Row className=" mt-4">
-            <Col sm={12} md={4} lg={4}>
+        <Row className=" mt-4">
+          <Col sm={12} md={4} lg={4}>
+            <Fade bottom>
               <ProductCard
                 className="mycard"
                 style={{ backgroundColor: "blue" }}
@@ -103,9 +103,10 @@ function MaterialHandling() {
                 url={url1}
                 onClick={() => handleShowModal(url1)}
               />
-            </Col>
-
-            <Col sm={12} md={4}>
+            </Fade>
+          </Col>
+          <Col sm={12} md={4}>
+            <Fade bottom>
               <ProductCard
                 className="mycard"
                 title="Single Lane Conveyor Series 0.5 M Inspection Conveyor QIK-500IC "
@@ -115,9 +116,10 @@ function MaterialHandling() {
                 url={url2}
                 onClick={() => handleShowModal(url2)}
               />
-            </Col>
-
-            <Col sm={12} md={4}>
+            </Fade>
+          </Col>
+          <Col sm={12} md={4}>
+            <Fade bottom>
               <ProductCard
                 className="mycard"
                 title="Single Lane Conveyor Series 0.5 M Link Conveyor QIK-500LC "
@@ -127,9 +129,10 @@ function MaterialHandling() {
                 url={url3}
                 onClick={() => handleShowModal(url3)}
               />
-            </Col>
-
-            <Col sm={12} md={4}>
+            </Fade>
+          </Col>
+          <Col sm={12} md={4}>
+            <Fade bottom>
               <ProductCard
                 className="mycard"
                 title="Single Lane Conveyor Series 1 M Inspection Conveyor QIK-1000IC "
@@ -139,8 +142,10 @@ function MaterialHandling() {
                 url={url4}
                 onClick={() => handleShowModal(url4)}
               />
-            </Col>
-            <Col sm={12} md={4}>
+            </Fade>
+          </Col>
+          <Col sm={12} md={4}>
+            <Fade bottom>
               <ProductCard
                 className="mycard"
                 title="Single Lane Conveyor Series 1 M Cooling Conveyor QIK-1000CC "
@@ -150,8 +155,10 @@ function MaterialHandling() {
                 url={url5}
                 onClick={() => handleShowModal(url5)}
               />
-            </Col>
-            <Col sm={12} md={4}>
+            </Fade>
+          </Col>
+          <Col sm={12} md={4}>
+            <Fade bottom>
               <ProductCard
                 className="mycard"
                 title=" Single Lane Conveyor Series 1 M Link Conveyor QIK-1000LC "
@@ -161,8 +168,10 @@ function MaterialHandling() {
                 url={url6}
                 onClick={() => handleShowModal(url6)}
               />
-            </Col>
-            <Col sm={12} md={4}>
+            </Fade>
+          </Col>
+          <Col sm={12} md={4}>
+            <Fade bottom>
               <ProductCard
                 className="mycard"
                 title=" Single Lane Series Magazine Loader QIK-ML "
@@ -172,8 +181,10 @@ function MaterialHandling() {
                 url={url7}
                 onClick={() => handleShowModal(url7)}
               />
-            </Col>
-            <Col sm={12} md={4}>
+            </Fade>
+          </Col>
+          <Col sm={12} md={4}>
+            <Fade bottom>
               <ProductCard
                 className="mycard"
                 title="Single Lane Series Magazine Unloader QIK-MUL "
@@ -183,9 +194,9 @@ function MaterialHandling() {
                 url={url8}
                 onClick={() => handleShowModal(url8)}
               />
-            </Col>
-          </Row>
-        </Fade>
+            </Fade>
+          </Col>
+        </Row>
       </Container>
 
       <MyModal
