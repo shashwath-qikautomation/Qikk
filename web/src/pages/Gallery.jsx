@@ -96,40 +96,44 @@ function Gallery() {
       <Fade bottom duration="1500">
         <Row>
           <Col xs={12} className="mb-5">
-            <div>
-              <Button
+            <ul>
+              <li
+                style={{ width: "70px", paddingRight: "20px" }}
                 className={`filter-item ${
                   filter === "All" ? "active-filter" : ""
                 }`}
                 onClick={() => handleFilterClick("All")}
               >
                 All
-              </Button>
-              <Button
+              </li>
+              <li
+                style={{ width: "80px", paddingRight: "20px" }}
                 className={`filter-item ${
                   filter === "Rack" ? "active-filter" : ""
                 }`}
                 onClick={() => handleFilterClick("Rack")}
               >
                 Rack
-              </Button>
-              <Button
+              </li>
+              <li
+                style={{ width: "120px", paddingRight: "20px" }}
                 className={`filter-item ${
                   filter === "Conveyor" ? "active-filter" : ""
                 }`}
                 onClick={() => handleFilterClick("Conveyor")}
               >
                 Conveyor
-              </Button>
-              <Button
+              </li>
+              <li
+                style={{ width: "120px", paddingRight: "20px" }}
                 className={`filter-item ${
                   filter === "Company" ? "active-filter" : ""
                 }`}
                 onClick={() => handleFilterClick("Company")}
               >
                 Company
-              </Button>
-            </div>
+              </li>
+            </ul>
           </Col>
         </Row>
       </Fade>
