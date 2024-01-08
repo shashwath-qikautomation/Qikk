@@ -75,7 +75,7 @@ ul {
   width: 110px;
 }
 .active-filter {
-  background-color: #28619b;
+  background-color: #3498db;
   clip-path: polygon(0 0, 90% 0, 75% 100%, 0 100%);
   color: white;
 }

@@ -13,7 +13,7 @@ import MaterialHandling from "./pages/MaterialHandling";
 import SmartStorage from "./pages/SmartStorage";
 import SmartInventory from "./pages/SmartInventory";
 import Traceability from "./pages/Traceability";
-import { FaArrowAltCircleUp } from "react-icons/fa";
+import { FaArrowCircleUp } from "react-icons/fa";
 
 function App() {
   const scrollToTop = () => {
@@ -38,7 +38,7 @@ function App() {
         style={{ height: "30px", position: "relative", bottom: "25px" }}
         className="d-flex justify-content-end w-75 mx-auto"
       >
-        <FaArrowAltCircleUp
+        <FaArrowCircleUp
           onClick={scrollToTop}
           style={{ fontSize: "35px", color: "#3498db" }}
         />

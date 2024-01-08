@@ -35,7 +35,7 @@ function MaterialHandling() {
     setShowModal(false);
   };
 
-  const Width = { width: "120px" };
+  const Width = { width: "150px" };
   const [pageNumber, setPageNumber] = useState(1);
 
   const onDocumentLoadSuccess = ({ numPages }) => {

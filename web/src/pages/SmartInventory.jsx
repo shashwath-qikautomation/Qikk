@@ -24,7 +24,7 @@ function SmartInventory() {
     setShowModal(false);
   };
 
-  const Width = { width: "120px" };
+  const Width = { width: "150px" };
 
   const handleDownloadPdf = () => {
     if (canvasRef.current) {

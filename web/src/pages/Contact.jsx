@@ -30,8 +30,8 @@ function Contact() {
           <div className="col col-xs-12 col-md-12 col-sm-12 col-lg-12">
             <Fade bottom>
               <h2
-                className="contact-title mt-3  d-flex justify-content-center"
-                style={contactTitle}
+                className="contact-title mt-3 fs-2 d-flex justify-content-center fw-bolder"
+                style={{ fontSize: "calc(1.275rem + 1.5vw)" }}
               >
                 Get in touch
               </h2>

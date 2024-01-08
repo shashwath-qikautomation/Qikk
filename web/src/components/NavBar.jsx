@@ -7,6 +7,8 @@ import { routes } from "../helper/routes";
 import "../styles/NavBar.css";
 import { useNavigate, useLocation } from "react-router-dom";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import DropdownButton from "react-bootstrap/DropdownButton";
+import Dropdown from "react-bootstrap/Dropdown";
 
 function NavBar() {
   const navigate = useNavigate();
@@ -149,6 +151,11 @@ function NavBar() {
             >
               Contact
             </Nav.Link>
+            {/* <DropdownButton id="dropdown-basic-button" title="Dropdown button">
+              <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+              <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+              <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+            </DropdownButton> */}
           </Nav>
         </Navbar.Collapse>
       </Container>
