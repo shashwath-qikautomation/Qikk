@@ -40,11 +40,11 @@ const ResponsiveCollapseCard = (props) => {
 
   return (
     <Card
-      className="border border-0  mb-5 rounded text-black overflow-auto"
+      className="hovCard border  border-0  mb-5 rounded text-black overflow-auto"
       style={{ backgroundImage: `url(${about1Svg})`, height: "23rem" }}
     >
-      <CardBody>
-        <div className="hoover rounded p-2 bottom-0 ">
+      <CardBody className="hoover rounded p-2 bottom-0 ">
+        <div>
           <Card.Title>
             <h5>Future Outlook</h5>
           </Card.Title>
@@ -73,8 +73,8 @@ const ResponsiveCollapseCard = (props) => {
                 software offerings, we will remain dedicated to driving the
                 industry forward through Quality, efficiency, and excellence.
                 For inquiries, collaborations, or more information about QIK
-                AUTOMATION, please visit our website at www.rexsatronix.com or
-                contact us at info@rexsatronix.com.
+                AUTOMATION, please visit our website at qik.rexsatronix.in or
+                contact us at info@qikautomation.com.
               </p>
             </MyModal>
           </CardText>

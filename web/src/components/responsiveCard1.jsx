@@ -40,11 +40,11 @@ const ResponsiveCollapseCard1 = (props) => {
 
   return (
     <Card
-      className="border border-0  mb-5 rounded text-black overflow-auto"
+      className="hovCard border border-0  mb-5 rounded text-black overflow-auto"
       style={{ backgroundImage: `url(${about1Svg})`, height: "23rem" }}
     >
-      <CardBody>
-        <div className="hoover rounded p-2 bottom-0 ">
+      <CardBody className="hoover rounded p-2 bottom-0 ">
+        <div>
           <Card.Title>
             <h5>Mission</h5>
           </Card.Title>
