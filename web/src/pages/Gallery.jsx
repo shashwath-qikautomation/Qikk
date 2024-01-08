@@ -96,7 +96,7 @@ function Gallery() {
       <Fade bottom duration="1500">
         <Row>
           <Col xs={12} className="mb-5">
-            <div className="post-filter container">
+            <div>
               <Button
                 className={`filter-item ${
                   filter === "All" ? "active-filter" : ""

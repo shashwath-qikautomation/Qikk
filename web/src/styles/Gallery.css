@@ -39,38 +39,42 @@
   text-align: start;
 }
 
-.custom-modal {
-  background-color: rgba(0, 0, 0, 0.8);
-  height: 100%;
-  width: 100%;
-}
-
-.post-filter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  column-gap: 10px;
-  margin-top: 10px !important;
+.custom-modal{
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 100%;
+    width: 100%;
+    
+  }
+ 
+.filter-item{
+  color: rgb(78, 75, 75);
+  border: none;
+  padding: 10px;
   text-align: center;
-}
-.filter-item {
-  font-size: 16px;
-  font-weight: 500;
-  color: rgb(88, 84, 84);
-  text-align: center;
-  background-color: white;
-  border-style: none;
-  width: 120px;
-}
-.active-filter,
-.filter-item:hover {
-  background-color: #188ed3;
-  color: white;
-  padding: 4px 5px;
-  clip-path: polygon(0 0, 90% 0, 75% 100%, 0 100%);
+  font-size: 17px;
+  display: inline-block;
   border-radius: 10px;
-  text-align: center;
-  width: 120px;
-  padding: 6px;
+  transition-duration: 1s;
+  /* box-shadow: 5px 5px 10px gray; */
+  opacity: .7;
   cursor: pointer;
+  background-color: transparent;
+  margin-left: 10px;
+  width: 110px;
+  clip-path: polygon(0 0,90% 0,75% 100%,0 100%);
+  
+  
+}
+.filter-item:hover{
+  background-color:#28619b;
+  color: white;
+  clip-path: polygon(0 0,90% 0,75% 100%,0 100%);
+  width: 110px;
+  
+}
+.active-filter {
+  background-color: #28619b;
+  clip-path: polygon(0 0,90% 0,75% 100%,0 100%);
+  color: white;
+
 }
