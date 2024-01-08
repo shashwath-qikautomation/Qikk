@@ -31,6 +31,10 @@ function About() {
   const [modalShow, setModalShow] = React.useState(false);
   console.log(modalShow);
 
+  const width = {
+    width: "150px",
+  };
+
   const handleNavigateToContactUs = () => {
     navigate(routes.contact);
   };

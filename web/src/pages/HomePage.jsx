@@ -72,7 +72,7 @@ function HomePage() {
               style={{ fontSize: "calc(1.275rem + 1.5vw)" }}
               className="fs-2 mt-4 fw-bolder"
             >
-              Dedicated to revolutionizing the electronic manufacturing
+              Dedicated to revolutionizing the electronic <br /> manufacturing
               industry.
             </h1>
           </Col>
@@ -81,14 +81,14 @@ function HomePage() {
       <Fade bottom duration="1500">
         <Row className="gap-4 p-5">
           <Col className="card-effect shadow p-4 mb-3 bg-white rounded">
-            <h1 className="fs-3">Quality</h1>
+            <h1 className="fs-4 fw-semibold">Quality</h1>
             <p className="p-2">
               We are committed to delivering products and services of the
               highest quality, ensuring the satisfaction of our customers
             </p>
           </Col>
           <Col className="card-effect shadow p-4 mb-3 bg-white rounded">
-            <h1 className="fs-3">Intelligence</h1>
+            <h1 className="fs-4 fw-semibold">Intelligence</h1>
             <p className="p-2">
               We aim to create solutions that are not only efficient but also
               intelligent, capable of adapting and learning from data to provide
@@ -96,7 +96,7 @@ function HomePage() {
             </p>
           </Col>
           <Col className="card-effect shadow p-4 mb-3 bg-white rounded">
-            <h1 className="fs-3">Creativity</h1>
+            <h1 className="fs-4 fw-semibold">Creativity</h1>
             <p className="p-2">
               We foster a culture of creativity and constant improvement,
               encouraging our team to think outside the box and explore novel

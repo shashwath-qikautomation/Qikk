@@ -24,7 +24,7 @@ function Contact() {
   };
 
   return (
-    <div className="container-fluid pt-5 mt-5">
+    <div className="container-lg pt-5 mt-5">
       <div className="contact-section m-3">
         <div className="row">
           <div className="col col-xs-12 col-md-12 col-sm-12 col-lg-12">
@@ -33,7 +33,7 @@ function Contact() {
                 className="contact-title mt-3 fs-2 d-flex justify-content-center fw-bolder"
                 style={{ fontSize: "calc(1.275rem + 1.5vw)" }}
               >
-                Get in touch
+                Contact Us
               </h2>
             </Fade>
           </div>
@@ -43,7 +43,26 @@ function Contact() {
             <div className="form-group">
               <div className="row">
                 <Fade bottom>
-                  <div className="col col-xs-12 col-sm-12 col-lg-12 col-md-12">
+                  <div className="col-md-6">
+                    <input
+                      type="text"
+                      className="form-control mb-3"
+                      placeholder="Enter your name"
+                      id="text-area"
+                    />
+                  </div>
+
+                  <div className="col-md-6">
+                    <input
+                      type="text"
+                      className="form-control mb-3"
+                      placeholder="Enter your Email"
+                      id="email"
+                    />
+                  </div>
+                </Fade>
+                <Fade bottom>
+                  <div className="col-12">
                     <textarea
                       rows="5"
                       className="form-control mb-3"
@@ -52,9 +71,28 @@ function Contact() {
                     ></textarea>
                   </div>
                 </Fade>
+                <Fade bottom>
+                  <div className="col-12">
+                    <select className="form-control mb-3" id="reason">
+                      <option>Reason 1</option>
+                      <option>Reason 2</option>
+                      <option>Reason 3</option>
+                    </select>
+                  </div>
+                </Fade>
+                <Fade bottom>
+                  <div className="col-12">
+                    <input
+                      className="form-control mb-3"
+                      type="text"
+                      placeholder="Enter Subject"
+                      id="subject"
+                    />
+                  </div>
+                </Fade>
               </div>
               <div className="row mb-2">
-                <Fade bottom>
+                {/* <Fade bottom>
                   <div className="col col-xs-12 col-sm-12 col-lg-6 col-md-6 mb-2">
                     <input
                       type="text"
@@ -72,8 +110,8 @@ function Contact() {
                       id="email"
                     />
                   </div>
-                </Fade>
-                <div className="row">
+                </Fade> */}
+                {/* <div className="row">
                   <Fade bottom>
                     <div className="col col-xs-12 col-sm-12 col-md-12 col-lg-12">
                       <select className="form-control mb-3" id="reason">
@@ -95,7 +133,7 @@ function Contact() {
                       />
                     </div>
                   </Fade>
-                </div>
+                </div> */}
               </div>
             </div>
             <Fade bottom>

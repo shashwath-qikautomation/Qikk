@@ -17,6 +17,7 @@ function NavBar() {
     const storedItem = localStorage.getItem("activeItem");
     return storedItem || "home";
   });
+  const [shadow, setShadow] = useState("");
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -24,7 +25,6 @@ function NavBar() {
   }, [activeItem, location.pathname]);
 
   const navigateRouteTo = (path) => {
-    console.log(path);
     navigate(path);
   };
 
@@ -32,9 +32,23 @@ function NavBar() {
     setActiveItem(link);
   };
 
+  const onScrollDown = () => {
+    setShadow("0px 2px 15px rgba(0, 0, 0, 0.1)");
+    if (window.scrollY === 0) {
+      setShadow("");
+    }
+  };
+
+  const navStyle = {
+    boxShadow: shadow,
+  };
+
+  window.addEventListener("scroll", onScrollDown);
+
   return (
     <Navbar
       collapseOnSelect
+      style={navStyle}
       expand="lg"
       className="navbar bg-body-tertiary fixed-top"
     >

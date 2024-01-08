@@ -70,7 +70,7 @@ function Article() {
       <Row
         style={{
           marginTop: "30px",
-          marginBottom: "100px",
+          marginBottom: "20px",
           backgroundColor: "#E9FDFD",
           zIndex: "300",
         }}
