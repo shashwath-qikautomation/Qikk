@@ -16,7 +16,7 @@ const ResponsiveCollapseCard = (props) => {
     if (screenWidth < 768) {
       setContent("Future Outlook..");
     } else if (screenWidth < 1366) {
-      setContent("Future Outlook");
+      setContent("QIK AUTOMATION is poised for rapid growth...");
     } else {
       setContent(
         "QIKK AUTOMATION TECHNOLOGIES PRIVATE LIMITED is poised for rapid growth in the electronic manufacturing industry."
@@ -41,7 +41,7 @@ const ResponsiveCollapseCard = (props) => {
   return (
     <Card
       className="border border-0  mb-5 rounded text-black overflow-auto"
-      style={{ backgroundImage: `url(${about1Svg})` }}
+      style={{ backgroundImage: `url(${about1Svg})`, height: "23rem" }}
     >
       <CardBody>
         <div className="hoover rounded p-2 bottom-0 ">

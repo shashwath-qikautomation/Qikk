@@ -1,142 +1,160 @@
 import React from "react";
-import style from "../styles/Contact.css";
-import Form from "react-bootstrap/Form";
-import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import Buttons from "../components/Button";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
-import { IoHome } from "react-icons/io5";
+import { MdHomeFilled } from "react-icons/md";
+import { Fade } from "react-reveal";
 import "animate.css";
 
 function Contact() {
+  const h2 = {
+    fontSize: "50px",
+    fontWeight: "700",
+    marginBottom: "66px",
+    lineHeight: "1.3",
+  };
+
   const contactTitle = {
     fontSize: "27px",
     fontWeight: "600",
     marginBottom: "20px",
-    float: "left",
   };
 
   return (
-    <Container>
-      <div className="pt-5 mt-5">
-        <div className="header">
-          <Container>
-            <Row className="d-flex justify-content-center animate__animated animate__fadeInUp">
-              <Col lg={8} className="d-flex justify-content-center">
-                <div style={{ position: "relative", paddingTop: "20px" }}>
-                  <h2>Contact Us</h2>
-                </div>
-              </Col>
-            </Row>
-          </Container>
+    <div className="container-fluid pt-5 mt-5">
+      <div className="contact-section m-3">
+        <div className="row">
+          <div className="col col-xs-12 col-md-12 col-sm-12 col-lg-12">
+            <Fade bottom>
+              <h2
+                className="contact-title mt-3  d-flex justify-content-center"
+                style={contactTitle}
+              >
+                Get in touch
+              </h2>
+            </Fade>
+          </div>
         </div>
-        <div className="contact-section animate__animated animate__fadeInUp">
-          <Container fluid>
-            <Row>
-              <Col lg={12} sm={12} md={12}>
-                <h3 className="contact-title" style={contactTitle}>
-                  Get in touch
-                </h3>
-              </Col>
-            </Row>
-            <Row>
-              <Col lg={8} sm={12} md={8} className="mb-4">
-                <Form.Group
-                  className="mb-3"
-                  placeholder="Enter message"
-                  controlId="exampleForm.ControlTextarea1"
-                >
-                  <Row>
-                    <Col sm={12} lg={12} md={12}>
-                      <Form.Control
-                        as="textarea"
-                        rows={5}
-                        className="mb-3"
-                        placeholder="Enter Message"
-                      />
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Col sm={12} lg={6} md={6}>
-                      <Form.Control
-                        className="mb-3"
-                        type="text"
-                        placeholder="Enter your name"
-                      />
-                    </Col>
-                    <Col sm={12} lg={6} md={6}>
-                      <Form.Control
-                        className="mb-3"
-                        type="text"
-                        placeholder="Enter your Email"
-                      />
-                    </Col>
-                    <Col sm={12} lg={12} md={12} className="mb-3">
-                      <Form.Select aria-label="Default select example">
-                        <option style={{ color: "gray" }}>Select Reason</option>
-                        <option value="1">Reason One</option>
-                        <option value="2">Reason Two</option>
-                        <option value="3">Reason Three</option>
-                      </Form.Select>
-                    </Col>
-                    <Col sm={12} lg={12} md={12}>
-                      <Form.Control
-                        className="mb-3"
+        <div className="row mt-3">
+          <div className="col col-xs-12 col-lg-8 col-md-8 col-sm-12 mb-4">
+            <div className="form-group">
+              <div className="row">
+                <Fade bottom>
+                  <div className="col col-xs-12 col-sm-12 col-lg-12 col-md-12">
+                    <textarea
+                      rows="5"
+                      className="form-control mb-3"
+                      placeholder="Enter Message"
+                      id="message"
+                    ></textarea>
+                  </div>
+                </Fade>
+              </div>
+              <div className="row mb-2">
+                <Fade bottom>
+                  <div className="col col-xs-12 col-sm-12 col-lg-6 col-md-6 mb-2">
+                    <input
+                      type="text"
+                      className="form-control mb-3"
+                      placeholder="Enter your name"
+                      id="text-area"
+                    />
+                  </div>
+
+                  <div className="col col-xs-12 col-sm-12 col-md-6 col-lg-6 mb-2">
+                    <input
+                      type="text"
+                      className="form-control mb-3"
+                      placeholder="Enter your Email"
+                      id="email"
+                    />
+                  </div>
+                </Fade>
+                <div className="row">
+                  <Fade bottom>
+                    <div className="col col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <select className="form-control mb-3" id="reason">
+                        <option>Reason 1</option>
+                        <option>Reason 2</option>
+                        <option>Reason 3</option>
+                      </select>
+                    </div>
+                  </Fade>
+                </div>
+                <div className="row">
+                  <Fade bottom>
+                    <div className="col col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <input
+                        className="form-control mb-3"
                         type="text"
                         placeholder="Enter Subject"
+                        id="subject"
                       />
-                    </Col>
+                    </div>
+                  </Fade>
+                </div>
+              </div>
+            </div>
+            <Fade bottom>
+              <div className="row">
+                <div className="col">
+                  <Buttons
+                    width={"120px"}
+                    className="btn"
+                    name="SEND"
+                  ></Buttons>
+                </div>
+              </div>
+            </Fade>
+          </div>
+          <div className="col col-sm-12 col-md-4 col-lg-4 mb-5 ml-1">
+            <Fade bottom>
+              <Card className=" p-4 mb-5 bg-white rounded border border-0">
+                <Card.Body>
+                  <Row>
+                    <Card.Text>
+                      {" "}
+                      <p>
+                        <b>
+                          <MdHomeFilled /> &emsp; Koorgalli, Mysore.
+                        </b>
+                      </p>
+                      &emsp; &emsp;Karnataka,-570018{" "}
+                    </Card.Text>
                   </Row>
-                </Form.Group>
-              </Col>
-              <Col sm={12} md={4} lg={4} className="mb-4 ml-1">
-                <Card className=" p-4 mb-5 bg-white rounded">
-                  <Card.Body>
-                    <Row>
-                      <Card.Text>
+                  <br />
+                  <Row>
+                    <Card.Text>
+                      <p>
+                        <b>
+                          <FaPhoneAlt /> &emsp; +91 8277995300
+                        </b>
+                      </p>
+                      &emsp;&emsp;Mon to Fri 9am to 6pm
+                    </Card.Text>
+                  </Row>
+                  <br />
+                  <Row>
+                    <Card.Text>
+                      <p>
                         {" "}
-                        <p>
-                          <b>
-                            <IoHome /> &emsp; Koorgalli, Mysore.
-                          </b>
-                        </p>
-                        &emsp; &emsp;Karnataka,-570018{" "}
-                      </Card.Text>
-                    </Row>
-                    <br />
-                    <Row>
-                      <Card.Text>
-                        <p>
-                          <b>
-                            <FaPhoneAlt /> &emsp; +91 8277995300
-                          </b>
-                        </p>
-                        &emsp;&emsp;Mon to Fri 9am to 6pm
-                      </Card.Text>
-                    </Row>
-                    <br />
-                    <Row>
-                      <Card.Text>
-                        <p>
-                          {" "}
-                          <b>
-                            <IoMdMail /> &emsp; info@rexsatronix.com
-                          </b>{" "}
-                        </p>
-                        &emsp;&emsp; Send us your query anytime!
-                      </Card.Text>
-                    </Row>
-                  </Card.Body>
-                </Card>
-              </Col>
-            </Row>
-          </Container>
+                        <b>
+                          <IoMdMail /> &emsp; info@qikautomation.com
+                        </b>{" "}
+                      </p>
+                      &emsp;&emsp; Send us your query anytime!
+                    </Card.Text>
+                  </Row>
+                </Card.Body>
+              </Card>
+            </Fade>
+          </div>
         </div>
       </div>
-    </Container>
+    </div>
   );
 }
 export default Contact;

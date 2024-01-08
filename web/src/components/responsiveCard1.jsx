@@ -16,12 +16,10 @@ const ResponsiveCollapseCard1 = (props) => {
     if (screenWidth < 768) {
       setContent("Our mission is to.....");
     } else if (screenWidth < 1366) {
-      setContent(
-        "Our mission is to empower electronic manufacturing companies"
-      );
+      setContent("Our mission is to empower electronic companies");
     } else {
       setContent(
-        "QIKK AUTOMATION TECHNOLOGIES PRIVATE LIMITED is poised for rapid growth in the electronic manufacturing industry."
+        "Our mission is to empower electronic manufacturing companies"
       );
     }
   };
@@ -43,7 +41,7 @@ const ResponsiveCollapseCard1 = (props) => {
   return (
     <Card
       className="border border-0  mb-5 rounded text-black overflow-auto"
-      style={{ backgroundImage: `url(${about1Svg})` }}
+      style={{ backgroundImage: `url(${about1Svg})`, height: "23rem" }}
     >
       <CardBody>
         <div className="hoover rounded p-2 bottom-0 ">
