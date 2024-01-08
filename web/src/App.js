@@ -13,8 +13,13 @@ import MaterialHandling from "./pages/MaterialHandling";
 import SmartStorage from "./pages/SmartStorage";
 import SmartInventory from "./pages/SmartInventory";
 import Traceability from "./pages/Traceability";
+import { FaArrowAltCircleUp } from "react-icons/fa";
 
 function App() {
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <div className="App">
       <NavBar />
@@ -29,6 +34,15 @@ function App() {
         <Route path={routes.smartInventory} element={<SmartInventory />} />
         <Route path={routes.traceability} element={<Traceability />} />
       </Routes>
+      <div
+        style={{ height: "30px", position: "relative", bottom: "25px" }}
+        className="d-flex justify-content-end w-75 mx-auto"
+      >
+        <FaArrowAltCircleUp
+          onClick={scrollToTop}
+          style={{ fontSize: "35px", color: "#3498db" }}
+        />
+      </div>
       <Footer />
     </div>
   );

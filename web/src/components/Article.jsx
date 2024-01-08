@@ -177,7 +177,10 @@ function Article() {
         <Col className="gap-4 pt-4">
           <Fade right duration="1500">
             {" "}
-            <h1 style={{ fontSize: "calc(1.275rem + 1.5vw)" }} className="fs-1">
+            <h1
+              style={{ fontSize: "calc(1.275rem + 1.5vw)" }}
+              className="fs-1 fw-bolder"
+            >
               Our compressive solutions aligned with Industry 4.0
             </h1>
             <p className="p-3">
@@ -205,7 +208,7 @@ function Article() {
             </h5>
             <h1
               style={{ fontSize: "calc(1.275rem + 1.5vw)" }}
-              className="fs-2 mt-4 font-weight-bold"
+              className="fs-2 mt-4 fw-bolder"
             >
               Our compressive solutions aligned with Industry 4.0
             </h1>
@@ -215,7 +218,7 @@ function Article() {
       <Fade bottom duration="1500">
         <Row className="row gap-5 w-75 mx-auto justify-content-center">
           <Col className="col-md-5 card-hover shadow p-4 bg-white rounded">
-            <h1 className="fs-3">Material Handling Solutions</h1>
+            <h1 className="fs-4 fw-semibold">Material Handling Solutions</h1>
             <p className="p">
               Single Lane Conveyor Series 1 M Link Conveyor QIK-1000LC
             </p>
@@ -227,7 +230,7 @@ function Article() {
             />
           </Col>
           <Col className="col-md-5 card-hover shadow p-4 bg-white rounded">
-            <h1 className="fs-3">Smart Storage Solutions</h1>
+            <h1 className="fs-4 fw-semibold">Smart Storage Solutions</h1>
             <p className="p">
               Single Lane Conveyor Series 1 M Link Conveyor QIK-1000LC
             </p>
@@ -239,7 +242,7 @@ function Article() {
             />
           </Col>
           <Col className="col-md-5 card-hover shadow p-4 bg-white rounded">
-            <h1 className="fs-3">Smart Inventory Solutions</h1>
+            <h1 className="fs-4 fw-semibold">Smart Inventory Solutions</h1>
             <p className="p">
               Single Lane Conveyor Series 1 M Link Conveyor QIK-1000LC
             </p>
@@ -251,7 +254,7 @@ function Article() {
             />
           </Col>
           <Col className="col-md-5 card-hover shadow p-4 bg-white rounded">
-            <h1 className="fs-3">Traceability</h1>
+            <h1 className="fs-4 fw-semibold">Traceability</h1>
             <p className="p">
               Single Lane Conveyor Series 1 M Link Conveyor QIK-1000LC
             </p>

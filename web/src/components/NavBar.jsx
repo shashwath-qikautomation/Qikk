@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import logoW from "../assets/logoFW.png";
+import logoFB from "../assets/logoFB.png";
 import { routes } from "../helper/routes";
 import "../styles/NavBar.css";
 import { useNavigate, useLocation } from "react-router-dom";
@@ -31,20 +31,25 @@ function NavBar() {
   };
 
   return (
-    <Navbar expand="lg" className="navbar bg-body-tertiary fixed-top">
+    <Navbar
+      collapseOnSelect
+      expand="lg"
+      className="navbar bg-body-tertiary fixed-top"
+    >
       <Container className="gap-5">
         <Navbar.Brand
           onClick={() => {
             navigateRouteTo(routes.homePage);
           }}
         >
-          <img src={logoW} alt="logo" height={"80"} width={"140"} />
+          <img src={logoFB} alt="logo" height={"80"} width={"140"} />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto gap-4 p-4">
             <Nav.Link
               className="nav-link d-flex justify-content-start"
+              eventKey="1"
               onClick={() => {
                 navigateRouteTo(routes.homePage);
                 handleClick("home");
@@ -58,6 +63,7 @@ function NavBar() {
             </Nav.Link>
             <Nav.Link
               className="nav-link d-flex justify-content-start"
+              eventKey="2"
               onClick={() => {
                 navigateRouteTo(routes.about);
                 handleClick("about");
@@ -72,6 +78,7 @@ function NavBar() {
             </Nav.Link>
             <Nav.Link
               className="nav-link d-flex justify-content-start"
+              eventKey="3"
               // href={routes.blog}
               onClick={() => {
                 navigateRouteTo(routes.blog);
@@ -90,21 +97,25 @@ function NavBar() {
               menuVariant="dark"
             >
               <NavDropdown.Item
+                eventKey="4"
                 onClick={() => navigateRouteTo(routes.materialHandling)}
               >
                 Material handling
               </NavDropdown.Item>
               <NavDropdown.Item
+                eventKey="5"
                 onClick={() => navigateRouteTo(routes.smartStorage)}
               >
                 Smart storage
               </NavDropdown.Item>
               <NavDropdown.Item
+                eventKey="6"
                 onClick={() => navigateRouteTo(routes.smartInventory)}
               >
                 Smart inventory
               </NavDropdown.Item>
               <NavDropdown.Item
+                eventKey="7"
                 onClick={() => navigateRouteTo(routes.traceability)}
               >
                 Traceability
@@ -112,6 +123,7 @@ function NavBar() {
             </NavDropdown>
             <Nav.Link
               className="nav-link d-flex justify-content-start"
+              eventKey="8"
               // href={routes.gallery}
               onClick={() => {
                 navigateRouteTo(routes.gallery);
@@ -125,6 +137,7 @@ function NavBar() {
             </Nav.Link>
             <Nav.Link
               className="nav-link d-flex justify-content-start"
+              eventKey="9"
               // href={routes.contact}
               onClick={() => {
                 navigateRouteTo(routes.contact);

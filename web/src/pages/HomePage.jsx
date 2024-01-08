@@ -67,7 +67,7 @@ function HomePage() {
       <Fade bottom duration="1500">
         <Row className="gap-4 p-2">
           <Col>
-            <h5 className="text-primary fs-5 fw-bold"> About Us</h5>
+            <h5 className="text-primary fs-5 fw-bold">About Us</h5>
             <h1
               style={{ fontSize: "calc(1.275rem + 1.5vw)" }}
               className="fs-2 mt-4 fw-bolder"

@@ -31,10 +31,10 @@ const Footer = () => {
       className="main-footer"
     >
       <div className="container p-5">
-        <div className="row">
+        <div className="row gap-4">
           <div className="col">
             <Col className="text-start">
-              <h1 className="fs-6 pb-3 text-black">Get In Touch</h1>
+              <h1 className="fs-6 pb-2 text-black">Get In Touch</h1>
               <p>
                 <IoLocationSharp /> No.22, P-3 & P-4 , Site No.97 3rd Phase
                 Koorgalli Industrial Area Mysore , Karnataka - 570018
@@ -83,7 +83,7 @@ const Footer = () => {
           </div>
           <div className="col">
             <Col className="text-start">
-              <h1 className="fs-6 pb-3 text-black">Popular Link</h1>
+              <h1 className="fs-6 pb-2 text-black">Popular Link</h1>
               <Nav.Link className="pb-2" href={routes.about}>
                 About
               </Nav.Link>
@@ -173,7 +173,7 @@ const Footer = () => {
           </div> */}
           <div className="col">
             <Col className="text-start">
-              <h1 className="fs-6 pb-3 text-black">Mission</h1>
+              <h1 className="fs-6 pb-2 text-black">Mission</h1>
               <p>
                 Our mission is to empower electronic manufacturing companies
                 with state-of-the-art technology solutions that optimize
