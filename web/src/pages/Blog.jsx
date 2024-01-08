@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Fade from "react-reveal/Fade";
-import { FaAngleRight } from "react-icons/fa";
+import { FaAngleRight } from "react-icons/fa6";
 import "animate.css";
 
 function Blog() {
@@ -20,7 +20,7 @@ function Blog() {
   };
 
   return (
-    <Container className="pt-5 pb-5 mt-5">
+    <Container className="pt-5 pb-5 mt-5 text-center">
       <Row className="mb-5 p-2 mt-5 ">
         <Fade bottom duration="1500">
           <Col xs={12} className="mb-5">
@@ -47,16 +47,17 @@ function Blog() {
           <Col xs={12} className="mb-4">
             <div className="accordion">
               <div className="item">
-                <div className="d-flex flex-row">
+                <div className="d-flex flex-row justify-content-space-between">
                   <h1 className="text" onClick={toggleAccordianBenifits}>
                     {" "}
                     Benefits of Automation in EMS :
                   </h1>
                   <FaAngleRight
-                    className={`icon ${isVisible ? "rotate" : ""}`}
+                    className={`icons ${isVisible ? "rotate" : ""}`}
                     onClick={toggleAccordianBenifits}
                   />
                 </div>
+
                 <div className={`hidden-box ${isVisible ? "active-box" : ""}`}>
                   <p>
                     <span className="fw-bold">Enhanced Efficiency :</span>{" "}
@@ -106,10 +107,11 @@ function Blog() {
                 <div className="d-flex flex-row">
                   <h1 className="text" onClick={toggleAccordionChallenges}>
                     {" "}
-                    Challenges and Considerations:
+                    Challenges and Considerations :
                   </h1>
+
                   <FaAngleRight
-                    className={`icon ${isVisibleChallenges ? "rotate" : ""}`}
+                    className={`icons ${isVisibleChallenges ? "rotate" : ""}`}
                     onClick={toggleAccordionChallenges}
                   />
                 </div>

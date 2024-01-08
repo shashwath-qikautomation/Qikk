@@ -3,12 +3,12 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
+   
+ 
    
     
 }
 .item{
-   
     column-gap: 24px;
     row-gap: 32px;
     border-top: 4px solid #228be6;
@@ -16,6 +16,8 @@
     border-radius: 15px 15px 0 0;
     align-items: center;
     padding: 24px 24px 0 24px;
+    
+   
     
 }
 .text{
@@ -25,19 +27,24 @@
     margin-bottom: 20px; 
     padding-right: 10px;
   
+  
    
     
 }
-.icon{
-    width: 24px;
-    height: 24px;
+.icons{
+    width: 20px;
+    height: 20px;
     color:  #228be6;
     transform: rotate(0deg);
     transition: transform 0.3s ease;
-    font-size: 20px;
+    position: relative;
+    top: 3px;
  
-    
 }
+   
+
+    
+
 .hidden-box{
     grid-column: 2;
     max-height: 0;
