@@ -35,11 +35,6 @@ function About() {
   const handleNavigateToContactUs = () => {
     navigate(routes.contact);
   };
-
-  const width = {
-    width: "120px",
-  };
-
   return (
     <div style={{ position: "relative", top: "110px" }}>
       <Container className="position-relative">
@@ -61,7 +56,7 @@ function About() {
         </div> */}
         <div>
           <Fade bottom duration="1500">
-            <Row className="mt-1 gap-1 p-5">
+            <Row className="mt-1 gap-1 p-5 clearfix">
               <Col md={5} className="text-start">
                 <img src={aboutSvg} />
               </Col>
@@ -85,7 +80,6 @@ function About() {
                 <Buttons
                   width={width.width}
                   name={"Contact Us"}
-                  width={width.width}
                   onClick={handleNavigateToContactUs}
                 />
               </Col>
@@ -130,11 +124,7 @@ function About() {
             <Fade left duration="1500">
               <Card className="qik border border-0">
                 <Card.Header className="border border-0">
-                  <FaAward
-                    size={"180px"}
-                    backgroundColor={"transparent"}
-                    fluid
-                  />
+                  <FaAward size={"180px"} fluid />
                 </Card.Header>
                 <Card.Body>
                   <Card.Title>

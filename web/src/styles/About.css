@@ -1,14 +1,15 @@
 .Card:hover{
 transform: scale(1) !important;
 }
-.hoover:hover {
+.hovCard:hover .hoover{
   background-color:#64A8E3;
   color: white;
 }
- .hoover {
+.hoover {
   background-color: #DBDBDB;
+  margin: 8px;
  margin-top:175px ;
- position: static;
+ position: static; 
 }
 .qik:hover{
   background-position: 0;
