@@ -17,8 +17,15 @@ import { IoLogoFacebook } from "react-icons/io5";
 import { RiInstagramLine } from "react-icons/ri";
 import { MdEmail } from "react-icons/md";
 import "../styles/Footer.css";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
+
+  const navigateRouteTo = (path) => {
+    navigate(path);
+  };
+
   return (
     <div
       style={{
@@ -60,7 +67,7 @@ const Footer = () => {
                     textDecoration: "none",
                     paddingLeft: "10px",
                   }}
-                  href="#"
+                  href="mailto:info@qikautomation.com"
                 >
                   info@qikautomation.com
                 </a>
@@ -84,93 +91,20 @@ const Footer = () => {
           <div className="col">
             <Col className="text-start">
               <h1 className="fs-6 pb-2 text-black">Popular Link</h1>
-              <Nav.Link className="pb-2" href={routes.about}>
+              <Nav.Link
+                className="pb-2"
+                onClick={() => navigateRouteTo(routes.about)}
+              >
                 About
               </Nav.Link>
-              <Nav.Link className="pb-2" href={routes.product}>
-                Services
-              </Nav.Link>
-              <Nav.Link className="pb-2" href={routes.blog}>
-                Blog
-              </Nav.Link>
-              <Nav.Link className="pb-2" href={routes.gallery}>
-                Gallery
-              </Nav.Link>
-              <Nav.Link className="pb-2" href={routes.contact}>
+              <Nav.Link
+                className="pb-2"
+                onClick={() => navigateRouteTo(routes.contact)}
+              >
                 Contact
               </Nav.Link>
             </Col>
           </div>
-          {/* <div className="col-md-6 col-lg-3">
-            <Col className="text-start">
-              <h1 className="fs-6 pb-3 text-black">Gallery</h1>
-              <div className="row g-2">
-                <div className="col-4">
-                  <Image
-                    style={{
-                      maxWidth: "100%",
-                      height: "auto",
-                    }}
-                    src={business}
-                  />
-                </div>
-                <div className="col-4">
-                  <Image
-                    style={{
-                      maxWidth: "100%",
-                      height: "auto",
-                    }}
-                    src={business}
-                  />
-                </div>
-                <div className="col-4">
-                  <Image
-                    style={{
-                      maxWidth: "100%",
-                      height: "auto",
-                    }}
-                    src={business}
-                  />
-                </div>
-                <div className="col-4">
-                  <Image
-                    style={{
-                      maxWidth: "100%",
-                      height: "auto",
-                    }}
-                    src={business}
-                  />
-                </div>
-                <div className="col-4">
-                  <Image
-                    style={{
-                      maxWidth: "100%",
-                      height: "auto",
-                    }}
-                    src={business}
-                  />
-                </div>
-                <div className="col-4">
-                  <Image
-                    style={{
-                      maxWidth: "100%",
-                      height: "auto",
-                    }}
-                    src={business}
-                  />
-                </div>
-              </div>
-              <Col className="pt-4">
-                <h1 className="fs-6 pb-3 text-black">Language</h1>
-                <div className="d-flex">
-                  <Image src={usa} width="20px" />
-                  <Image src={china} width="20px" />
-                  <Image src={japan} width="20px" />
-                  <Image src={thailand} width="20px" />
-                </div>
-              </Col>
-            </Col>
-          </div> */}
           <div className="col">
             <Col className="text-start">
               <h1 className="fs-6 pb-2 text-black">Mission</h1>

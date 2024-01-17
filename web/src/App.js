@@ -13,11 +13,31 @@ import MaterialHandling from "./pages/MaterialHandling";
 import SmartStorage from "./pages/SmartStorage";
 import SmartInventory from "./pages/SmartInventory";
 import Traceability from "./pages/Traceability";
-import { FaArrowCircleUp } from "react-icons/fa";
+import { BiSolidUpArrowCircle } from "react-icons/bi";
+import { useState } from "react";
 
 function App() {
+  const [hideIcon, setHideIcon] = useState("hidden");
   const scrollToTop = () => {
     window.scrollTo(0, 0);
+  };
+
+  const onScrollDown = () => {
+    setHideIcon("visible");
+    if (window.scrollY === 0) {
+      setHideIcon("hidden");
+    }
+  };
+
+  window.addEventListener("scroll", onScrollDown);
+
+  const styleIcon = {
+    height: "30px",
+    position: "fixed",
+    top: "150px",
+    marginRight: "80px",
+    visibility: hideIcon,
+    transition: "0.5s",
   };
 
   return (
@@ -35,12 +55,15 @@ function App() {
         <Route path={routes.traceability} element={<Traceability />} />
       </Routes>
       <div
-        style={{ height: "30px", position: "relative", bottom: "25px" }}
-        className="d-flex justify-content-end w-75 mx-auto"
+        style={styleIcon}
+        className="d-flex justify-content-end w-100 mx-auto p-4"
       >
-        <FaArrowCircleUp
+        <BiSolidUpArrowCircle
           onClick={scrollToTop}
-          style={{ fontSize: "35px", color: "#3498db" }}
+          style={{
+            fontSize: "35px",
+            color: "#3498db",
+          }}
         />
       </div>
       <Footer />
