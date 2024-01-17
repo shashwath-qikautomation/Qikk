@@ -76,7 +76,7 @@ const SmartStorage = () => {
         </Row>
         <Fade bottom>
           <Row className="mt-4">
-            <Col sm={12} md={4}>
+            <Col sm={12} md={6} lg={4}>
               <ProductCard
                 title="Smart Storage Series Smart Reel Storage System QIK-SRSS "
                 text="Our Storage system is equipped 

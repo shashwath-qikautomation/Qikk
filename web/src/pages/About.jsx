@@ -65,9 +65,9 @@ function About() {
               </Col>
               <Col></Col>
               <Col md={6} className="text-start">
-                <h1 style={{ fontSize: "35px" }} className="fw-bolder mb-3">
+                {/* <h1 style={{ fontSize: "35px" }} className="fw-bolder mb-3">
                   We Collect High Quality Leads
-                </h1>
+                </h1> */}
                 <p className="pt-2">
                   <strong>QIKK AUTOMATION TECHNOLOGIES</strong> PRIVATE LIMITED
                   is a cutting-edge startup based in Mysore, India, dedicated to
@@ -123,7 +123,7 @@ function About() {
           </Row>
         </Fade>
         <Row className="p-5">
-          <Col md={4} className="text-center col-lg-4 col-md-6">
+          <Col md={4} className="text-center mb-3 col-lg-4 col-md-6">
             <Fade left duration="1500">
               <Card className="qik border border-0">
                 <Card.Header className="border border-0">
@@ -141,7 +141,7 @@ function About() {
               </Card>
             </Fade>
           </Col>
-          <Col md={4} className="text-center col-lg-4 col-md-6">
+          <Col md={4} className="text-center mb-3  col-lg-4 col-md-6">
             <Fade bottom duration="1500">
               <Card className="qik border border-0">
                 <Card.Img
@@ -162,7 +162,7 @@ function About() {
               </Card>
             </Fade>
           </Col>
-          <Col md={4} className="text-center col-lg-4 col-md-6">
+          <Col md={4} className="text-center mb-3  col-lg-4 col-md-6">
             <Fade right duration="1500">
               <Card className="qik border border-0">
                 <Card.Img

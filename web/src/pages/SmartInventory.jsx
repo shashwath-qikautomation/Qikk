@@ -73,7 +73,7 @@ function SmartInventory() {
 
       <Fade bottom>
         <Row className="mt-4">
-          <Col sm={12} md={4}>
+          <Col sm={12} md={6} lg={4}>
             <ProductCard
               title="Smart Storage Series Smart Component Incoming System QIK-SCIS "
               text="A Smart Incoming SMT System
