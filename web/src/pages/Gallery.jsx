@@ -1,18 +1,33 @@
 import React from "react";
-import { Col, Container, Row, Modal, Carousel, Button } from "react-bootstrap";
-import rackImg from "../assets/images/rackImg.jpg";
-import reelRackImg from "../assets/images/reelRackImg.jpg";
-import conveyorImg1 from "../assets/images/conveyorImg1.jpg";
-import conveyorImg2 from "../assets/images/conveyorImg2.jpg";
-import conveyorImg3 from "../assets/images/conveyorImg3.jpg";
-import conveyorImg4 from "../assets/images/conveyorImg4.jpg";
-import conveyorImg5 from "../assets/images/conveyorImg5.jpg";
-import conveyorImg6 from "../assets/images/conveyorImg6.jpg";
-import conveyorImg7 from "../assets/images/conveyorImg7.jpg";
-import companyImg1 from "../assets/images/companyImg1.jpg";
-import companyImg2 from "../assets/images/companyImg2.jpg";
-import companyImg3 from "../assets/images/companyImg3.jpg";
-import companyImg4 from "../assets/images/companyImg4.jpg";
+import { Col, Container, Row, Modal, Carousel } from "react-bootstrap";
+import rackImg from "../assets/images/rackImages/rack1.jpg";
+import reelRackImg from "../assets/images/rackImages/rack2.jpg";
+import conveyorImg1 from "../assets/images/conveyorImages/conveyor1.jpg";
+import conveyorImg2 from "../assets/images/conveyorImages/conveyor2.jpg";
+import conveyorImg3 from "../assets/images/conveyorImages/conveyor3.jpg";
+import conveyorImg4 from "../assets/images/conveyorImages/conveyor4.jpg";
+import conveyorImg5 from "../assets/images/conveyorImages/conveyor5.jpg";
+import conveyorImg6 from "../assets/images/conveyorImages/conveyor6.jpg";
+import conveyorImg7 from "../assets/images/conveyorImages/conveyor7.jpg";
+import companyImg1 from "../assets/images/companyImages/companyImg1.jpg";
+import companyImg2 from "../assets/images/companyImages/companyImg2.jpg";
+import companyImg3 from "../assets/images/companyImages/companyImg3.jpg";
+import companyImg4 from "../assets/images/companyImages/companyImg4.jpg";
+
+import rackCorosuel1 from "../assets/images/rackImages/rackCorosuel1.jpg";
+import rackCorosuel2 from "../assets/images/rackImages/rackCorosuel2.jpg";
+import conveyorCorosuel1 from "../assets/images/conveyorImages/conveyorCorosuel1.jpg";
+import conveyorCorosuel2 from "../assets/images/conveyorImages/conveyorCorosuel2.jpg";
+import conveyorCorosuel3 from "../assets/images/conveyorImages/conveyorCorosuel3.jpg";
+import conveyorCorosuel4 from "../assets/images/conveyorImages/conveyorCorosuel4.jpg";
+import conveyorCorosuel5 from "../assets/images/conveyorImages/conveyorCorosuel5.jpg";
+import conveyorCorosuel6 from "../assets/images/conveyorImages/conveyorCorosuel6.jpg";
+import conveyorCorosuel7 from "../assets/images/conveyorImages/conveyorCorosuel7.jpg";
+import companyCorosuel1 from "../assets/images/companyImages/companyCorosuel1.jpg";
+import companyCorosuel2 from "../assets/images/companyImages/companyCorosuel2.jpg";
+import companyCorosuel3 from "../assets/images/companyImages/companyCorosuel3.jpg";
+import companyCorosuel4 from "../assets/images/companyImages/companyCorosuel4.jpg";
+
 import { useState } from "react";
 import "../styles/Gallery.css";
 import { FaAngleLeft } from "react-icons/fa";
@@ -37,6 +52,21 @@ const allImages = [
   { src: conveyorImg6, category: "Conveyor" },
   { src: conveyorImg7, category: "Conveyor" },
   { src: companyImg4, category: "Company" },
+];
+const allCorosuelImage = [
+  { src: companyCorosuel1, category: "Company" },
+  { src: rackCorosuel1, category: "Rack" },
+  { src: rackCorosuel2, category: "Rack" },
+  { src: conveyorCorosuel1, category: "Conveyor" },
+  { src: companyCorosuel2, category: "Company" },
+  { src: conveyorCorosuel2, category: "Conveyor" },
+  { src: companyCorosuel3, category: "Company" },
+  { src: conveyorCorosuel3, category: "Conveyor" },
+  { src: conveyorCorosuel4, category: "Conveyor" },
+  { src: conveyorCorosuel5, category: "Conveyor" },
+  { src: conveyorCorosuel6, category: "Conveyor" },
+  { src: conveyorCorosuel7, category: "Conveyor" },
+  { src: companyCorosuel4, category: "Company" },
 ];
 
 function Gallery() {
@@ -182,7 +212,7 @@ function Gallery() {
         onHide={handleCarouselClose}
         centered
         className="custom-modal"
-        style={{ width: "100%", maxHeight: "100vh" }}
+        size="lg"
       >
         <div className="d-flex justify-content-end">
           <IoClose
@@ -208,7 +238,7 @@ function Gallery() {
           }
           style={{ maxHeight: "100vh" }}
         >
-          {filteredImages.map((image, index) => (
+          {allCorosuelImage.map((image, index) => (
             <Carousel.Item key={index}>
               <Image
                 src={image.src}

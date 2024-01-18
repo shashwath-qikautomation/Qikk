@@ -39,7 +39,7 @@ function Contact() {
           </div>
         </div>
         <div className="row mt-3">
-          <div className="col col-xs-12 col-lg-8 col-md-8 col-sm-12 mb-4">
+          <div className="col col-xs-12 col-lg-8 col-md-12 col-sm-12 mb-4">
             <div className="form-group">
               <div className="row">
                 <Fade bottom>
@@ -150,40 +150,55 @@ function Contact() {
           </div>
           <div className="col col-sm-12 col-md-4 col-lg-4 mb-5 ml-1">
             <Fade bottom>
-              <Card className=" p-4 mb-5 bg-white rounded border border-0">
+              <Card className="border border-0">
                 <Card.Body>
                   <Row>
                     <Card.Text>
-                      {" "}
-                      <p>
-                        <b>
-                          <MdHomeFilled /> &emsp; Koorgalli, Mysore.
-                        </b>
-                      </p>
-                      &emsp; &emsp;Karnataka,-570018{" "}
+                      <div className="d-flex flex-row">
+                        <div>
+                          <MdHomeFilled
+                            size={"20px"}
+                            style={{ marginRight: "10px" }}
+                          />
+                        </div>
+                        <p style={{ fontSize: "14px" }}>
+                          <b>
+                            {" "}
+                            No.22, P-3 & P-4 , Site No.97 3rd Phase Koorgalli
+                            Industrial Area,Mysore,
+                          </b>{" "}
+                          <br /> Karnataka-570018
+                        </p>
+                      </div>
                     </Card.Text>
-                  </Row>
-                  <br />
-                  <Row>
+
                     <Card.Text>
-                      <p>
-                        <b>
-                          <FaPhoneAlt /> &emsp; +91 8277995300
-                        </b>
-                      </p>
-                      &emsp;&emsp;Mon to Fri 9am to 6pm
+                      <div className="d-flex flex-row">
+                        <div>
+                          <FaPhoneAlt
+                            size={"20px"}
+                            style={{ marginRight: "10px" }}
+                          />
+                        </div>
+                        <p style={{ fontSize: "14px" }}>
+                          <b> +91 8277995300</b> <br /> Mon to Fri 9am to 6pm
+                        </p>
+                      </div>
                     </Card.Text>
-                  </Row>
-                  <br />
-                  <Row>
+
                     <Card.Text>
-                      <p>
-                        {" "}
-                        <b>
-                          <IoMdMail /> &emsp; info@qikautomation.com
-                        </b>{" "}
-                      </p>
-                      &emsp;&emsp; Send us your query anytime!
+                      <div className="d-flex flex-row">
+                        <div>
+                          <IoMdMail
+                            size={"20px"}
+                            style={{ marginRight: "10px" }}
+                          />
+                        </div>
+                        <p style={{ fontSize: "14px" }}>
+                          <b> info@qikautomation.com</b> <br /> Send us your
+                          query anytime!
+                        </p>
+                      </div>
                     </Card.Text>
                   </Row>
                 </Card.Body>
