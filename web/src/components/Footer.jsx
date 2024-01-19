@@ -90,19 +90,45 @@ const Footer = () => {
           </div>
           <div className="col">
             <Col className="text-start">
-              <h1 className="fs-6 pb-2 text-black">Popular Link</h1>
+              <h1 className="fs-6 pb-2 text-black">Products</h1>
               <Nav.Link
                 className="pb-2"
-                onClick={() => navigateRouteTo(routes.about)}
+                onClick={() => navigateRouteTo(routes.materialHandling)}
               >
-                About
+                Material Handling
               </Nav.Link>
               <Nav.Link
                 className="pb-2"
-                onClick={() => navigateRouteTo(routes.contact)}
+                onClick={() => navigateRouteTo(routes.smartStorage)}
               >
-                Contact
+                Smart Storage
               </Nav.Link>
+              <Nav.Link
+                className="pb-2"
+                onClick={() => navigateRouteTo(routes.smartInventory)}
+              >
+                Smart Inventory
+              </Nav.Link>
+              <Nav.Link
+                className="pb-2"
+                onClick={() => navigateRouteTo(routes.traceability)}
+              >
+                Traceability
+              </Nav.Link>
+              <div className="pt-3">
+                <Nav.Link
+                  className="pb-2"
+                  onClick={() => navigateRouteTo(routes.about)}
+                >
+                  About
+                </Nav.Link>
+                <Nav.Link
+                  className="pb-2"
+                  onClick={() => navigateRouteTo(routes.contact)}
+                >
+                  Contact
+                </Nav.Link>
+              </div>
             </Col>
           </div>
           <div className="col">
